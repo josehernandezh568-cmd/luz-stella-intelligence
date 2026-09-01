@@ -1,13 +1,14 @@
 {
-  "last_updated": "2026-08-30T19:00:00-05:00",
+  "last_updated": "2026-08-31T00:00:00-05:00",
   "timezone": "America/Bogota",
   "items": [
     {
-      "id": "2026-08-30-001",
+      "id": "2026-08-31-001",
+      "topic_id": "seguridad-militarizacion-bogota",
       "rank": 1,
-      "score": 98,
-      "date": "2026-08-30",
-      "title": "Cabildo abierto sobre militarización de Bogotá",
+      "score": 80,
+      "date": "2026-08-27",
+      "title": "Cabildo abierto sobre asistencia militar en Bogotá",
       "place": "Bogotá",
       "categories": [
         "politica",
@@ -15,53 +16,268 @@
         "bogota"
       ],
       "verification": "alta",
-      "status": "en_desarrollo",
-      "summary": "La certificación de firmas habilita un debate institucional; no equivale por sí sola a aprobación de la medida.",
-      "source_name": "El Espectador",
-      "source_url": "https://www.elespectador.com/bogota/militarizacion-de-bogota-llegara-a-debate-tras-validacion-de-37056-firmas/",
+      "status": "EN DESARROLLO",
+      "historical_status": "SEGUIMIENTO",
+      "summary": "La Registraduría certificó 37.056 firmas válidas (Resolución 1052/2026), obligando al Concejo a tramitar un cabildo abierto sobre asistencia militar. No aprueba la militarización por sí sola.",
+      "source_name": "Concejo de Bogotá",
+      "source_url": "https://concejodebogota.gov.co/administracion-galan-tendra-que-responder-sobre-la-militarizacion-de/cbogota/2026-08-27/153102.php",
       "passes": [
-        "Relación institucional/política detectada.",
-        "Contexto del mecanismo confirmado.",
-        "Control: firmas no equivalen a aprobación."
+        "fuente primaria confirmada",
+        "8 fuentes secundarias independientes",
+        "contexto histórico verificado (proceso desde marzo 2026)"
       ],
+      "publicable": true,
+      "script_status": "LISTO",
       "script": {
-        "hook": "Más de 37 mil firmas llevaron al Concejo de Bogotá un debate que muchos ya dan por hecho. Pero todavía no está aprobado.",
-        "context": "La certificación permite convocar un cabildo abierto y llevar el asunto al debate público.",
-        "key_fact": "Las firmas habilitan el trámite; no autorizan por sí solas presencia militar.",
-        "citizen_connection": "La ciudadanía necesita distinguir entre abrir un debate y que una medida ya haya sido adoptada.",
-        "close": "Ahora corresponde seguir el procedimiento y las decisiones de las autoridades competentes.",
-        "cta": "¿Qué preguntas deberían responderse durante ese debate?"
+        "hook": "Más de 37 mil firmas obligan al Concejo de Bogotá a debatir algo que muchos ya dan por hecho: la militarización de la ciudad. Pero esto todavía no está decidido.",
+        "context": "La Registraduría certificó que se superó el número mínimo de firmas para convocar un cabildo abierto sobre asistencia militar en Bogotá.",
+        "key_fact": "37.056 firmas válidas, frente a un umbral de 31.096, según la Registraduría Distrital.",
+        "citizen_connection": "Es un mecanismo real de participación: la ciudadanía puso el tema en la agenda del Concejo.",
+        "close": "¿Ustedes creen que este es el camino correcto para atender la inseguridad en Bogotá? Los invito a informarse antes de opinar — este es apenas el inicio del debate.",
+        "cta": "Infórmense sobre el proceso antes de sacar conclusiones y cuéntenme qué opinan."
       }
     },
     {
-      "id": "2026-08-30-002",
+      "id": "2026-08-31-002",
+      "topic_id": "desastre-terremoto-reconstruccion",
       "rank": 2,
-      "score": 94,
-      "date": "2026-08-30",
-      "title": "Explosión en El Amparo, Kennedy",
-      "place": "Kennedy",
+      "score": 75,
+      "date": "2026-08-19",
+      "title": "Emergencia económica por el terremoto del 10 de agosto",
+      "place": "Colombia (15 departamentos)",
       "categories": [
-        "seguridad",
-        "kennedy"
+        "ambiente",
+        "salud",
+        "bogota"
       ],
       "verification": "alta",
-      "status": "investigacion",
-      "summary": "Una explosión afectó viviendas. Los reportes consultados no confirmaban autoría ni móvil.",
+      "status": "EN DESARROLLO",
+      "historical_status": "SEGUIMIENTO",
+      "summary": "El presidente firmó el Decreto 1261 de 2026 declarando emergencia económica por 30 días tras el terremoto de magnitud 7.4 del 10 de agosto. Balance oficial más reciente (corte 20 ago.): 319 fallecidos, 4.506 heridos, 260 desaparecidos.",
+      "source_name": "Presidencia de la República",
+      "source_url": "https://www.presidencia.gov.co/prensa/Paginas/Gobierno-Nacional-declaro-oficialmente-la-emergencia-economica-social-260820.aspx",
+      "passes": [
+        "fuente primaria (Presidencia)",
+        "segunda fuente independiente (Infobae)",
+        "cifras con fecha de corte explícita"
+      ],
+      "publicable": true,
+      "script_status": "REVISAR",
+      "script": {
+        "hook": "El Gobierno declaró emergencia económica por el terremoto del 10 de agosto. ¿Qué significa esto realmente?",
+        "context": "El presidente firmó el Decreto 1261 de 2026, que declara la Emergencia Económica, Social y Ecológica en 15 departamentos por la calamidad del terremoto.",
+        "key_fact": "La declaratoria rige por 30 días y permite medidas presupuestales, contractuales y financieras extraordinarias, exclusivamente para atender el desastre.",
+        "citizen_connection": "Es importante que la ciudadanía entienda los límites de esta herramienta: no resuelve el desequilibrio fiscal general, solo habilita recursos para la emergencia.",
+        "close": "Vamos a seguir este proceso de cerca para que la ayuda realmente llegue a quienes la necesitan.",
+        "cta": "¿Conocen a alguien afectado por el terremoto? Cuéntenme qué necesita la comunidad."
+      }
+    },
+    {
+      "id": "2026-08-31-003",
+      "topic_id": "seguridad-el-amparo-kennedy",
+      "rank": 3,
+      "score": 70,
+      "date": "2026-08-25",
+      "title": "Explosión sin resolver en El Amparo, Kennedy",
+      "place": "Kennedy (barrio El Amparo)",
+      "categories": [
+        "seguridad",
+        "kennedy",
+        "bogota"
+      ],
+      "verification": "alta",
+      "status": "EN DESARROLLO",
+      "historical_status": "SEGUIMIENTO",
+      "summary": "Artefacto no identificado explotó el 25 de agosto en El Amparo; 6-7 viviendas afectadas, sin heridos. Segunda fase de investigación en curso, sin capturas ni autoría confirmada.",
       "source_name": "El Espectador",
       "source_url": "https://www.elespectador.com/bogota/explosion-en-kennedy-afecto-seis-viviendas-policia-analiza-el-elemento-usado/",
       "passes": [
-        "Seguridad territorial detectada.",
-        "Contexto y daños contrastados.",
-        "Control: se eliminan hipótesis no confirmadas."
+        "3 fuentes secundarias independientes",
+        "confirmación policial de segunda fase de investigación",
+        "corrección de una fuente ambigua sobre otro caso de 2024"
       ],
+      "publicable": true,
+      "script_status": "REVISAR",
       "script": {
-        "hook": "En El Amparo, Kennedy, se registró una explosión. Esto es lo que realmente sabemos.",
-        "context": "El hecho afectó varias viviendas y quedó bajo investigación de las autoridades.",
-        "key_fact": "No debe atribuirse autoría ni móvil mientras no exista confirmación oficial.",
-        "citizen_connection": "La comunidad necesita información institucional clara, no rumores.",
-        "close": "El seguimiento debe concentrarse en los resultados de la investigación.",
-        "cta": "¿Qué información deberían aclarar las autoridades?"
+        "hook": "Esta semana volvió a sonar una explosión en El Amparo, Kennedy. Y no es la primera vez.",
+        "context": "En la madrugada del 25 de agosto, un artefacto no identificado explotó en el barrio, afectando varias viviendas. No hubo heridos.",
+        "key_fact": "Es al menos la tercera detonación reportada en ese mismo sector en los últimos dos años, según reportes de la Policía Metropolitana.",
+        "citizen_connection": "Los vecinos de El Amparo tienen derecho a saber qué está pasando en su barrio y qué está haciendo la Policía al respecto.",
+        "close": "Como edilesa de Kennedy, voy a seguir este caso de cerca. ¿Ustedes han vivido situaciones similares en su barrio? Cuéntenme.",
+        "cta": "Cuéntenme si han vivido algo similar en su barrio."
       }
+    },
+    {
+      "id": "2026-08-31-004",
+      "topic_id": "corrupcion-libro-de-la-verdad",
+      "rank": 4,
+      "score": 65,
+      "date": "2026-08-18",
+      "title": "\"Libro de la Verdad\": hallazgos sobre la administración anterior",
+      "place": "Colombia",
+      "categories": [
+        "politica",
+        "corrupcion",
+        "dinero"
+      ],
+      "verification": "alta",
+      "status": "EN DESARROLLO",
+      "historical_status": "CORREGIDO",
+      "summary": "Documento de 135 páginas con 82 hallazgos sobre 22 sectores del Estado, entregado a Fiscalía, Procuraduría y Contraloría. Según El País, solo 23 de esos 82 puntos serían potencialmente constitutivos de corrupción.",
+      "source_name": "El Espectador",
+      "source_url": "https://www.elespectador.com/politica/estos-son-los-detalles-del-libro-de-la-verdad-revelando-82-casos-de-presunta-corrupcion-noticias-hoy/",
+      "passes": [
+        "4 fuentes independientes",
+        "corrección explícita de un vínculo erróneo con la reconstrucción del terremoto"
+      ],
+      "publicable": true,
+      "script_status": "REVISAR",
+      "script": {
+        "hook": "Esta semana el Gobierno entregó un documento con 82 hallazgos sobre la administración anterior. Les explico qué dice y qué no dice.",
+        "context": "El presidente y el vicepresidente entregaron el 'Libro de la Verdad' a la Fiscalía, la Procuraduría y la Contraloría, con hallazgos del proceso de empalme.",
+        "key_fact": "De los 82 puntos, solo 23 corresponderían a hechos que podrían constituir corrupción; el resto son observaciones administrativas, según un análisis periodístico.",
+        "citizen_connection": "Es importante no confundir un hallazgo remitido a investigación con una condena: eso lo determinarán la Fiscalía, la Procuraduría y la Contraloría.",
+        "close": "Vamos a seguir de cerca qué pasa con las investigaciones que se abran.",
+        "cta": "Este es un tema sensible por su carga política — sugiero validar con el equipo antes de publicar cualquier posición."
+      }
+    },
+    {
+      "id": "2026-08-31-006",
+      "topic_id": "kennedy-siniestro-vial-americas-boyaca",
+      "rank": 5,
+      "score": 50,
+      "date": "2026-08-31",
+      "title": "Siniestro vial fatal en Av. Américas con Av. Boyacá, Kennedy",
+      "place": "Kennedy",
+      "categories": [
+        "movilidad",
+        "seguridad",
+        "kennedy",
+        "bogota"
+      ],
+      "verification": "baja",
+      "status": "NO VERIFICADO",
+      "historical_status": "NUEVO",
+      "summary": "Un peatón habría fallecido en un siniestro vial el 31 de agosto. Una sola fuente encontrada hasta ahora, sin URL recuperada ni confirmación de Movilidad/Policía.",
+      "source_name": "PENDIENTE_CONFIRMAR",
+      "source_url": "PENDIENTE_CONFIRMAR",
+      "passes": [
+        "ninguna verificación independiente completada todavía"
+      ],
+      "publicable": false,
+      "script_status": "BLOQUEADO_POR_VERIFICACION",
+      "script": null
+    },
+    {
+      "id": "2026-08-31-005",
+      "topic_id": "kennedy-espacio-publico",
+      "rank": 6,
+      "score": 45,
+      "date": "2026-08-29",
+      "title": "Operativos de recuperación de espacio público en Kennedy",
+      "place": "Kennedy (Techo, María Paz, río Fucha)",
+      "categories": [
+        "seguridad",
+        "kennedy",
+        "bogota"
+      ],
+      "verification": "alta",
+      "status": "CONFIRMADO",
+      "historical_status": "EN CRECIMIENTO",
+      "summary": "Tres operativos en una semana: río Fucha (27 ago.), María Paz (28 ago., 14.300 m²), Techo (29 ago., 802 m²). Se corrige una cifra acumulada errónea usada previamente ('216.000 m²'); la cifra oficial real es de ~22.500 m² (corte feb. 2026).",
+      "source_name": "Alcaldía Local de Kennedy (bogota.gov.co)",
+      "source_url": "https://bogota.gov.co/mi-ciudad/gobierno/intervenidos-14300-m2-de-espacio-publico-en-kennedy-sur-de-bogota",
+      "passes": [
+        "3 fuentes primarias distintas (bogota.gov.co)",
+        "corrección explícita de cifra fabricada previamente"
+      ],
+      "publicable": true,
+      "script_status": "REVISAR",
+      "script": {
+        "hook": "Esta semana en Kennedy hubo tres operativos distintos para recuperar espacio público. Les cuento qué se logró.",
+        "context": "Entre el 27 y el 29 de agosto, la Alcaldía Local, la Policía y otras entidades desmontaron cambuches y recuperaron espacio en el río Fucha, María Paz y Techo.",
+        "key_fact": "Solo en María Paz se recuperaron 14.300 metros cuadrados y se retiraron 72 toneladas de residuos, con 8 cambuches desmontados.",
+        "citizen_connection": "Este es el tipo de trabajo territorial que se hace barrio por barrio en Kennedy.",
+        "close": "Vamos a seguir recorriendo Kennedy para que estos espacios sigan siendo de la comunidad.",
+        "cta": "¿Hay algún espacio público en su sector que necesite atención? Cuéntenme."
+      }
+    },
+    {
+      "id": "2026-08-31-007",
+      "topic_id": "ambiente-incendios-el-nino",
+      "rank": 7,
+      "score": 40,
+      "date": "2026-08-29",
+      "title": "Incendios forestales y probabilidad de El Niño fuerte",
+      "place": "Tolima / Cundinamarca",
+      "categories": [
+        "ambiente",
+        "salud"
+      ],
+      "verification": "media",
+      "status": "EN DESARROLLO",
+      "historical_status": "SEGUIMIENTO",
+      "summary": "19 incendios activos en Tolima según UNGRD (vía Infobae); Cundinamarca suspendió quemas controladas. Solo una fuente periodística encontrada, URL no recuperada.",
+      "source_name": "Infobae",
+      "source_url": "PENDIENTE_CONFIRMAR",
+      "passes": [
+        "una sola fuente, sin segunda verificación independiente"
+      ],
+      "publicable": false,
+      "script_status": "BLOQUEADO_POR_VERIFICACION",
+      "script": null
+    },
+    {
+      "id": "2026-08-31-008",
+      "topic_id": "corrupcion-denuncia-briceno-contratistas",
+      "rank": 8,
+      "score": 35,
+      "date": "2026-08-25",
+      "title": "Denuncia de Daniel Briceño sobre contratistas inhabilitados",
+      "place": "Colombia",
+      "categories": [
+        "politica",
+        "corrupcion",
+        "dinero"
+      ],
+      "verification": "baja",
+      "status": "NO VERIFICADO",
+      "historical_status": "SEGUIMIENTO",
+      "summary": "Denuncia de un congresista ante la Fiscalía sobre contratistas inhabilitados que habrían seguido contratando con el Estado. Sin pronunciamiento oficial de la Fiscalía. URL no recuperada.",
+      "source_name": "Infobae",
+      "source_url": "PENDIENTE_CONFIRMAR",
+      "passes": [
+        "fuente única (el propio denunciante)",
+        "sin confirmación institucional"
+      ],
+      "publicable": false,
+      "script_status": "BLOQUEADO_POR_VERIFICACION",
+      "script": null
+    },
+    {
+      "id": "2026-08-31-009",
+      "topic_id": "kennedy-servicios-cortes-agua-luz",
+      "rank": 9,
+      "score": 20,
+      "date": "2026-08-31",
+      "title": "Cortes programados de agua y energía en Kennedy",
+      "place": "Kennedy",
+      "categories": [
+        "kennedy",
+        "bogota"
+      ],
+      "verification": "baja",
+      "status": "CONFIRMADO",
+      "historical_status": "NUEVO",
+      "summary": "EAAB programó cortes de agua (31 ago.-4 sep., incluye Kennedy el 3 sep.) y Enel reportó corte en Marsella, Kennedy, el 31 de agosto. URLs primarias no recuperadas todavía.",
+      "source_name": "PENDIENTE_CONFIRMAR",
+      "source_url": "PENDIENTE_CONFIRMAR",
+      "passes": [
+        "informacion operativa de servicio, bajo impacto estrategico, sin verificacion de URL todavia"
+      ],
+      "publicable": false,
+      "script_status": "BLOQUEADO_POR_VERIFICACION",
+      "script": null
     }
   ]
 }

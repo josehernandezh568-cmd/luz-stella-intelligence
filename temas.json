@@ -1,0 +1,443 @@
+{
+  "last_updated": "2026-08-31T00:00:00-05:00",
+  "topics": [
+    {
+      "topic_id": "seguridad-el-amparo-kennedy",
+      "titulo_actual": "Explosión sin resolver en El Amparo, Kennedy (25 ago. 2026)",
+      "categoria": [
+        "seguridad"
+      ],
+      "territorio": [
+        "Kennedy",
+        "Bogotá"
+      ],
+      "primera_aparicion": "2026-08-31",
+      "ultima_actualizacion": "2026-08-31",
+      "numero_apariciones": 1,
+      "estado_actual": "SEGUIMIENTO",
+      "importancia_actual": 70,
+      "historial_importancia": [
+        {
+          "fecha": "2026-08-31",
+          "score": 70
+        }
+      ],
+      "resumen_evolucion": "Explosión de artefacto no identificado el 25 de agosto de 2026 en El Amparo, Kennedy; 6-7 viviendas afectadas, sin heridos. El 31 de agosto la Policía confirmó una segunda fase de investigación (recolección de video y testimonios), sin capturas ni autoría confirmada. El barrio tiene antecedentes de episodios similares en jul. 2024 y sep. 2024 (este último con una víctima fatal, caso distinto y ya resuelto en 2024 con capturas).",
+      "publicable": true,
+      "guion_estado": "REVISAR",
+      "ultima_verificacion": "2026-08-31T00:00:00-05:00",
+      "numero_fuentes_verificadas": 3,
+      "fuentes": [
+        {
+          "medio": "El Espectador",
+          "url": "https://www.elespectador.com/bogota/explosion-en-kennedy-afecto-seis-viviendas-policia-analiza-el-elemento-usado/",
+          "tipo": "secundaria",
+          "fecha": "2026-08-25"
+        },
+        {
+          "medio": "LaFM",
+          "url": "https://www.lafm.com.co/orden-publico/explosion-en-el-amparo-kennedy-deja-danos-en-varios-inmuebles-408840",
+          "tipo": "secundaria",
+          "fecha": "2026-08-25"
+        },
+        {
+          "medio": "Pulzo",
+          "url": "https://www.pulzo.com/nacion/bogota/panico-sur-bogota-por-atentado-barrio-amparo-madrugada-PP5283678",
+          "tipo": "secundaria",
+          "fecha": "2026-08-25"
+        }
+      ],
+      "correcciones": [
+        {
+          "fecha": "2026-08-31",
+          "informacion_anterior": "Una nota sin fecha clara mencionaba 'una persona muerta' en una explosión en El Amparo, dejada como REQUIERE DOBLE VERIFICACIÓN.",
+          "informacion_corregida": "Ese hecho corresponde al 10 de septiembre de 2024 (caso distinto y anterior, ya resuelto con capturas), no al del 25 de agosto de 2026.",
+          "motivo": "La fecha de publicación no era clara en la primera búsqueda; una segunda búsqueda más específica permitió fecharlo correctamente.",
+          "fuente": "PENDIENTE_CONFIRMAR"
+        }
+      ]
+    },
+    {
+      "topic_id": "seguridad-militarizacion-bogota",
+      "titulo_actual": "Cabildo abierto sobre asistencia militar en Bogotá",
+      "categoria": [
+        "seguridad",
+        "politica"
+      ],
+      "territorio": [
+        "Bogotá"
+      ],
+      "primera_aparicion": "2026-08-31",
+      "ultima_actualizacion": "2026-08-31",
+      "numero_apariciones": 1,
+      "estado_actual": "SEGUIMIENTO",
+      "importancia_actual": 80,
+      "historial_importancia": [
+        {
+          "fecha": "2026-08-31",
+          "score": 80
+        }
+      ],
+      "resumen_evolucion": "Iniciativa del concejal Julián Uscátegui y el representante José Jaime Uscátegui, con comité promotor inscrito desde enero de 2026. La Registraduría (Resolución 1052 del 19 de agosto de 2026) certificó 37.056 firmas válidas de 52.965 revisadas, frente a un umbral de 31.096. Obliga al Concejo a tramitar un cabildo abierto en un plazo máximo de un mes; no aprueba la militarización por sí sola ni obliga al alcalde Galán a solicitarla. Los promotores citan cifras de estructuras criminales en Bogotá que varían entre fuentes (~200 según Semana, ~250 según Colombia.com) sin una fuente oficial única identificada.",
+      "publicable": true,
+      "guion_estado": "LISTO",
+      "ultima_verificacion": "2026-08-31T00:00:00-05:00",
+      "numero_fuentes_verificadas": 8,
+      "fuentes": [
+        {
+          "medio": "Concejo de Bogotá",
+          "url": "https://concejodebogota.gov.co/administracion-galan-tendra-que-responder-sobre-la-militarizacion-de/cbogota/2026-08-27/153102.php",
+          "tipo": "primaria",
+          "fecha": "2026-08-27"
+        },
+        {
+          "medio": "El Nuevo Siglo",
+          "url": "https://www.elnuevosiglo.com.co/nacion/registraduria-avala-firmas-para-cabildo-sobre-militarizacion-en-bogota",
+          "tipo": "secundaria",
+          "fecha": "2026-08-27"
+        },
+        {
+          "medio": "El Espectador",
+          "url": "https://www.elespectador.com/bogota/militarizacion-de-bogota-llegara-a-debate-tras-validacion-de-37056-firmas/",
+          "tipo": "secundaria",
+          "fecha": "2026-08-27"
+        },
+        {
+          "medio": "El Tiempo",
+          "url": "https://www.eltiempo.com/bogota/esta-de-acuerdo-con-la-militarizacion-de-bogota-esta-propuesta-llega-al-concejo-y-abre-debate-sobre-sus-alcances-frente-a-la-inseguridad-3581878",
+          "tipo": "secundaria",
+          "fecha": "2026-08-28"
+        },
+        {
+          "medio": "Infobae",
+          "url": "https://www.infobae.com/colombia/2026/08/27/registraduria-avalo-las-firmas-para-convocar-al-cabildo-abierto-en-bogota-que-definira-si-se-militariza-o-no-la-ciudad-para-combatir-la-inseguridad/",
+          "tipo": "secundaria",
+          "fecha": "2026-08-27"
+        },
+        {
+          "medio": "CityTV Noticias",
+          "url": "https://citytv.eltiempo.com/programas/arriba-bogota/avalan-firmas-y-bogota-se-prepara-para-debatir-la-militarizacion-de-la-ciudad_94682",
+          "tipo": "secundaria",
+          "fecha": "2026-08-27"
+        },
+        {
+          "medio": "Pulzo",
+          "url": "https://www.pulzo.com/nacion/bogota/37056-firmas-abren-debate-sobre-militarizacion-bogota-concejo-PP5287754",
+          "tipo": "secundaria",
+          "fecha": "2026-08-27"
+        },
+        {
+          "medio": "Semana (contexto histórico, marzo 2026)",
+          "url": "https://www.semana.com/nacion/bogota/articulo/con-mas-de-32000-firmas-en-la-registraduria-concejal-julian-uscategui-busca-que-cabildo-abierto-discuta-militarizacion-de-bogota/202605/",
+          "tipo": "secundaria",
+          "fecha": "2026-03-02"
+        }
+      ],
+      "correcciones": []
+    },
+    {
+      "topic_id": "corrupcion-libro-de-la-verdad",
+      "titulo_actual": "\"Libro de la Verdad\": hallazgos sobre la administración anterior",
+      "categoria": [
+        "corrupcion-transparencia",
+        "politica"
+      ],
+      "territorio": [
+        "Colombia"
+      ],
+      "primera_aparicion": "2026-08-31",
+      "ultima_actualizacion": "2026-08-31",
+      "numero_apariciones": 1,
+      "estado_actual": "CORREGIDO",
+      "importancia_actual": 65,
+      "historial_importancia": [
+        {
+          "fecha": "2026-08-31",
+          "score": 65
+        }
+      ],
+      "resumen_evolucion": "Documento de 135 páginas con 82 casos/hallazgos sobre 22 sectores del Estado, entregado el 18 de agosto de 2026 por el presidente Abelardo De la Espriella y el vicepresidente José Manuel Restrepo a la Fiscal Luz Adriana Camargo, el Procurador Gregorio Eljach y la Contraloría, atribuido a la administración de Gustavo Petro. Según análisis de El País (citado por Pulzo), solo 23 de los 82 puntos corresponderían a hechos que podrían constituir corrupción; el resto son críticas administrativas o de política pública.",
+      "publicable": true,
+      "guion_estado": "REVISAR",
+      "ultima_verificacion": "2026-08-31T00:00:00-05:00",
+      "numero_fuentes_verificadas": 4,
+      "fuentes": [
+        {
+          "medio": "El Colombiano",
+          "url": "https://www.elcolombiano.com/colombia/el-libro-de-la-verdad-pdf-completo-de-la-espriella-petro-corrupcion-PC40069644",
+          "tipo": "secundaria",
+          "fecha": "2026-08-19"
+        },
+        {
+          "medio": "Infobae",
+          "url": "https://www.infobae.com/colombia/2026/08/19/el-libro-de-la-verdad-estas-serian-las-10-denuncias-mas-fuertes-que-lleva-el-informe-del-gobierno-de-abelardo-de-la-espriella-sobre-presunta-corrupcion-en-el-gobierno-de-gustavo-petro/",
+          "tipo": "secundaria",
+          "fecha": "2026-08-19"
+        },
+        {
+          "medio": "El Espectador",
+          "url": "https://www.elespectador.com/politica/estos-son-los-detalles-del-libro-de-la-verdad-revelando-82-casos-de-presunta-corrupcion-noticias-hoy/",
+          "tipo": "secundaria",
+          "fecha": "2026-08-19"
+        },
+        {
+          "medio": "Pulzo (cita análisis de El País: 23 de 82 casos serían corrupción)",
+          "url": "https://www.pulzo.com/nacion/libro-de-la-verdad-en-colombia-hallazgos-contra-el-gobierno-petro-y-crisis-tras-el-terremoto-PP5280756A",
+          "tipo": "secundaria",
+          "fecha": "2026-08-21"
+        }
+      ],
+      "correcciones": [
+        {
+          "fecha": "2026-08-31",
+          "informacion_anterior": "Se presentó vinculado a corrupción en la reconstrucción del terremoto del 10 de agosto.",
+          "informacion_corregida": "Es un documento separado sobre 22 sectores del Estado durante la administración anterior; no hay evidencia de que trate específicamente la reconstrucción.",
+          "motivo": "La única fuente que sugería esa relación (Moncloa) hacía una interpretación editorial propia, no reportaba un hecho verificado.",
+          "fuente": "https://www.pulzo.com/nacion/libro-de-la-verdad-en-colombia-hallazgos-contra-el-gobierno-petro-y-crisis-tras-el-terremoto-PP5280756A"
+        }
+      ]
+    },
+    {
+      "topic_id": "corrupcion-denuncia-briceno-contratistas",
+      "titulo_actual": "Denuncia de Daniel Briceño sobre contratistas inhabilitados",
+      "categoria": [
+        "corrupcion-transparencia"
+      ],
+      "territorio": [
+        "Colombia"
+      ],
+      "primera_aparicion": "2026-08-31",
+      "ultima_actualizacion": "2026-08-31",
+      "numero_apariciones": 1,
+      "estado_actual": "SEGUIMIENTO",
+      "importancia_actual": 35,
+      "historial_importancia": [
+        {
+          "fecha": "2026-08-31",
+          "score": 35
+        }
+      ],
+      "resumen_evolucion": "Denuncia de un congresista ante la Fiscalía sobre contratistas/funcionarios inhabilitados que habrían seguido contratando con el Estado. Sin pronunciamiento de la Fiscalía en ninguna de las verificaciones realizadas hoy.",
+      "publicable": false,
+      "guion_estado": "BLOQUEADO_POR_VERIFICACION",
+      "ultima_verificacion": "2026-08-31T00:00:00-05:00",
+      "numero_fuentes_verificadas": 0,
+      "fuentes": [
+        {
+          "medio": "Infobae",
+          "url": "PENDIENTE_CONFIRMAR",
+          "tipo": "secundaria",
+          "fecha": "2026-08-25"
+        }
+      ],
+      "correcciones": []
+    },
+    {
+      "topic_id": "desastre-terremoto-reconstruccion",
+      "titulo_actual": "Reconstrucción y emergencia económica tras el terremoto del 10 de agosto",
+      "categoria": [
+        "medio-ambiente",
+        "infraestructura",
+        "salud"
+      ],
+      "territorio": [
+        "Colombia"
+      ],
+      "primera_aparicion": "2026-08-31",
+      "ultima_actualizacion": "2026-08-31",
+      "numero_apariciones": 1,
+      "estado_actual": "SEGUIMIENTO",
+      "importancia_actual": 75,
+      "historial_importancia": [
+        {
+          "fecha": "2026-08-31",
+          "score": 75
+        }
+      ],
+      "resumen_evolucion": "Terremoto de magnitud 7.4 el 10 de agosto de 2026 a las 7:34 a.m., epicentro en San José del Palmar, Chocó. El presidente firmó el Decreto 1261 de 2026 (19 de agosto) declarando emergencia económica en 15 departamentos por 30 días. Balance oficial más reciente encontrado (corte 20 de agosto, 6:30 a.m.): 319 fallecidos, 4.506 heridos, 260 desaparecidos.",
+      "publicable": true,
+      "guion_estado": "REVISAR",
+      "ultima_verificacion": "2026-08-31T00:00:00-05:00",
+      "numero_fuentes_verificadas": 2,
+      "fuentes": [
+        {
+          "medio": "Presidencia de la República",
+          "url": "https://www.presidencia.gov.co/prensa/Paginas/Gobierno-Nacional-declaro-oficialmente-la-emergencia-economica-social-260820.aspx",
+          "tipo": "primaria",
+          "fecha": "2026-08-19"
+        },
+        {
+          "medio": "Infobae (cifras de víctimas, corte 20 ago.)",
+          "url": "https://www.infobae.com/colombia/2026/08/20/abelardo-de-la-espriella-decreto-la-emergencia-economica-que-efectos-tendra-en-los-15-departamentos-afectados-por-el-terremoto/",
+          "tipo": "secundaria",
+          "fecha": "2026-08-20"
+        }
+      ],
+      "correcciones": []
+    },
+    {
+      "topic_id": "ambiente-incendios-el-nino",
+      "titulo_actual": "Incendios forestales y probabilidad de El Niño fuerte",
+      "categoria": [
+        "medio-ambiente",
+        "salud"
+      ],
+      "territorio": [
+        "Colombia",
+        "Cundinamarca"
+      ],
+      "primera_aparicion": "2026-08-31",
+      "ultima_actualizacion": "2026-08-31",
+      "numero_apariciones": 1,
+      "estado_actual": "SEGUIMIENTO",
+      "importancia_actual": 40,
+      "historial_importancia": [
+        {
+          "fecha": "2026-08-31",
+          "score": 40
+        }
+      ],
+      "resumen_evolucion": "19 incendios activos en Tolima a corte del 29 de agosto (UNGRD, según Infobae). Cundinamarca suspendió quemas controladas por probabilidad alta de El Niño fuerte. Confianza MEDIA: solo una fuente periodística encontrada, URL no recuperada todavía.",
+      "publicable": false,
+      "guion_estado": "BLOQUEADO_POR_VERIFICACION",
+      "ultima_verificacion": "2026-08-31T00:00:00-05:00",
+      "numero_fuentes_verificadas": 0,
+      "fuentes": [
+        {
+          "medio": "Infobae",
+          "url": "PENDIENTE_CONFIRMAR",
+          "tipo": "secundaria",
+          "fecha": "2026-08-29"
+        }
+      ],
+      "correcciones": []
+    },
+    {
+      "topic_id": "kennedy-espacio-publico",
+      "titulo_actual": "Operativos de recuperación de espacio público en Kennedy",
+      "categoria": [
+        "seguridad",
+        "calidad-de-vida"
+      ],
+      "territorio": [
+        "Kennedy"
+      ],
+      "primera_aparicion": "2026-08-31",
+      "ultima_actualizacion": "2026-08-31",
+      "numero_apariciones": 1,
+      "estado_actual": "EN CRECIMIENTO",
+      "importancia_actual": 45,
+      "historial_importancia": [
+        {
+          "fecha": "2026-08-31",
+          "score": 45
+        }
+      ],
+      "resumen_evolucion": "Al menos tres operativos distintos en una semana: desmonte de cambuches en la ronda del río Fucha (27 ago., incautación de celulares hurtados, estupefacientes y armas blancas); megaoperativo en María Paz/UPZ Corabastos (28 ago., 14.300 m² recuperados, 72 toneladas de residuos, 8 cambuches desmontados); recuperación de 802 m² en Techo (cuatro tráileres retirados). La cifra acumulada oficial de 2025+2026 reportada por la Secretaría Distrital de Gobierno es de ~22.500 m² (corte de febrero de 2026, no de hoy) -- se corrige aquí la cifra de '216.000 m²' usada erróneamente en una actualización anterior, que no tenía respaldo en ninguna fuente real.",
+      "publicable": true,
+      "guion_estado": "REVISAR",
+      "ultima_verificacion": "2026-08-31T00:00:00-05:00",
+      "numero_fuentes_verificadas": 3,
+      "fuentes": [
+        {
+          "medio": "Bogota.gov.co (Alcaldía Local de Kennedy) - Techo, 802 m²",
+          "url": "https://bogota.gov.co/mi-ciudad/gobierno/802-metros-cuadrados-de-espacio-publico-recuperados-en-kennedy-bogota",
+          "tipo": "primaria",
+          "fecha": "2026-08-29"
+        },
+        {
+          "medio": "Bogota.gov.co - María Paz, 14.300 m²",
+          "url": "https://bogota.gov.co/mi-ciudad/gobierno/intervenidos-14300-m2-de-espacio-publico-en-kennedy-sur-de-bogota",
+          "tipo": "primaria",
+          "fecha": "2026-08-28"
+        },
+        {
+          "medio": "Bogota.gov.co (Secretaría de Seguridad) - río Fucha",
+          "url": "https://bogota.gov.co/mi-ciudad/seguridad/bogota-recupera-espacio-publico-en-sector-del-rio-fucha-en-kennedy",
+          "tipo": "primaria",
+          "fecha": "2026-08-27"
+        }
+      ],
+      "correcciones": [
+        {
+          "fecha": "2026-08-31",
+          "informacion_anterior": "Cifra acumulada de '216.000 m² recuperados en Kennedy durante 2026'.",
+          "informacion_corregida": "No existe una fuente real para esa cifra. La cifra oficial encontrada (Secretaría Distrital de Gobierno) es de aproximadamente 22.500 m² acumulados entre 2025 y 2026, con corte a febrero de 2026.",
+          "motivo": "Error propio: la cifra de 216.000 m² fue introducida sin respaldo en una actualización anterior del radar.",
+          "fuente": "http://www.gobiernobogota.gov.co/noticias/operacion-espacio-publico-mas-22-mil-m2-recuperados-kennedy"
+        }
+      ]
+    },
+    {
+      "topic_id": "kennedy-siniestro-vial-americas-boyaca",
+      "titulo_actual": "Siniestro vial fatal en Av. Américas con Av. Boyacá, Kennedy",
+      "categoria": [
+        "seguridad-vial",
+        "movilidad"
+      ],
+      "territorio": [
+        "Kennedy"
+      ],
+      "primera_aparicion": "2026-08-31",
+      "ultima_actualizacion": "2026-08-31",
+      "numero_apariciones": 1,
+      "estado_actual": "NUEVO",
+      "importancia_actual": 50,
+      "historial_importancia": [
+        {
+          "fecha": "2026-08-31",
+          "score": 50
+        }
+      ],
+      "resumen_evolucion": "Peatón fallecido en siniestro vial el 31 de agosto de 2026, aprox. 5:00 a.m. Una sola fuente encontrada hasta ahora; URL no recuperada todavía; falta confirmación de Movilidad/Policía.",
+      "publicable": false,
+      "guion_estado": "BLOQUEADO_POR_VERIFICACION",
+      "ultima_verificacion": "2026-08-31T00:00:00-05:00",
+      "numero_fuentes_verificadas": 0,
+      "fuentes": [
+        {
+          "medio": "QHubo Bogotá",
+          "url": "PENDIENTE_CONFIRMAR",
+          "tipo": "secundaria",
+          "fecha": "2026-08-31"
+        }
+      ],
+      "correcciones": []
+    },
+    {
+      "topic_id": "kennedy-servicios-cortes-agua-luz",
+      "titulo_actual": "Cortes programados de agua y energía en Kennedy",
+      "categoria": [
+        "servicios-publicos"
+      ],
+      "territorio": [
+        "Kennedy"
+      ],
+      "primera_aparicion": "2026-08-31",
+      "ultima_actualizacion": "2026-08-31",
+      "numero_apariciones": 1,
+      "estado_actual": "NUEVO",
+      "importancia_actual": 20,
+      "historial_importancia": [
+        {
+          "fecha": "2026-08-31",
+          "score": 20
+        }
+      ],
+      "resumen_evolucion": "EAAB programó cortes de agua del 31 ago. al 4 sep. incluyendo Kennedy (3 sep.). Enel reportó corte en el barrio Marsella, Kennedy, el 31 de agosto desde las 9:00 a.m. URLs primarias no recuperadas todavía.",
+      "publicable": false,
+      "guion_estado": "BLOQUEADO_POR_VERIFICACION",
+      "ultima_verificacion": "2026-08-31T00:00:00-05:00",
+      "numero_fuentes_verificadas": 0,
+      "fuentes": [
+        {
+          "medio": "EAAB / Enel (vía Infobae, Radio Santa Fe)",
+          "url": "PENDIENTE_CONFIRMAR",
+          "tipo": "primaria",
+          "fecha": "2026-08-31"
+        }
+      ],
+      "correcciones": []
+    }
+  ]
+}
