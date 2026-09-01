@@ -1,15 +1,34 @@
-# Luz Stella Intelligence V2
+# Luz Stella Intelligence V3
 
-Sube toda esta estructura al repositorio conservando las carpetas.
+## Novedades
+- Radar priorizado por score.
+- Filtro por categoría, verificación, estado histórico y publicabilidad.
+- Centro de guiones con bloqueo visual para noticias no verificadas.
+- Seguimiento por `topic_id`.
+- Evolución de importancia por tema.
+- Fuentes acumuladas por tema.
+- Correcciones históricas visibles.
+- Gráficos de categorías, volumen por corte, verificación y estados históricos.
 
-## GitHub Pages
+## Instalación
+Sube toda la estructura al repositorio y reemplaza:
+- `index.html`
+- `data/radar.json`
+- `data/temas.json`
+- `data/historico.json`
+
+Conserva la carpeta `prompts/`.
+
+GitHub Pages:
 Settings → Pages → Deploy from a branch → `main` → `/ (root)`.
 
-## Actualización diaria
-1. Ejecuta el radar con Claude.
-2. Sustituye `data/radar.json` con el JSON nuevo.
-3. Agrega el resumen diario a `data/historico.json`.
-4. Commit changes.
-5. El dashboard se actualizará en GitHub Pages.
+## Flujo diario
+1. Ejecuta el radar en Claude.
+2. Descarga/copias los 3 JSON completos.
+3. Reemplaza `data/radar.json` y `data/temas.json`.
+4. `data/historico.json` debe conservar todos los cortes anteriores y agregar el nuevo.
+5. Commit.
+6. El dashboard se actualiza automáticamente.
 
-El dashboard incluye ranking, filtros, fuentes originales, gráficos, histórico y centro de guiones.
+## Regla crítica
+Que una noticia tenga ranking alto no significa que sea publicable. El dashboard muestra ambas dimensiones por separado.

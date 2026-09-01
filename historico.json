@@ -7,7 +7,7 @@
       "alta": 5,
       "media": 1,
       "baja": 3,
-      "politica": 3,
+      "politica": 2,
       "corrupcion": 2,
       "dinero": 2,
       "seguridad": 4,
@@ -16,6 +16,23 @@
       "salud": 2,
       "kennedy": 4,
       "bogota": 6
+    },
+    {
+      "date": "2026-09-01",
+      "cut": "PENDIENTE_CONFIRMAR - hora exacta no registrada; primera ejecucion del dia",
+      "total": 10,
+      "alta": 6,
+      "media": 1,
+      "baja": 3,
+      "politica": 2,
+      "corrupcion": 2,
+      "dinero": 2,
+      "seguridad": 5,
+      "movilidad": 1,
+      "ambiente": 2,
+      "salud": 2,
+      "kennedy": 5,
+      "bogota": 7
     }
   ],
   "nota": "Este es el primer registro historico real generado para este proyecto. No existen cortes anteriores en data/historico.json con los que comparar evolucion cuantitativa dia a dia; a partir de este corte se puede empezar a construir la serie temporal."
