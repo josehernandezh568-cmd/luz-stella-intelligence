@@ -1,0 +1,314 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Luz Stella Intelligence V3.1</title>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<style>
+:root{
+ --bg:#071019;--panel:#0f1a26;--panel2:#142334;--line:#263a4d;--txt:#f7fbff;--muted:#9fb0c1;
+ --cyan:#63ddff;--green:#61df98;--yellow:#ffd46a;--red:#ff7d89;--purple:#a990ff;
+}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--txt);font:14px/1.45 Inter,system-ui,-apple-system,Segoe UI,sans-serif}
+header{position:sticky;top:0;z-index:20;background:#071019e8;backdrop-filter:blur(10px);border-bottom:1px solid var(--line);padding:14px 4%;display:flex;justify-content:space-between;align-items:center}
+.brand{font-weight:900;letter-spacing:.02em}.brand small{display:block;color:var(--muted);font-weight:500}
+main{max-width:1500px;margin:auto;padding:28px 4% 70px}
+.hero{padding:30px;border:1px solid var(--line);border-radius:22px;background:radial-gradient(circle at 88% 0,#1c4a62,transparent 34%),var(--panel)}
+.ey{color:var(--cyan);font-weight:900;font-size:11px;letter-spacing:.13em}.hero h1{font-size:42px;line-height:1.05;margin:6px 0 10px}.muted{color:var(--muted)}
+.stats{display:grid;grid-template-columns:repeat(6,1fr);gap:10px;margin:14px 0 20px}.stat,.panel,.card,.topic-card,.script-card{background:var(--panel);border:1px solid var(--line);border-radius:16px}
+.stat{padding:15px}.stat b{display:block;font-size:27px}.stat span{color:var(--muted);font-size:12px}
+.nav{display:flex;gap:8px;flex-wrap:wrap;margin:20px 0}.nav button{border:1px solid var(--line);background:#0d1722;color:#dbe7ef;border-radius:999px;padding:9px 12px;cursor:pointer}.nav button.active{border-color:var(--cyan);color:var(--cyan)}
+.controls{display:grid;grid-template-columns:2fr repeat(4,1fr);gap:8px;margin:16px 0}.controls input,.controls select{background:var(--panel);border:1px solid var(--line);color:white;border-radius:10px;padding:11px}
+.cards,.scripts,.topics,.charts{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}
+.card,.topic-card,.script-card,.panel{padding:17px}
+.card h3,.topic-card h3,.script-card h3{margin:8px 0}
+.topline{display:flex;justify-content:space-between;gap:10px;align-items:center;color:var(--cyan);font-size:11px;font-weight:900}
+.summary{color:var(--muted)}
+.tags{display:flex;gap:5px;flex-wrap:wrap;margin:8px 0}.tag{display:inline-block;border:1px solid #3b536a;border-radius:999px;padding:4px 7px;font-size:10px}
+.v-alta{border-color:#347052;color:var(--green)}.v-media{border-color:#6d5e2f;color:var(--yellow)}.v-baja{border-color:#713943;color:var(--red)}
+.h-NUEVO{border-color:#3b6281;color:var(--cyan)}.h-SEGUIMIENTO{border-color:#5a5f69;color:#d4dde6}.h-EN-CRECIMIENTO{border-color:#3f6f50;color:var(--green)}
+.h-PERDIENDO-RELEVANCIA{border-color:#6e6236;color:var(--yellow)}.h-CORREGIDO{border-color:#74424b;color:var(--red)}.h-CERRADO{border-color:#4b5570;color:#b5c6dc}
+.ready{color:var(--green)}.review{color:var(--yellow)}.blocked{color:var(--red)}
+.actions{display:flex;gap:8px;justify-content:space-between;align-items:center;margin-top:12px}.btn{background:#172739;color:white;border:1px solid #3a526a;border-radius:8px;padding:8px 10px;cursor:pointer}.btn:hover{border-color:var(--cyan)}.link{color:var(--cyan);text-decoration:none;font-size:12px}
+section{margin-top:35px}.chartbox{height:260px}.panel h3{margin-top:5px}
+pre{white-space:pre-wrap;background:#08111a;border:1px solid var(--line);border-radius:10px;padding:12px;color:#dce8f2;line-height:1.55;max-height:360px;overflow:auto}
+.source-list{padding-left:18px}.source-list li{margin:7px 0;color:var(--muted)}
+.timeline{border-left:2px solid var(--line);padding-left:18px}.trow{position:relative;margin:0 0 14px}.trow:before{content:"";position:absolute;left:-24px;top:6px;width:9px;height:9px;border-radius:50%;background:var(--cyan)}
+.modal{position:fixed;inset:0;background:#000c;display:grid;place-items:center;padding:20px;z-index:50}.hide{display:none}.modalbox{width:min(980px,100%);max-height:90vh;overflow:auto;background:var(--panel2);border:1px solid var(--line);border-radius:18px;padding:24px;position:relative}.close{position:absolute;right:14px;top:7px;background:none;border:0;color:#fff;font-size:28px;cursor:pointer}
+.notice{padding:12px;border:1px solid #64434a;border-radius:10px;background:#2a151a;color:#ffc2c8;margin:10px 0}
+.oknotice{padding:12px;border:1px solid #335d46;border-radius:10px;background:#10251b;color:#a5efbd;margin:10px 0}
+.cutbox{margin:18px 0 4px;padding:18px;border:1px solid var(--line);border-radius:16px;background:var(--panel2)}
+.cutgrid{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-top:12px}
+.cutmetric{padding:11px;border:1px solid var(--line);border-radius:12px;background:#0b1621}
+.cutmetric b{display:block;font-size:20px}.cutmetric span{color:var(--muted);font-size:11px}
+.actionrow{display:flex;gap:7px;flex-wrap:wrap;margin-top:12px}
+.btn-primary{border-color:var(--cyan);color:var(--cyan)}
+.btn-ready{border-color:#347052;color:var(--green)}
+.btn-danger{border-color:#713943;color:var(--red)}
+.script-card.is-ready{border-color:#347052}
+.script-card.is-blocked{border-color:#713943}
+.sourcebox{padding:10px 12px;border:1px solid var(--line);border-radius:10px;margin:7px 0;background:#0b1621}
+@media(max-width:700px){.cutgrid{grid-template-columns:1fr 1fr}}
+footer{border-top:1px solid var(--line);padding:20px 4%;color:var(--muted);font-size:11px;display:flex;justify-content:space-between}
+@media(max-width:1050px){.stats{grid-template-columns:repeat(3,1fr)}.controls{grid-template-columns:1fr 1fr}.cards,.scripts,.topics,.charts{grid-template-columns:1fr}}
+@media(max-width:600px){header{padding:12px 14px}.hero h1{font-size:31px}.stats,.controls{grid-template-columns:1fr}main{padding:20px 14px 50px}}
+</style>
+</head>
+<body>
+<header>
+ <div class="brand">LUZ STELLA INTELLIGENCE <small>Radar · histórico · fuentes · guiones</small></div>
+ <div id="updated" class="muted">Cargando…</div>
+</header>
+<main>
+ <div class="hero">
+  <div class="ey">CENTRO DE INTELIGENCIA V3.1</div>
+  <h1>De la noticia a la evolución y al guion.</h1>
+  <p class="muted">El radar muestra qué ocurre hoy; el histórico conserva cómo cambia cada tema; los guiones solo se habilitan cuando la verificación lo permite.</p>
+ </div>
+
+ <div id="lastCut" class="cutbox">
+  <div class="ey">ÚLTIMO CORTE</div>
+  <h3 id="cutTitle" style="margin:5px 0">Cargando último corte…</h3>
+  <p id="cutNote" class="muted"></p>
+  <div id="cutMetrics" class="cutgrid"></div>
+ </div>
+
+ <div id="stats" class="stats"></div>
+
+ <div class="nav">
+  <button class="active" data-view="radar">Radar</button>
+  <button data-view="guiones">Guiones</button>
+  <button data-view="temas">Seguimiento de temas</button>
+  <button data-view="analitica">Analítica</button>
+ </div>
+
+ <section id="view-radar" class="view">
+  <div class="ey">RADAR DEL DÍA</div><h2>Noticias priorizadas</h2>
+  <div class="controls">
+   <input id="q" placeholder="Buscar título, tema, lugar…">
+   <select id="category"><option value="all">Todas las categorías</option></select>
+   <select id="verification"><option value="all">Toda verificación</option><option value="alta">Alta</option><option value="media">Media</option><option value="baja">Baja</option></select>
+   <select id="historical"><option value="all">Todo estado histórico</option></select>
+   <select id="publishable"><option value="all">Publicable o bloqueado</option><option value="true">Publicable</option><option value="false">No publicable</option></select>
+  </div>
+  <div id="cards" class="cards"></div>
+ </section>
+
+ <section id="view-guiones" class="view hide">
+  <div class="ey">CENTRO DE GUIONES</div><h2>🎬 Guiones por noticia</h2>
+  <p class="muted">Los temas no publicables aparecen bloqueados. Los temas en revisión muestran el borrador pero advierten que todavía no debe grabarse.</p>
+  <div id="scripts" class="scripts"></div>
+ </section>
+
+ <section id="view-temas" class="view hide">
+  <div class="ey">MEMORIA DEL SISTEMA</div><h2>Seguimiento de temas</h2>
+  <div id="topics" class="topics"></div>
+ </section>
+
+ <section id="view-analitica" class="view hide">
+  <div class="ey">ANALÍTICA</div><h2>Evolución y distribución</h2>
+  <div class="charts">
+   <div class="panel"><h3>Noticias por categoría</h3><div class="chartbox"><canvas id="catChart"></canvas></div></div>
+   <div class="panel"><h3>Volumen por corte</h3><div class="chartbox"><canvas id="histChart"></canvas></div></div>
+   <div class="panel"><h3>Verificación del radar</h3><div class="chartbox"><canvas id="verChart"></canvas></div></div>
+   <div class="panel"><h3>Estado histórico de temas</h3><div class="chartbox"><canvas id="stateChart"></canvas></div></div>
+  </div>
+ </section>
+</main>
+
+<div class="modal hide" id="modal"><div class="modalbox"><button class="close" onclick="closeModal()">×</button><div id="modalContent"></div></div></div>
+
+<footer><span>Luz Stella Intelligence V3.1</span><span>Solo información pública verificada · revisión humana recomendada</span></footer>
+
+<script>
+let RADAR=[], TOPICS=[], HIST=[], LAST="";
+const LABEL={politica:"Política",corrupcion:"Corrupción",dinero:"Dinero",seguridad:"Seguridad",salud:"Salud",ambiente:"Ambiente",bogota:"Bogotá",kennedy:"Kennedy",movilidad:"Movilidad",justicia:"Justicia"};
+const $=s=>document.querySelector(s);
+const esc=s=>(s??"").toString().replace(/[&<>"']/g,m=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#039;"}[m]));
+const hs=s=>(s||"").replaceAll(" ","-");
+const scriptText=s=>!s?"":`HOOK:\n${s.hook||""}\n\nCONTEXTO:\n${s.context||""}\n\nDATO CLAVE:\n${s.key_fact||""}\n\nCONEXIÓN CIUDADANA:\n${s.citizen_connection||""}\n\nCIERRE:\n${s.close||""}\n\nCTA:\n${s.cta||""}${s.screen_text?`\n\nTEXTO EN PANTALLA:\n${s.screen_text}`:""}${s.broll?`\n\nB-ROLL:\n${s.broll}`:""}${s.caption?`\n\nCAPTION:\n${s.caption}`:""}`;
+
+async function boot(){
+ const [r,t,h]=await Promise.all([fetch("data/radar.json"),fetch("data/temas.json"),fetch("data/historico.json")]);
+ const rr=await r.json(),tt=await t.json(),hh=await h.json();
+ RADAR=rr.items||[]; TOPICS=tt.topics||[]; HIST=hh.cuts||hh.days||[]; LAST=rr.last_updated||tt.last_updated||"";
+ updated.textContent="Actualizado · "+(LAST?LAST.replace("T"," ").slice(0,16):"sin fecha");
+ init();
+}
+function init(){
+ const cats=[...new Set(RADAR.flatMap(x=>x.categories||[]))].sort();
+ category.innerHTML+=cats.map(c=>`<option value="${c}">${LABEL[c]||c}</option>`).join("");
+ const states=[...new Set(RADAR.map(x=>x.historical_status).filter(Boolean))].sort();
+ historical.innerHTML+=states.map(s=>`<option value="${s}">${s}</option>`).join("");
+ renderLastCut();renderStats();renderRadar();renderScripts();renderTopics();renderCharts();
+ [q,category,verification,historical,publishable].forEach(x=>x.addEventListener("input",renderRadar));
+ document.querySelectorAll(".nav button").forEach(b=>b.onclick=()=>switchView(b.dataset.view,b));
+}
+function switchView(view,btn){
+ document.querySelectorAll(".view").forEach(v=>v.classList.add("hide"));
+ $("#view-"+view).classList.remove("hide");
+ document.querySelectorAll(".nav button").forEach(b=>b.classList.remove("active"));btn.classList.add("active");
+}
+
+function renderLastCut(){
+ const c=HIST.length?HIST[HIST.length-1]:null;
+ if(!c){cutTitle.textContent="Sin cortes históricos registrados";cutNote.textContent="";cutMetrics.innerHTML="";return;}
+ cutTitle.textContent=`${c.date||"Sin fecha"} · ${c.cut||"corte registrado"}`;
+ cutNote.textContent=`Última actualización del radar: ${LAST||"sin fecha registrada"}.`;
+ cutMetrics.innerHTML=[
+  ["Noticias",c.total??RADAR.length],["Alta",c.alta??0],["Media",c.media??0],["Baja",c.baja??0]
+ ].map(x=>`<div class="cutmetric"><b>${x[1]}</b><span>${x[0]}</span></div>`).join("");
+}
+function topicFor(x){return TOPICS.find(t=>t.topic_id===x.topic_id)}
+function sourceList(x){
+ const t=topicFor(x), arr=(t?.fuentes||[]).filter(s=>s.url && s.url!=="PENDIENTE_CONFIRMAR");
+ if(!arr.length && x.source_url && x.source_url!=="PENDIENTE_CONFIRMAR") arr.push({medio:x.source_name||"Fuente principal",url:x.source_url,tipo:"principal",fecha:x.date||""});
+ return arr;
+}
+function openSources(id){
+ const x=RADAR.find(a=>a.id===id), arr=sourceList(x);
+ modalContent.innerHTML=`<div class="ey">FUENTES · NOTICIA #${x.rank}</div><h2>${esc(x.title)}</h2>
+ ${arr.length?arr.map((s,i)=>`<div class="sourcebox"><b>${i+1}. ${esc(s.medio||"Fuente")}</b><br><span class="muted">${esc(s.tipo||"")} ${esc(s.fecha||"")}</span><br><a class="link" href="${s.url}" target="_blank" rel="noopener">Abrir fuente oficial/original ↗</a></div>`).join(""):`<div class="notice">No hay URL verificada disponible todavía.</div>`}`;
+ modal.classList.remove("hide");
+}
+function openEvolution(id){
+ const x=RADAR.find(a=>a.id===id),t=topicFor(x);
+ if(t) return openTopic(t.topic_id);
+ modalContent.innerHTML=`<div class="notice">Este registro todavía no tiene evolución histórica asociada.</div>`;
+ modal.classList.remove("hide");
+}
+function openScript(id){
+ const x=RADAR.find(a=>a.id===id);
+ modalContent.innerHTML=`<div class="ey">GUION #${x.rank}</div><h2>${esc(x.title)}</h2>
+ ${(!x.publicable||x.script_status!=="LISTO")?`<div class="notice">⚠️ Estado: ${esc(x.script_status||"BLOQUEADO")}. ${!x.publicable?"NO PUBLICAR TODAVÍA.":"Requiere revisión del equipo antes de grabar."}</div>`:`<div class="oknotice">✓ Guion LISTO para revisión final del equipo.</div>`}
+ ${x.script?`<pre>${esc(scriptText(x.script))}</pre><button class="btn btn-primary" onclick="copyScript('${x.id}')">Copiar guion</button>`:`<p class="muted">No existe guion disponible.</p>`}`;
+ modal.classList.remove("hide");
+}
+
+function renderStats(){
+ const p=RADAR.filter(x=>x.publicable).length,ready=RADAR.filter(x=>x.script_status==="LISTO").length,blocked=RADAR.filter(x=>!x.publicable).length;
+ stats.innerHTML=[
+  ["Noticias",RADAR.length],["Publicables",p],["Guiones listos",ready],["Bloqueadas",blocked],
+  ["Temas históricos",TOPICS.length],["Kennedy",RADAR.filter(x=>(x.categories||[]).includes("kennedy")).length]
+ ].map(x=>`<div class="stat"><b>${x[1]}</b><span>${x[0]}</span></div>`).join("");
+}
+function filtered(){
+ let arr=RADAR.filter(x=>
+   (category.value==="all"||(x.categories||[]).includes(category.value)) &&
+   (verification.value==="all"||x.verification===verification.value) &&
+   (historical.value==="all"||x.historical_status===historical.value) &&
+   (publishable.value==="all"||String(!!x.publicable)===publishable.value) &&
+   (!q.value||JSON.stringify(x).toLowerCase().includes(q.value.toLowerCase()))
+ );
+ return arr.sort((a,b)=>(a.rank??999)-(b.rank??999));
+}
+function badgeVerification(v){return `<span class="tag v-${v}">Verificación ${v}</span>`}
+function badgeHist(s){return s?`<span class="tag h-${hs(s)}">${s}</span>`:""}
+function scriptState(x){
+ if(x.script_status==="LISTO")return `<span class="ready">● LISTO</span>`;
+ if(x.script_status?.includes("REVISAR"))return `<span class="review">● REVISAR</span>`;
+ return `<span class="blocked">● BLOQUEADO</span>`;
+}
+function renderRadar(){
+ cards.innerHTML=filtered().map(x=>`
+ <article class="card">
+  <div class="topline"><span>#${x.rank} · ${x.score}/100</span><span>${esc(x.place)}</span></div>
+  <h3>${esc(x.title)}</h3>
+  <div class="tags">${(x.categories||[]).map(c=>`<span class="tag">${LABEL[c]||esc(c)}</span>`).join("")}${badgeVerification(x.verification)}${badgeHist(x.historical_status)}</div>
+  <p class="summary">${esc(x.summary)}</p>
+  <div class="actions"><span>${scriptState(x)}</span></div>
+   <div class="actionrow">
+    <button class="btn" onclick="openSources('${x.id}')">Ver fuentes</button>
+    <button class="btn" onclick="openEvolution('${x.id}')">Ver evolución</button>
+    <button class="btn ${x.script_status==="LISTO"?"btn-ready":(!x.publicable?"btn-danger":"")}" onclick="openScript('${x.id}')">Ver guion</button>
+    <button class="btn" onclick="openRadar('${x.id}')">Ver ficha</button>
+   </div>
+ </article>`).join("");
+}
+function renderScripts(){
+ const ordered=RADAR.slice().sort((a,b)=>{
+  const pa=a.script_status==="LISTO"?0:(a.script?1:2), pb=b.script_status==="LISTO"?0:(b.script?1:2);
+  return pa-pb || (a.rank??999)-(b.rank??999);
+ });
+ scripts.innerHTML=ordered.map(x=>{
+  const hardBlocked=!x.publicable;
+  const ready=x.publicable&&x.script_status==="LISTO"&&!!x.script;
+  const hasDraft=!!x.script;
+  return `<article class="script-card ${ready?"is-ready":hardBlocked?"is-blocked":""}">
+   <div class="topline"><span>GUION #${x.rank}</span><span>${scriptState(x)}</span></div>
+   <h3>${esc(x.title)}</h3>
+   ${ready?`<div class="oknotice">✓ LISTO. Guion habilitado para revisión final y grabación.</div>`:
+     hardBlocked?`<div class="notice">⛔ NO PUBLICAR TODAVÍA. Verificación ${esc(x.verification)} · ${esc(x.script_status||"BLOQUEADO")}.</div>`:
+     `<div class="notice">⚠️ BORRADOR EN REVISIÓN. Es publicable, pero el guion todavía no está marcado LISTO.</div>`}
+   ${hasDraft?`<pre>${esc(scriptText(x.script))}</pre>`:`<p class="muted">No existe guion hasta superar la verificación.</p>`}
+   <div class="actionrow">
+    <button class="btn" onclick="openSources('${x.id}')">Ver fuentes</button>
+    <button class="btn" onclick="openEvolution('${x.id}')">Ver evolución</button>
+    ${hasDraft?`<button class="btn btn-primary" onclick="copyScript('${x.id}')">Copiar guion</button>`:""}
+   </div>
+  </article>`
+ }).join("");
+}
+function renderTopics(){
+ topics.innerHTML=TOPICS.slice().sort((a,b)=>(b.importancia_actual||0)-(a.importancia_actual||0)).map(t=>`
+ <article class="topic-card">
+  <div class="topline"><span>${esc(t.topic_id)}</span><span>${t.importancia_actual??"-"}/100</span></div>
+  <h3>${esc(t.titulo_actual)}</h3>
+  <div class="tags">${badgeHist(t.estado_actual)}<span class="tag">${(t.numero_fuentes_verificadas??0)} fuentes verificadas</span></div>
+  <p class="summary">${esc(t.resumen_evolucion)}</p>
+  <div class="actions"><span class="muted">Última: ${esc(t.ultima_actualizacion||"")}</span><button class="btn" onclick="openTopic('${t.topic_id}')">Ver evolución</button></div>
+ </article>`).join("");
+}
+function openRadar(id){
+ const x=RADAR.find(a=>a.id===id); const t=TOPICS.find(z=>z.topic_id===x.topic_id);
+ modalContent.innerHTML=`
+  <div class="ey">NOTICIA #${x.rank} · ${x.score}/100</div><h2>${esc(x.title)}</h2>
+  <div class="tags">${badgeVerification(x.verification)}${badgeHist(x.historical_status)}</div>
+  <p class="summary">${esc(x.summary)}</p>
+  <h3>Verificación</h3><ol>${(x.passes||[]).map(p=>`<li>${esc(p)}</li>`).join("")}</ol>
+  <h3>Fuentes</h3><p><button class="btn" onclick="openSources('${x.id}')">Ver todas las fuentes verificadas</button></p>
+  <h3>Estado del guion</h3><p>${scriptState(x)}</p>
+  ${!x.publicable?`<div class="notice">Esta noticia está en el ranking por relevancia, pero no debe publicarse todavía.</div>`:""}
+  ${x.script?`<pre>${esc(scriptText(x.script))}</pre>`:"<p class='muted'>Sin guion disponible.</p>"}
+  ${t?`<h3>Historia del tema</h3><p class="summary">${esc(t.resumen_evolucion)}</p>`:""}
+ `;
+ modal.classList.remove("hide");
+}
+function openTopic(id){
+ const t=TOPICS.find(x=>x.topic_id===id);
+ const sources=(t.fuentes||[]).map(s=>`<li><a class="link" href="${s.url}" target="_blank">${esc(s.medio)} ↗</a> · ${esc(s.tipo||"")} · ${esc(s.fecha||"")}</li>`).join("");
+ const scores=(t.historial_importancia||[]).map(s=>`<div class="trow"><b>${esc(s.fecha)} · ${s.score}/100</b></div>`).join("");
+ const corrections=(t.correcciones||[]).map(c=>`<div class="notice"><b>Corrección ${esc(c.fecha)}</b><br>${esc(c.informacion_anterior)}<br><b>→</b> ${esc(c.informacion_corregida)}<br><small>${esc(c.motivo)}</small></div>`).join("");
+ modalContent.innerHTML=`
+  <div class="ey">TOPIC ID</div><h2>${esc(t.titulo_actual)}</h2><p class="muted">${esc(t.topic_id)}</p>
+  <div class="tags">${badgeHist(t.estado_actual)}<span class="tag">${t.importancia_actual}/100</span><span class="tag">${t.numero_fuentes_verificadas||0} fuentes verificadas</span></div>
+  <p class="summary">${esc(t.resumen_evolucion)}</p>
+  <h3>Evolución de importancia</h3><div class="timeline">${scores||"<span class='muted'>Sin histórico suficiente.</span>"}</div>
+  <h3>Fuentes acumuladas</h3><ul class="source-list">${sources||"<li>Sin fuentes registradas</li>"}</ul>
+  ${corrections?`<h3>Correcciones</h3>${corrections}`:""}
+ `;
+ modal.classList.remove("hide");
+}
+function closeModal(){modal.classList.add("hide")}
+async function copyScript(id){
+ const x=RADAR.find(a=>a.id===id), text=scriptText(x?.script);
+ if(!text)return;
+ try{await navigator.clipboard.writeText(text);alert("Guion copiado.");}
+ catch(e){prompt("Copia el guion:",text);}
+}
+function renderCharts(){
+ const cats={}; RADAR.forEach(x=>(x.categories||[]).forEach(c=>cats[LABEL[c]||c]=(cats[LABEL[c]||c]||0)+1));
+ new Chart(catChart,{type:"bar",data:{labels:Object.keys(cats),datasets:[{data:Object.values(cats)}]},options:{responsive:true,maintainAspectRatio:false,plugins:{legend:{display:false}}}});
+ new Chart(histChart,{type:"line",data:{labels:HIST.map(x=>`${x.date} ${x.cut||""}`),datasets:[{label:"Noticias",data:HIST.map(x=>x.total||0)}]},options:{responsive:true,maintainAspectRatio:false}});
+ const vv={alta:0,media:0,baja:0}; RADAR.forEach(x=>vv[x.verification]=(vv[x.verification]||0)+1);
+ new Chart(verChart,{type:"doughnut",data:{labels:Object.keys(vv),datasets:[{data:Object.values(vv)}]},options:{responsive:true,maintainAspectRatio:false}});
+ const ss={};TOPICS.forEach(t=>ss[t.estado_actual]=(ss[t.estado_actual]||0)+1);
+ new Chart(stateChart,{type:"bar",data:{labels:Object.keys(ss),datasets:[{data:Object.values(ss)}]},options:{responsive:true,maintainAspectRatio:false,plugins:{legend:{display:false}}}});
+}
+modal.addEventListener("click",e=>{if(e.target.id==="modal")closeModal()});
+boot().catch(err=>{document.body.innerHTML=`<main><h2>Error cargando datos</h2><p>${esc(err.message)}</p><p>Prueba desde GitHub Pages, no abriendo el archivo local directamente.</p></main>`});
+</script>
+</body>
+</html>
