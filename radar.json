@@ -1,11 +1,45 @@
 {
-  "last_updated": "2026-08-31T00:00:00-05:00",
+  "last_updated": "2026-09-01T00:10:00-05:00",
   "timezone": "America/Bogota",
   "items": [
     {
+      "id": "2026-09-01-001",
+      "topic_id": "seguridad-tren-aragua-kennedy-kevin-angel",
+      "rank": 1,
+      "score": 88,
+      "date": "2026-09-01",
+      "title": "Capturas del Tren de Aragua por el asesinato del profesor Kevin Santiago Angel, Kennedy",
+      "place": "Kennedy, Bogota",
+      "categories": [
+        "seguridad",
+        "kennedy",
+        "bogota"
+      ],
+      "verification": "media",
+      "status": "CONFIRMADO",
+      "historical_status": "NUEVO",
+      "summary": "La Fiscalia vinculo a 8 presuntos integrantes del Tren de Aragua al asesinato de Kevin Santiago Angel, profesor y lider comunitario de Kennedy asesinado en mayo de 2026 por su trabajo social con jovenes. Siete capturas en Bogota y Pamplona; una persona ya recluida en La Dorada.",
+      "source_name": "Infobae",
+      "source_url": "https://www.infobae.com/colombia/2026/09/01/el-tren-de-aragua-habria-sido-el-responsable-del-brutal-asesinato-del-profesor-kevin-santiago-angel-en-bogota-capturaron-a-ocho-sospechosos/",
+      "passes": [
+        "fuente unica (Infobae) con cita directa de funcionario de la Fiscalia",
+        "no se encontro segunda fuente independiente ni comunicado oficial verificable por separado"
+      ],
+      "publicable": false,
+      "script_status": "REVISAR_VERIFICACION",
+      "script": {
+        "hook": "En Kennedy, un profesor que trabajaba para alejar a los jovenes del crimen fue asesinado. Hoy hay ocho capturas por ese caso.",
+        "context": "Kevin Santiago Angel era profesor y lider comunitario en Kennedy. Segun la Fiscalia, su trabajo social incomodaba a una estructura del Tren de Aragua, y por eso fue asesinado en mayo de este ano.",
+        "key_fact": "La Fiscalia, con apoyo del CTI, la Policia y el Gaula Militar, capturo a ocho presuntos responsables: siete en Bogota y Pamplona, y una octava persona que ya estaba presa en Caldas.",
+        "citizen_connection": "Este caso nos recuerda que el trabajo comunitario en Kennedy tiene un costo real, y que merece proteccion y reconocimiento.",
+        "close": "Como Edilesa de Kennedy, quiero que este caso no se olvide, y que el trabajo de personas como Kevin siga inspirando a nuestra comunidad.",
+        "cta": "BORRADOR INTERNO - NO PUBLICAR TODAVIA hasta encontrar segunda fuente o comunicado oficial."
+      }
+    },
+    {
       "id": "2026-08-31-001",
       "topic_id": "seguridad-militarizacion-bogota",
-      "rank": 1,
+      "rank": 2,
       "score": 80,
       "date": "2026-08-27",
       "title": "Cabildo abierto sobre asistencia militar en Bogotá",
@@ -40,7 +74,7 @@
     {
       "id": "2026-08-31-002",
       "topic_id": "desastre-terremoto-reconstruccion",
-      "rank": 2,
+      "rank": 3,
       "score": 75,
       "date": "2026-08-19",
       "title": "Emergencia económica por el terremoto del 10 de agosto",
@@ -75,7 +109,7 @@
     {
       "id": "2026-08-31-003",
       "topic_id": "seguridad-el-amparo-kennedy",
-      "rank": 3,
+      "rank": 4,
       "score": 70,
       "date": "2026-08-25",
       "title": "Explosión sin resolver en El Amparo, Kennedy",
@@ -110,7 +144,7 @@
     {
       "id": "2026-08-31-004",
       "topic_id": "corrupcion-libro-de-la-verdad",
-      "rank": 4,
+      "rank": 5,
       "score": 65,
       "date": "2026-08-18",
       "title": "\"Libro de la Verdad\": hallazgos sobre la administración anterior",
@@ -140,33 +174,6 @@
         "close": "Vamos a seguir de cerca qué pasa con las investigaciones que se abran.",
         "cta": "Este es un tema sensible por su carga política — sugiero validar con el equipo antes de publicar cualquier posición."
       }
-    },
-    {
-      "id": "2026-08-31-006",
-      "topic_id": "kennedy-siniestro-vial-americas-boyaca",
-      "rank": 5,
-      "score": 50,
-      "date": "2026-08-31",
-      "title": "Siniestro vial fatal en Av. Américas con Av. Boyacá, Kennedy",
-      "place": "Kennedy",
-      "categories": [
-        "movilidad",
-        "seguridad",
-        "kennedy",
-        "bogota"
-      ],
-      "verification": "baja",
-      "status": "NO VERIFICADO",
-      "historical_status": "NUEVO",
-      "summary": "Un peatón habría fallecido en un siniestro vial el 31 de agosto. Una sola fuente encontrada hasta ahora, sin URL recuperada ni confirmación de Movilidad/Policía.",
-      "source_name": "PENDIENTE_CONFIRMAR",
-      "source_url": "PENDIENTE_CONFIRMAR",
-      "passes": [
-        "ninguna verificación independiente completada todavía"
-      ],
-      "publicable": false,
-      "script_status": "BLOQUEADO_POR_VERIFICACION",
-      "script": null
     },
     {
       "id": "2026-08-31-005",
@@ -203,9 +210,36 @@
       }
     },
     {
+      "id": "2026-08-31-006",
+      "topic_id": "kennedy-siniestro-vial-americas-boyaca",
+      "rank": 7,
+      "score": 50,
+      "date": "2026-08-31",
+      "title": "Siniestro vial fatal en Av. Américas con Av. Boyacá, Kennedy",
+      "place": "Kennedy",
+      "categories": [
+        "movilidad",
+        "seguridad",
+        "kennedy",
+        "bogota"
+      ],
+      "verification": "baja",
+      "status": "NO VERIFICADO",
+      "historical_status": "NUEVO",
+      "summary": "Un peatón habría fallecido en un siniestro vial el 31 de agosto. Una sola fuente encontrada hasta ahora, sin URL recuperada ni confirmación de Movilidad/Policía.",
+      "source_name": "PENDIENTE_CONFIRMAR",
+      "source_url": "PENDIENTE_CONFIRMAR",
+      "passes": [
+        "ninguna verificación independiente completada todavía"
+      ],
+      "publicable": false,
+      "script_status": "BLOQUEADO_POR_VERIFICACION",
+      "script": null
+    },
+    {
       "id": "2026-08-31-007",
       "topic_id": "ambiente-incendios-el-nino",
-      "rank": 7,
+      "rank": 8,
       "score": 40,
       "date": "2026-08-29",
       "title": "Incendios forestales y probabilidad de El Niño fuerte",
@@ -230,7 +264,7 @@
     {
       "id": "2026-08-31-008",
       "topic_id": "corrupcion-denuncia-briceno-contratistas",
-      "rank": 8,
+      "rank": 9,
       "score": 35,
       "date": "2026-08-25",
       "title": "Denuncia de Daniel Briceño sobre contratistas inhabilitados",
@@ -257,7 +291,7 @@
     {
       "id": "2026-08-31-009",
       "topic_id": "kennedy-servicios-cortes-agua-luz",
-      "rank": 9,
+      "rank": 10,
       "score": 20,
       "date": "2026-08-31",
       "title": "Cortes programados de agua y energía en Kennedy",
