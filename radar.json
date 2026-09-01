@@ -1,0 +1,67 @@
+{
+  "last_updated": "2026-08-30T19:00:00-05:00",
+  "timezone": "America/Bogota",
+  "items": [
+    {
+      "id": "2026-08-30-001",
+      "rank": 1,
+      "score": 98,
+      "date": "2026-08-30",
+      "title": "Cabildo abierto sobre militarización de Bogotá",
+      "place": "Bogotá",
+      "categories": [
+        "politica",
+        "seguridad",
+        "bogota"
+      ],
+      "verification": "alta",
+      "status": "en_desarrollo",
+      "summary": "La certificación de firmas habilita un debate institucional; no equivale por sí sola a aprobación de la medida.",
+      "source_name": "El Espectador",
+      "source_url": "https://www.elespectador.com/bogota/militarizacion-de-bogota-llegara-a-debate-tras-validacion-de-37056-firmas/",
+      "passes": [
+        "Relación institucional/política detectada.",
+        "Contexto del mecanismo confirmado.",
+        "Control: firmas no equivalen a aprobación."
+      ],
+      "script": {
+        "hook": "Más de 37 mil firmas llevaron al Concejo de Bogotá un debate que muchos ya dan por hecho. Pero todavía no está aprobado.",
+        "context": "La certificación permite convocar un cabildo abierto y llevar el asunto al debate público.",
+        "key_fact": "Las firmas habilitan el trámite; no autorizan por sí solas presencia militar.",
+        "citizen_connection": "La ciudadanía necesita distinguir entre abrir un debate y que una medida ya haya sido adoptada.",
+        "close": "Ahora corresponde seguir el procedimiento y las decisiones de las autoridades competentes.",
+        "cta": "¿Qué preguntas deberían responderse durante ese debate?"
+      }
+    },
+    {
+      "id": "2026-08-30-002",
+      "rank": 2,
+      "score": 94,
+      "date": "2026-08-30",
+      "title": "Explosión en El Amparo, Kennedy",
+      "place": "Kennedy",
+      "categories": [
+        "seguridad",
+        "kennedy"
+      ],
+      "verification": "alta",
+      "status": "investigacion",
+      "summary": "Una explosión afectó viviendas. Los reportes consultados no confirmaban autoría ni móvil.",
+      "source_name": "El Espectador",
+      "source_url": "https://www.elespectador.com/bogota/explosion-en-kennedy-afecto-seis-viviendas-policia-analiza-el-elemento-usado/",
+      "passes": [
+        "Seguridad territorial detectada.",
+        "Contexto y daños contrastados.",
+        "Control: se eliminan hipótesis no confirmadas."
+      ],
+      "script": {
+        "hook": "En El Amparo, Kennedy, se registró una explosión. Esto es lo que realmente sabemos.",
+        "context": "El hecho afectó varias viviendas y quedó bajo investigación de las autoridades.",
+        "key_fact": "No debe atribuirse autoría ni móvil mientras no exista confirmación oficial.",
+        "citizen_connection": "La comunidad necesita información institucional clara, no rumores.",
+        "close": "El seguimiento debe concentrarse en los resultados de la investigación.",
+        "cta": "¿Qué información deberían aclarar las autoridades?"
+      }
+    }
+  ]
+}

@@ -1,26 +1,15 @@
-# Luz Stella Intelligence
+# Luz Stella Intelligence V2
 
-Dashboard estático para el radar diario.
+Sube toda esta estructura al repositorio conservando las carpetas.
 
-## Incluye
-- Noticias ordenadas por importancia.
-- Filtros por política, corrupción, dinero, seguridad, salud, ambiente, Bogotá y Kennedy.
-- Verificación visible.
-- Registro de hasta 3 pasadas de revisión.
-- Enlace directo a cada fuente.
-- Centro de guiones con acceso inmediato.
-- Archivo de actividad del día.
-
-## Publicar en GitHub Pages
-1. Sube `index.html` al repositorio.
-2. Ve a **Settings → Pages**.
-3. En **Build and deployment**, selecciona **Deploy from a branch**.
-4. Branch: `main`.
-5. Folder: `/ (root)`.
-6. Guarda y espera la publicación.
-
-URL esperada:
-https://josehernandezh568-cmd.github.io/luz-stella-intelligence/
+## GitHub Pages
+Settings → Pages → Deploy from a branch → `main` → `/ (root)`.
 
 ## Actualización diaria
-Claude debe devolver los nuevos artículos en un formato que pueda copiarse al bloque `A` de `index.html`, conservando título, prioridad, categorías, verificación, fuente, URL, pasadas y guion.
+1. Ejecuta el radar con Claude.
+2. Sustituye `data/radar.json` con el JSON nuevo.
+3. Agrega el resumen diario a `data/historico.json`.
+4. Commit changes.
+5. El dashboard se actualizará en GitHub Pages.
+
+El dashboard incluye ranking, filtros, fuentes originales, gráficos, histórico y centro de guiones.
