@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-09-01T00:10:00-05:00",
+  "last_updated": "2026-09-01T00:20:00-05:00",
   "topics": [
     {
       "topic_id": "seguridad-tren-aragua-kennedy-kevin-angel",
@@ -122,7 +122,7 @@
       "resumen_evolucion": "Iniciativa del concejal Julián Uscátegui y el representante José Jaime Uscátegui, con comité promotor inscrito desde enero de 2026. La Registraduría (Resolución 1052 del 19 de agosto de 2026) certificó 37.056 firmas válidas de 52.965 revisadas, frente a un umbral de 31.096. Obliga al Concejo a tramitar un cabildo abierto en un plazo máximo de un mes; no aprueba la militarización por sí sola ni obliga al alcalde Galán a solicitarla. Los promotores citan cifras de estructuras criminales en Bogotá que varían entre fuentes (~200 según Semana, ~250 según Colombia.com) sin una fuente oficial única identificada. Re-verificado el 1 de septiembre de 2026: sin cambios, el Concejo aun no ha definido fecha de sesion.",
       "publicable": true,
       "guion_estado": "LISTO",
-      "ultima_verificacion": "2026-09-01T00:00:00-05:00",
+      "ultima_verificacion": "2026-09-01T00:20:00-05:00",
       "numero_fuentes_verificadas": 8,
       "fuentes": [
         {
@@ -174,7 +174,17 @@
           "fecha": "2026-03-02"
         }
       ],
-      "correcciones": []
+      "correcciones": [],
+      "verificaciones": [
+        {
+          "fecha": "2026-09-01T00:20:00-05:00",
+          "resultado": "SIN_CAMBIOS",
+          "verification": "alta",
+          "numero_fuentes": 8,
+          "fuentes_nuevas": [],
+          "nota": "Reverificacion para generar GUION 2. Se reutilizo la busqueda hecha minutos antes en la misma conversacion (no se ejecuto una nueva busqueda por la cercania temporal). Sin cambios materiales: sigue sin fecha de sesion del cabildo."
+        }
+      ]
     },
     {
       "topic_id": "corrupcion-libro-de-la-verdad",
