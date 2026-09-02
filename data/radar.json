@@ -242,8 +242,8 @@
       "status": "NO VERIFICADO",
       "historical_status": "NUEVO",
       "summary": "Un peatón habría fallecido en un siniestro vial el 31 de agosto. Una sola fuente encontrada hasta ahora, sin URL recuperada ni confirmación de Movilidad/Policía.",
-      "source_name": "PENDIENTE_CONFIRMAR",
-      "source_url": "PENDIENTE_CONFIRMAR",
+      "source_name": null,
+      "source_url": null,
       "passes": [
         "ninguna verificación independiente completada todavía"
       ],
@@ -268,7 +268,7 @@
       "historical_status": "SEGUIMIENTO",
       "summary": "19 incendios activos en Tolima según UNGRD (vía Infobae); Cundinamarca suspendió quemas controladas. Solo una fuente periodística encontrada, URL no recuperada.",
       "source_name": "Infobae",
-      "source_url": "PENDIENTE_CONFIRMAR",
+      "source_url": null,
       "passes": [
         "una sola fuente, sin segunda verificación independiente"
       ],
@@ -294,7 +294,7 @@
       "historical_status": "SEGUIMIENTO",
       "summary": "Denuncia de un congresista ante la Fiscalía sobre contratistas inhabilitados que habrían seguido contratando con el Estado. Sin pronunciamiento oficial de la Fiscalía. URL no recuperada.",
       "source_name": "Infobae",
-      "source_url": "PENDIENTE_CONFIRMAR",
+      "source_url": null,
       "passes": [
         "fuente única (el propio denunciante)",
         "sin confirmación institucional"
@@ -319,8 +319,8 @@
       "status": "CONFIRMADO",
       "historical_status": "NUEVO",
       "summary": "EAAB programó cortes de agua (31 ago.-4 sep., incluye Kennedy el 3 sep.) y Enel reportó corte en Marsella, Kennedy, el 31 de agosto. URLs primarias no recuperadas todavía.",
-      "source_name": "PENDIENTE_CONFIRMAR",
-      "source_url": "PENDIENTE_CONFIRMAR",
+      "source_name": null,
+      "source_url": null,
       "passes": [
         "informacion operativa de servicio, bajo impacto estrategico, sin verificacion de URL todavia"
       ],
