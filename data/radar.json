@@ -64,11 +64,23 @@
       "script_status": "LISTO",
       "script": {
         "hook": "Más de 37 mil firmas obligan al Concejo de Bogotá a debatir algo que muchos ya dan por hecho: la militarización de la ciudad. Pero esto todavía no está decidido.",
-        "context": "La Registraduría certificó que se superó el número mínimo de firmas para convocar un cabildo abierto sobre asistencia militar en Bogotá.",
-        "key_fact": "37.056 firmas válidas, frente a un umbral de 31.096, según la Registraduría Distrital.",
-        "citizen_connection": "Es un mecanismo real de participación: la ciudadanía puso el tema en la agenda del Concejo.",
-        "close": "¿Ustedes creen que este es el camino correcto para atender la inseguridad en Bogotá? Los invito a informarse antes de opinar — este es apenas el inicio del debate.",
-        "cta": "Infórmense sobre el proceso antes de sacar conclusiones y cuéntenme qué opinan."
+        "context": "La Registraduría certificó los requisitos para convocar un cabildo abierto sobre asistencia militar en Bogotá, lo que obliga al Concejo a citar una sesión pública.",
+        "key_fact": "37.056 firmas válidas, frente a un mínimo de 31.096, según la Resolución 1052 de la Registraduría.",
+        "citizen_connection": "Es un mecanismo real de participación: la ciudadanía puso este tema en la agenda pública.",
+        "close": "El Concejo todavía no ha fijado fecha. Vamos a seguir el proceso de cerca.",
+        "cta": "¿Ustedes qué opinan? Infórmense antes de sacar conclusiones — esto apenas empieza.",
+        "short_version": "HOOK: Más de 37 mil firmas obligan al Concejo de Bogotá a hablar de la militarización de la ciudad. DESARROLLO: Pero esto todavía no está decidido: falta que el Concejo fije fecha y que el alcalde tome postura. DATO CLAVE: 37.056 firmas válidas, frente a un mínimo de 31.096, según la Registraduría. CIERRE: Vamos a seguir este proceso de cerca. CTA: ¿Ustedes qué opinan? Infórmense antes de sacar conclusiones.",
+        "full_version": "HOOK: Más de 37 mil firmas obligan al Concejo de Bogotá a debatir algo que muchos ya dan por hecho: la militarización de la ciudad. Pero esto todavía no está decidido. CONTEXTO: La Registraduría certificó los requisitos para convocar un cabildo abierto sobre asistencia militar en Bogotá, lo que obliga al Concejo a citar una sesión pública. DATO CLAVE: 37.056 firmas válidas, frente a un mínimo de 31.096, según la Resolución 1052 de la Registraduría. EXPLICACIÓN: Un cabildo abierto no es una votación ni un referendo: no va a terminar con una orden de sacar tropas a la calle. CONEXIÓN CIUDADANA: Es un mecanismo real de participación: la ciudadanía puso este tema en la agenda pública. CONEXIÓN TERRITORIAL: Esta decisión afectaría a toda la ciudad de Bogotá. CIERRE: El Concejo todavía no ha fijado fecha. Vamos a seguir el proceso de cerca. CTA: ¿Ustedes qué opinan? Infórmense antes de sacar conclusiones — esto apenas empieza.",
+        "screen_text": [
+          "37.056 firmas certificadas",
+          "¿Qué significa esto?",
+          "Todavía NO hay fecha ni decisión"
+        ],
+        "broll": "Sesiones públicas reales del Concejo de Bogotá (si hay registro disponible); imágenes generales de espacio público de Bogotá. Nunca operativos militares reales.",
+        "caption": "El Concejo de Bogotá tendrá que debatir la militarización de la ciudad, después de que se certificaran más de 37 mil firmas ciudadanas. Esto no es una votación que decida nada todavía — es apenas el inicio de un debate público. ¿Ustedes qué opinan?",
+        "estimated_seconds_short": 25,
+        "estimated_seconds_full": 57,
+        "last_script_verification": "2026-09-01T00:20:00-05:00"
       }
     },
     {
