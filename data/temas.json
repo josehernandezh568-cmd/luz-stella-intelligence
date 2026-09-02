@@ -36,7 +36,8 @@
           "fecha": "2026-09-01"
         }
       ],
-      "correcciones": []
+      "correcciones": [],
+      "verificaciones": []
     },
     {
       "topic_id": "seguridad-el-amparo-kennedy",
@@ -90,9 +91,10 @@
           "informacion_anterior": "Una nota sin fecha clara mencionaba 'una persona muerta' en una explosión en El Amparo, dejada como REQUIERE DOBLE VERIFICACIÓN.",
           "informacion_corregida": "Ese hecho corresponde al 10 de septiembre de 2024 (caso distinto y anterior, ya resuelto con capturas), no al del 25 de agosto de 2026.",
           "motivo": "La fecha de publicación no era clara en la primera búsqueda; una segunda búsqueda más específica permitió fecharlo correctamente.",
-          "fuente": "PENDIENTE_CONFIRMAR"
+          "fuente": null
         }
-      ]
+      ],
+      "verificaciones": []
     },
     {
       "topic_id": "seguridad-militarizacion-bogota",
@@ -255,7 +257,8 @@
           "motivo": "La única fuente que sugería esa relación (Moncloa) hacía una interpretación editorial propia, no reportaba un hecho verificado.",
           "fuente": "https://www.pulzo.com/nacion/libro-de-la-verdad-en-colombia-hallazgos-contra-el-gobierno-petro-y-crisis-tras-el-terremoto-PP5280756A"
         }
-      ]
+      ],
+      "verificaciones": []
     },
     {
       "topic_id": "corrupcion-denuncia-briceno-contratistas",
@@ -285,12 +288,13 @@
       "fuentes": [
         {
           "medio": "Infobae",
-          "url": "PENDIENTE_CONFIRMAR",
+          "url": null,
           "tipo": "secundaria",
           "fecha": "2026-08-25"
         }
       ],
-      "correcciones": []
+      "correcciones": [],
+      "verificaciones": []
     },
     {
       "topic_id": "desastre-terremoto-reconstruccion",
@@ -333,7 +337,8 @@
           "fecha": "2026-08-20"
         }
       ],
-      "correcciones": []
+      "correcciones": [],
+      "verificaciones": []
     },
     {
       "topic_id": "ambiente-incendios-el-nino",
@@ -365,12 +370,13 @@
       "fuentes": [
         {
           "medio": "Infobae",
-          "url": "PENDIENTE_CONFIRMAR",
+          "url": null,
           "tipo": "secundaria",
           "fecha": "2026-08-29"
         }
       ],
-      "correcciones": []
+      "correcciones": [],
+      "verificaciones": []
     },
     {
       "topic_id": "kennedy-espacio-publico",
@@ -426,7 +432,8 @@
           "motivo": "Error propio: la cifra de 216.000 m² fue introducida sin respaldo en una actualización anterior del radar.",
           "fuente": "http://www.gobiernobogota.gov.co/noticias/operacion-espacio-publico-mas-22-mil-m2-recuperados-kennedy"
         }
-      ]
+      ],
+      "verificaciones": []
     },
     {
       "topic_id": "kennedy-siniestro-vial-americas-boyaca",
@@ -457,12 +464,13 @@
       "fuentes": [
         {
           "medio": "QHubo Bogotá",
-          "url": "PENDIENTE_CONFIRMAR",
+          "url": null,
           "tipo": "secundaria",
           "fecha": "2026-08-31"
         }
       ],
-      "correcciones": []
+      "correcciones": [],
+      "verificaciones": []
     },
     {
       "topic_id": "kennedy-servicios-cortes-agua-luz",
@@ -492,12 +500,13 @@
       "fuentes": [
         {
           "medio": "EAAB / Enel (vía Infobae, Radio Santa Fe)",
-          "url": "PENDIENTE_CONFIRMAR",
+          "url": null,
           "tipo": "primaria",
           "fecha": "2026-08-31"
         }
       ],
-      "correcciones": []
+      "correcciones": [],
+      "verificaciones": []
     }
   ]
 }
