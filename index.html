@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Luz Stella Intelligence V3</title>
+<title>Luz Stella Intelligence V3.3</title>
 <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 <style>
 :root{
@@ -39,6 +39,39 @@ pre{white-space:pre-wrap;background:#08111a;border:1px solid var(--line);border-
 .modal{position:fixed;inset:0;background:#000c;display:grid;place-items:center;padding:20px;z-index:50}.hide{display:none}.modalbox{width:min(980px,100%);max-height:90vh;overflow:auto;background:var(--panel2);border:1px solid var(--line);border-radius:18px;padding:24px;position:relative}.close{position:absolute;right:14px;top:7px;background:none;border:0;color:#fff;font-size:28px;cursor:pointer}
 .notice{padding:12px;border:1px solid #64434a;border-radius:10px;background:#2a151a;color:#ffc2c8;margin:10px 0}
 .oknotice{padding:12px;border:1px solid #335d46;border-radius:10px;background:#10251b;color:#a5efbd;margin:10px 0}
+.cutbox{margin:18px 0 4px;padding:18px;border:1px solid var(--line);border-radius:16px;background:var(--panel2)}
+.cutgrid{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-top:12px}
+.cutmetric{padding:11px;border:1px solid var(--line);border-radius:12px;background:#0b1621}
+.cutmetric b{display:block;font-size:20px}.cutmetric span{color:var(--muted);font-size:11px}
+.actionrow{display:flex;gap:7px;flex-wrap:wrap;margin-top:12px}
+.btn-primary{border-color:var(--cyan);color:var(--cyan)}
+.btn-ready{border-color:#347052;color:var(--green)}
+.btn-danger{border-color:#713943;color:var(--red)}
+.script-card.is-ready{border-color:#347052}
+.script-card.is-blocked{border-color:#713943}
+.sourcebox{padding:10px 12px;border:1px solid var(--line);border-radius:10px;margin:7px 0;background:#0b1621}
+.production-shell{display:grid;grid-template-columns:320px 1fr;gap:14px;align-items:start}
+.production-list{display:flex;flex-direction:column;gap:8px}
+.production-item{width:100%;text-align:left;background:#0c1722;border:1px solid var(--line);border-radius:12px;padding:12px;color:var(--txt);cursor:pointer}
+.production-item:hover,.production-item.active{border-color:var(--cyan);background:#102130}
+.production-item .pnum{color:var(--cyan);font-weight:900;font-size:11px}
+.production-item .ptitle{font-weight:800;margin:4px 0}
+.production-item .pmeta{font-size:11px;color:var(--muted)}
+.production-panel{background:var(--panel);border:1px solid var(--line);border-radius:16px;padding:18px;min-height:420px}
+.prod-tabs{display:flex;gap:7px;flex-wrap:wrap;margin:14px 0}
+.prod-tabs button{background:#0d1722;color:#dbe7ef;border:1px solid var(--line);border-radius:999px;padding:8px 11px;cursor:pointer}
+.prod-tabs button.active{border-color:var(--cyan);color:var(--cyan)}
+.prod-block{display:none}.prod-block.active{display:block}
+.prod-actions{display:flex;gap:8px;flex-wrap:wrap;margin-top:12px}
+.prod-kpi{display:flex;gap:8px;flex-wrap:wrap;margin:10px 0}
+.prod-kpi span{border:1px solid var(--line);border-radius:999px;padding:5px 8px;font-size:11px}
+.production-lock{padding:16px;border:1px solid #713943;background:#2a151a;border-radius:12px;color:#ffc2c8}
+.production-warn{padding:16px;border:1px solid #6d5e2f;background:#2a2414;border-radius:12px;color:#ffe29a}
+.production-ok{padding:16px;border:1px solid #347052;background:#10251b;border-radius:12px;color:#a5efbd}
+.copy-wide{width:100%;margin-top:10px}
+@media(max-width:900px){.production-shell{grid-template-columns:1fr}.production-list{max-height:360px;overflow:auto}}
+
+@media(max-width:700px){.cutgrid{grid-template-columns:1fr 1fr}}
 footer{border-top:1px solid var(--line);padding:20px 4%;color:var(--muted);font-size:11px;display:flex;justify-content:space-between}
 @media(max-width:1050px){.stats{grid-template-columns:repeat(3,1fr)}.controls{grid-template-columns:1fr 1fr}.cards,.scripts,.topics,.charts{grid-template-columns:1fr}}
 @media(max-width:600px){header{padding:12px 14px}.hero h1{font-size:31px}.stats,.controls{grid-template-columns:1fr}main{padding:20px 14px 50px}}
@@ -51,9 +84,16 @@ footer{border-top:1px solid var(--line);padding:20px 4%;color:var(--muted);font-
 </header>
 <main>
  <div class="hero">
-  <div class="ey">CENTRO DE INTELIGENCIA V3</div>
+  <div class="ey">CENTRO DE INTELIGENCIA V3.3</div>
   <h1>De la noticia a la evolución y al guion.</h1>
   <p class="muted">El radar muestra qué ocurre hoy; el histórico conserva cómo cambia cada tema; los guiones solo se habilitan cuando la verificación lo permite.</p>
+ </div>
+
+ <div id="lastCut" class="cutbox">
+  <div class="ey">ÚLTIMO CORTE</div>
+  <h3 id="cutTitle" style="margin:5px 0">Cargando último corte…</h3>
+  <p id="cutNote" class="muted"></p>
+  <div id="cutMetrics" class="cutgrid"></div>
  </div>
 
  <div id="stats" class="stats"></div>
@@ -78,9 +118,14 @@ footer{border-top:1px solid var(--line);padding:20px 4%;color:var(--muted);font-
  </section>
 
  <section id="view-guiones" class="view hide">
-  <div class="ey">CENTRO DE GUIONES</div><h2>🎬 Guiones por noticia</h2>
-  <p class="muted">Los temas no publicables aparecen bloqueados. Los temas en revisión muestran el borrador pero advierten que todavía no debe grabarse.</p>
-  <div id="scripts" class="scripts"></div>
+  <div class="ey">CENTRO DE PRODUCCIÓN</div><h2>🎬 Guiones listos para trabajar</h2>
+  <p class="muted">Selecciona una noticia. El sistema separa guion corto, guion completo, producción y fuentes. Los temas sin verificación suficiente quedan bloqueados.</p>
+  <div class="production-shell">
+   <div id="productionList" class="production-list"></div>
+   <div id="productionPanel" class="production-panel">
+    <div class="muted">Selecciona una noticia para abrir su ficha de producción.</div>
+   </div>
+  </div>
  </section>
 
  <section id="view-temas" class="view hide">
@@ -101,7 +146,7 @@ footer{border-top:1px solid var(--line);padding:20px 4%;color:var(--muted);font-
 
 <div class="modal hide" id="modal"><div class="modalbox"><button class="close" onclick="closeModal()">×</button><div id="modalContent"></div></div></div>
 
-<footer><span>Luz Stella Intelligence V3</span><span>Solo información pública verificada · revisión humana recomendada</span></footer>
+<footer><span>Luz Stella Intelligence V3.3</span><span>Radar + producción · revisión humana recomendada</span></footer>
 
 <script>
 let RADAR=[], TOPICS=[], HIST=[], LAST="";
@@ -109,7 +154,7 @@ const LABEL={politica:"Política",corrupcion:"Corrupción",dinero:"Dinero",segur
 const $=s=>document.querySelector(s);
 const esc=s=>(s??"").toString().replace(/[&<>"']/g,m=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#039;"}[m]));
 const hs=s=>(s||"").replaceAll(" ","-");
-const scriptText=s=>!s?"":`HOOK:\n${s.hook||""}\n\nCONTEXTO:\n${s.context||""}\n\nDATO CLAVE:\n${s.key_fact||""}\n\nCONEXIÓN CIUDADANA:\n${s.citizen_connection||""}\n\nCIERRE:\n${s.close||""}\n\nCTA:\n${s.cta||""}`;
+const scriptText=s=>!s?"":`HOOK:\n${s.hook||""}\n\nCONTEXTO:\n${s.context||""}\n\nDATO CLAVE:\n${s.key_fact||""}\n\nCONEXIÓN CIUDADANA:\n${s.citizen_connection||""}\n\nCIERRE:\n${s.close||""}\n\nCTA:\n${s.cta||""}${s.screen_text?`\n\nTEXTO EN PANTALLA:\n${s.screen_text}`:""}${s.broll?`\n\nB-ROLL:\n${s.broll}`:""}${s.caption?`\n\nCAPTION:\n${s.caption}`:""}`;
 
 async function boot(){
  const [r,t,h]=await Promise.all([fetch("data/radar.json"),fetch("data/temas.json"),fetch("data/historico.json")]);
@@ -123,7 +168,7 @@ function init(){
  category.innerHTML+=cats.map(c=>`<option value="${c}">${LABEL[c]||c}</option>`).join("");
  const states=[...new Set(RADAR.map(x=>x.historical_status).filter(Boolean))].sort();
  historical.innerHTML+=states.map(s=>`<option value="${s}">${s}</option>`).join("");
- renderStats();renderRadar();renderScripts();renderTopics();renderCharts();
+ renderLastCut();renderStats();renderRadar();renderProductionCenter();renderTopics();renderCharts();
  [q,category,verification,historical,publishable].forEach(x=>x.addEventListener("input",renderRadar));
  document.querySelectorAll(".nav button").forEach(b=>b.onclick=()=>switchView(b.dataset.view,b));
 }
@@ -132,6 +177,42 @@ function switchView(view,btn){
  $("#view-"+view).classList.remove("hide");
  document.querySelectorAll(".nav button").forEach(b=>b.classList.remove("active"));btn.classList.add("active");
 }
+
+function renderLastCut(){
+ const c=HIST.length?HIST[HIST.length-1]:null;
+ if(!c){cutTitle.textContent="Sin cortes históricos registrados";cutNote.textContent="";cutMetrics.innerHTML="";return;}
+ cutTitle.textContent=`${c.date||"Sin fecha"} · ${c.cut||"corte registrado"}`;
+ cutNote.textContent=`Última actualización del radar: ${LAST||"sin fecha registrada"}.`;
+ cutMetrics.innerHTML=[
+  ["Noticias",c.total??RADAR.length],["Alta",c.alta??0],["Media",c.media??0],["Baja",c.baja??0]
+ ].map(x=>`<div class="cutmetric"><b>${x[1]}</b><span>${x[0]}</span></div>`).join("");
+}
+function topicFor(x){return TOPICS.find(t=>t.topic_id===x.topic_id)}
+function sourceList(x){
+ const t=topicFor(x), arr=(t?.fuentes||[]).filter(s=>s.url && s.url!=="PENDIENTE_CONFIRMAR");
+ if(!arr.length && x.source_url && x.source_url!=="PENDIENTE_CONFIRMAR") arr.push({medio:x.source_name||"Fuente principal",url:x.source_url,tipo:"principal",fecha:x.date||""});
+ return arr;
+}
+function openSources(id){
+ const x=RADAR.find(a=>a.id===id), arr=sourceList(x);
+ modalContent.innerHTML=`<div class="ey">FUENTES · NOTICIA #${x.rank}</div><h2>${esc(x.title)}</h2>
+ ${arr.length?arr.map((s,i)=>`<div class="sourcebox"><b>${i+1}. ${esc(s.medio||"Fuente")}</b><br><span class="muted">${esc(s.tipo||"")} ${esc(s.fecha||"")}</span><br><a class="link" href="${s.url}" target="_blank" rel="noopener">Abrir fuente oficial/original ↗</a></div>`).join(""):`<div class="notice">No hay URL verificada disponible todavía.</div>`}`;
+ modal.classList.remove("hide");
+}
+function openEvolution(id){
+ const x=RADAR.find(a=>a.id===id),t=topicFor(x);
+ if(t) return openTopic(t.topic_id);
+ modalContent.innerHTML=`<div class="notice">Este registro todavía no tiene evolución histórica asociada.</div>`;
+ modal.classList.remove("hide");
+}
+function openScript(id){
+ const x=RADAR.find(a=>a.id===id);
+ modalContent.innerHTML=`<div class="ey">GUION #${x.rank}</div><h2>${esc(x.title)}</h2>
+ ${(!x.publicable||x.script_status!=="LISTO")?`<div class="notice">⚠️ Estado: ${esc(x.script_status||"BLOQUEADO")}. ${!x.publicable?"NO PUBLICAR TODAVÍA.":"Requiere revisión del equipo antes de grabar."}</div>`:`<div class="oknotice">✓ Guion LISTO para revisión final del equipo.</div>`}
+ ${x.script?`<pre>${esc(scriptText(x.script))}</pre><button class="btn btn-primary" onclick="copyScript('${x.id}')">Copiar guion</button>`:`<p class="muted">No existe guion disponible.</p>`}`;
+ modal.classList.remove("hide");
+}
+
 function renderStats(){
  const p=RADAR.filter(x=>x.publicable).length,ready=RADAR.filter(x=>x.script_status==="LISTO").length,blocked=RADAR.filter(x=>!x.publicable).length;
  stats.innerHTML=[
@@ -163,21 +244,125 @@ function renderRadar(){
   <h3>${esc(x.title)}</h3>
   <div class="tags">${(x.categories||[]).map(c=>`<span class="tag">${LABEL[c]||esc(c)}</span>`).join("")}${badgeVerification(x.verification)}${badgeHist(x.historical_status)}</div>
   <p class="summary">${esc(x.summary)}</p>
-  <div class="actions"><a class="link" href="${x.source_url}" target="_blank" rel="noopener">Fuente ↗</a><span>${scriptState(x)}</span><button class="btn" onclick="openRadar('${x.id}')">Ver ficha</button></div>
+  <div class="actions"><span>${scriptState(x)}</span></div>
+   <div class="actionrow">
+    <button class="btn" onclick="openSources('${x.id}')">Ver fuentes</button>
+    <button class="btn" onclick="openEvolution('${x.id}')">Ver evolución</button>
+    <button class="btn ${x.script_status==="LISTO"?"btn-ready":(!x.publicable?"btn-danger":"")}" onclick="openScript('${x.id}')">Ver guion</button>
+    <button class="btn" onclick="openRadar('${x.id}')">Ver ficha</button>
+   </div>
  </article>`).join("");
 }
-function renderScripts(){
- scripts.innerHTML=RADAR.sort((a,b)=>a.rank-b.rank).map(x=>{
-  const blocked=!x.publicable||!x.script;
-  return `<article class="script-card">
-   <div class="topline"><span>GUION #${x.rank}</span><span>${scriptState(x)}</span></div>
-   <h3>${esc(x.title)}</h3>
-   ${blocked?`<div class="notice">⚠️ No publicable todavía. Verificación: ${x.verification}. Estado: ${x.script_status}.</div>`:`<div class="oknotice">✓ Guion habilitado para revisión/uso del equipo.</div>`}
-   ${x.script?`<pre>${esc(scriptText(x.script))}</pre>`:`<p class="muted">No existe guion hasta superar la verificación.</p>`}
-   <div class="actions"><a class="link" href="${x.source_url}" target="_blank">Fuente ↗</a>${x.script?`<button class="btn" onclick="copyScript('${x.id}')">Copiar guion</button>`:""}</div>
-  </article>`
- }).join("");
+
+let ACTIVE_PRODUCTION_ID=null;
+
+function prodStatusLabel(x){
+ if(x.publicable && x.script_status==="LISTO") return "🟢 LISTO";
+ if(x.publicable && x.script_status==="REVISAR") return "🟡 REVISAR";
+ if(x.script_status==="REVISAR_VERIFICACION") return "🟠 VERIFICAR";
+ return "🔴 BLOQUEADO";
 }
+
+function renderProductionCenter(){
+ const ordered=RADAR.slice().sort((a,b)=>(a.rank??999)-(b.rank??999));
+ productionList.innerHTML=ordered.map(x=>`
+  <button class="production-item ${ACTIVE_PRODUCTION_ID===x.id?"active":""}" onclick="selectProduction('${x.id}')">
+   <div class="pnum">#${x.rank} · ${x.score}/100</div>
+   <div class="ptitle">${esc(x.title)}</div>
+   <div class="pmeta">${prodStatusLabel(x)} · Verificación ${esc(x.verification)}</div>
+  </button>`).join("");
+
+ if(!ACTIVE_PRODUCTION_ID){
+   const firstReady=ordered.find(x=>x.publicable&&x.script_status==="LISTO") || ordered[0];
+   if(firstReady) setTimeout(()=>selectProduction(firstReady.id),0);
+ }
+}
+
+function versionText(x,which){
+ const s=x.script||{};
+ if(which==="short") return s.short_version || [s.hook,s.context,s.key_fact,s.close,s.cta].filter(Boolean).join("\n\n");
+ if(which==="full") return s.full_version || scriptText(s);
+ return scriptText(s);
+}
+
+function renderProdSources(x){
+ const arr=sourceList(x);
+ if(!arr.length) return `<div class="notice">No hay fuentes con URL verificable registradas.</div>`;
+ return arr.map((s,i)=>`<div class="sourcebox"><b>${i+1}. ${esc(s.medio||"Fuente")}</b><br><span class="muted">${esc(s.tipo||"")} · ${esc(s.fecha||"")}</span><br><a class="link" href="${s.url}" target="_blank" rel="noopener">Abrir fuente ↗</a></div>`).join("");
+}
+
+function selectProduction(id){
+ ACTIVE_PRODUCTION_ID=id;
+ const x=RADAR.find(a=>a.id===id);
+ if(!x)return;
+ document.querySelectorAll(".production-item").forEach(el=>el.classList.remove("active"));
+ const selected=[...document.querySelectorAll(".production-item")].find(el=>el.getAttribute("onclick")===`selectProduction('${id}')`);
+ if(selected)selected.classList.add("active");
+ const s=x.script||{};
+ const ready=x.publicable&&x.script_status==="LISTO";
+ const review=x.publicable&&!ready;
+
+ productionPanel.innerHTML=`
+  <div class="ey">NOTICIA #${x.rank} · ${x.score}/100</div>
+  <h2>${esc(x.title)}</h2>
+  <div class="tags">${badgeVerification(x.verification)}${badgeHist(x.historical_status)}</div>
+  <div class="prod-kpi">
+   <span>${prodStatusLabel(x)}</span>
+   <span>${esc(x.place||"")}</span>
+   ${s.estimated_seconds_short?`<span>Corto: ${s.estimated_seconds_short}s</span>`:""}
+   ${s.estimated_seconds_full?`<span>Completo: ${s.estimated_seconds_full}s</span>`:""}
+  </div>
+  ${ready?`<div class="production-ok">✓ Guion listo para revisión final del equipo y producción.</div>`:
+    review?`<div class="production-warn">⚠️ La noticia es publicable, pero el enfoque/guion todavía requiere revisión.</div>`:
+    `<div class="production-lock">⛔ NO PUBLICAR TODAVÍA. ${esc(x.script_status||"BLOQUEADO")}.</div>`}
+
+  <div class="prod-tabs">
+   <button class="active" onclick="switchProdTab('short',this)">Guion corto</button>
+   <button onclick="switchProdTab('full',this)">Guion completo</button>
+   <button onclick="switchProdTab('production',this)">Producción</button>
+   <button onclick="switchProdTab('sources',this)">Fuentes</button>
+  </div>
+
+  <div id="prod-short" class="prod-block active">
+   ${x.script?`<pre>${esc(versionText(x,"short"))}</pre>`:`<p class="muted">No existe guion.</p>`}
+   ${x.script?`<button class="btn btn-primary copy-wide" onclick="copyProduction('${x.id}','short')">📋 Copiar guion corto</button>`:""}
+  </div>
+
+  <div id="prod-full" class="prod-block">
+   ${x.script?`<pre>${esc(versionText(x,"full"))}</pre>`:`<p class="muted">No existe guion.</p>`}
+   ${x.script?`<button class="btn btn-primary copy-wide" onclick="copyProduction('${x.id}','full')">📋 Copiar guion completo</button>`:""}
+  </div>
+
+  <div id="prod-production" class="prod-block">
+   <h3>Textos en pantalla</h3>
+   ${Array.isArray(s.screen_text)?`<ol>${s.screen_text.map(z=>`<li>${esc(z)}</li>`).join("")}</ol>`:`<p class="muted">${esc(s.screen_text||"No registrado")}</p>`}
+   <h3>B-roll</h3><p class="summary">${esc(s.broll||"No registrado")}</p>
+   <h3>Caption</h3><pre>${esc(s.caption||"No registrado")}</pre>
+  </div>
+
+  <div id="prod-sources" class="prod-block">
+   ${renderProdSources(x)}
+   <div class="prod-actions">
+    ${x.source_url&&x.source_url!=="PENDIENTE_CONFIRMAR"?`<a class="btn" href="${x.source_url}" target="_blank" rel="noopener">🔗 Ver noticia original</a>`:""}
+    <button class="btn" onclick="openEvolution('${x.id}')">Ver evolución</button>
+   </div>
+  </div>`;
+}
+
+function switchProdTab(name,btn){
+ document.querySelectorAll("#productionPanel .prod-block").forEach(x=>x.classList.remove("active"));
+ document.querySelectorAll("#productionPanel .prod-tabs button").forEach(x=>x.classList.remove("active"));
+ const el=document.getElementById("prod-"+name); if(el)el.classList.add("active");
+ btn.classList.add("active");
+}
+
+async function copyProduction(id,which){
+ const x=RADAR.find(a=>a.id===id),text=versionText(x,which);
+ if(!text)return;
+ try{await navigator.clipboard.writeText(text);alert("Guion copiado.");}
+ catch(e){prompt("Copia el guion:",text);}
+}
+
 function renderTopics(){
  topics.innerHTML=TOPICS.slice().sort((a,b)=>(b.importancia_actual||0)-(a.importancia_actual||0)).map(t=>`
  <article class="topic-card">
@@ -195,7 +380,7 @@ function openRadar(id){
   <div class="tags">${badgeVerification(x.verification)}${badgeHist(x.historical_status)}</div>
   <p class="summary">${esc(x.summary)}</p>
   <h3>Verificación</h3><ol>${(x.passes||[]).map(p=>`<li>${esc(p)}</li>`).join("")}</ol>
-  <h3>Fuente principal</h3><p><a class="link" href="${x.source_url}" target="_blank">${esc(x.source_name)} ↗</a></p>
+  <h3>Fuentes</h3><p><button class="btn" onclick="openSources('${x.id}')">Ver todas las fuentes verificadas</button></p>
   <h3>Estado del guion</h3><p>${scriptState(x)}</p>
   ${!x.publicable?`<div class="notice">Esta noticia está en el ranking por relevancia, pero no debe publicarse todavía.</div>`:""}
   ${x.script?`<pre>${esc(scriptText(x.script))}</pre>`:"<p class='muted'>Sin guion disponible.</p>"}
@@ -219,7 +404,12 @@ function openTopic(id){
  modal.classList.remove("hide");
 }
 function closeModal(){modal.classList.add("hide")}
-async function copyScript(id){const x=RADAR.find(a=>a.id===id);await navigator.clipboard.writeText(scriptText(x.script));alert("Guion copiado.");}
+async function copyScript(id){
+ const x=RADAR.find(a=>a.id===id), text=scriptText(x?.script);
+ if(!text)return;
+ try{await navigator.clipboard.writeText(text);alert("Guion copiado.");}
+ catch(e){prompt("Copia el guion:",text);}
+}
 function renderCharts(){
  const cats={}; RADAR.forEach(x=>(x.categories||[]).forEach(c=>cats[LABEL[c]||c]=(cats[LABEL[c]||c]||0)+1));
  new Chart(catChart,{type:"bar",data:{labels:Object.keys(cats),datasets:[{data:Object.values(cats)}]},options:{responsive:true,maintainAspectRatio:false,plugins:{legend:{display:false}}}});
