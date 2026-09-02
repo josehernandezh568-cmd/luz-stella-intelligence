@@ -2,7 +2,7 @@
   "cuts": [
     {
       "date": "2026-08-31",
-      "cut": "PENDIENTE_CONFIRMAR - no se registraron horas exactas; corresponde a la sesion de normalizacion final del dia",
+      "cut": null,
       "total": 9,
       "alta": 5,
       "media": 1,
@@ -19,10 +19,10 @@
     },
     {
       "date": "2026-09-01",
-      "cut": "PENDIENTE_CONFIRMAR - hora exacta no registrada; primera ejecucion del dia",
+      "cut": null,
       "total": 10,
-      "alta": 6,
-      "media": 1,
+      "alta": 5,
+      "media": 2,
       "baja": 3,
       "politica": 2,
       "corrupcion": 2,
