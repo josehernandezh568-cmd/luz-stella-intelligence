@@ -27,7 +27,7 @@ main{max-width:1500px;margin:auto;padding:28px 4% 70px}
 .topline{display:flex;justify-content:space-between;gap:10px;align-items:center;color:var(--cyan);font-size:11px;font-weight:900}
 .summary{color:var(--muted)}
 .tags{display:flex;gap:5px;flex-wrap:wrap;margin:8px 0}.tag{display:inline-block;border:1px solid #3b536a;border-radius:999px;padding:4px 7px;font-size:10px}
-.v-alta{border-color:#347052;color:var(--green)}.v-media{border-color:#6d5e2f;color:var(--yellow)}.v-baja{border-color:#713943;color:var(--red)}
+.v-alta{border-color:#347052;color:var(--green)}.v-media{border-color:#6d5e2f;color:var(--yellow)}.v-baja{border-color:#713943;color:var(--red)}.v-no_aplica{border-color:#3b536a;color:var(--muted)}
 .h-NUEVO{border-color:#3b6281;color:var(--cyan)}.h-SEGUIMIENTO{border-color:#5a5f69;color:#d4dde6}.h-EN-CRECIMIENTO{border-color:#3f6f50;color:var(--green)}
 .h-PERDIENDO-RELEVANCIA{border-color:#6e6236;color:var(--yellow)}.h-CORREGIDO{border-color:#74424b;color:var(--red)}.h-CERRADO{border-color:#4b5570;color:#b5c6dc}
 .ready{color:var(--green)}.review{color:var(--yellow)}.blocked{color:var(--red)}
@@ -101,6 +101,28 @@ pre{white-space:pre-wrap;background:#08111a;border:1px solid var(--line);border-
 footer{border-top:1px solid var(--line);padding:20px 4%;color:var(--muted);font-size:11px;display:flex;justify-content:space-between}
 @media(max-width:1050px){.stats{grid-template-columns:repeat(3,1fr)}.controls{grid-template-columns:1fr 1fr}.cards,.scripts,.topics,.charts{grid-template-columns:1fr}}
 @media(max-width:600px){header{padding:12px 14px}.hero h1{font-size:31px}.stats,.controls{grid-template-columns:1fr}main{padding:20px 14px 50px}}
+
+/* ===== RADAR X V4.1 — estilos adicionales, modulares, no reemplazan nada existente ===== */
+.rx-card{opacity:1;transition:opacity .15s}
+.rx-card.rx-dim{opacity:.55}
+.rx-action{display:inline-block;border-radius:999px;padding:4px 7px;font-size:10px;border:1px solid #3b536a}
+.rx-action.rx-EXPLICAR{border-color:#3b6281;color:var(--cyan)}
+.rx-action.rx-ACLARAR{border-color:#6d5e2f;color:var(--yellow)}
+.rx-action.rx-SEGUIMIENTO{border-color:#5a5f69;color:#d4dde6}
+.rx-action.rx-NO_RESPONDER{border-color:#713943;color:var(--red)}
+.rx-op{display:inline-block;border-radius:999px;padding:4px 7px;font-size:10px;border:1px solid #3b536a}
+.rx-op.rx-op-ALTA{border-color:#347052;color:var(--green)}
+.rx-op.rx-op-MEDIA{border-color:#6d5e2f;color:var(--yellow)}
+.rx-op.rx-op-BAJA{border-color:#713943;color:var(--red)}
+.rx-op.rx-op-NINGUNA{border-color:#4b5570;color:var(--muted)}
+.rx-fields{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin:10px 0}
+.rx-field{padding:9px;border:1px solid var(--line);border-radius:10px;background:#0b1621}
+.rx-field b{display:block;font-size:12px}.rx-field span{color:var(--muted);font-size:10px}
+.rx-territory{display:flex;gap:6px;flex-wrap:wrap;margin:8px 0}
+.rx-hist-table{width:100%;border-collapse:collapse;margin-top:10px}
+.rx-hist-table th,.rx-hist-table td{border:1px solid var(--line);padding:8px;text-align:left;font-size:12px}
+.rx-hist-table th{color:var(--cyan);background:#0b1621}
+@media(max-width:1050px){.rx-fields{grid-template-columns:1fr 1fr}}
 </style>
 </head>
 <body>
@@ -128,6 +150,7 @@ footer{border-top:1px solid var(--line);padding:20px 4%;color:var(--muted);font-
   <button class="active" data-view="radar">Radar</button>
   <button data-view="guiones">Guiones</button>
   <button data-view="temas">Seguimiento de temas</button>
+  <button data-view="radarx">Radar X</button>
   <button data-view="analitica">Analítica</button>
  </div>
 
@@ -157,6 +180,25 @@ footer{border-top:1px solid var(--line);padding:20px 4%;color:var(--muted);font-
  <section id="view-temas" class="view hide">
   <div class="ey">MEMORIA DEL SISTEMA</div><h2>Seguimiento de temas</h2>
   <div id="topics" class="topics"></div>
+ </section>
+
+ <!-- ===== RADAR X V4.1 — vista modular, independiente del Radar Diario ===== -->
+ <section id="view-radarx" class="view hide">
+  <div class="ey">RADAR X · INTELIGENCIA DESDE X (TWITTER)</div><h2>Publicaciones analizadas</h2>
+  <p class="muted">Verificación factual y oportunidad editorial son conceptos separados: que un post esté bien verificado no significa que Luz Stella deba hablar de él.</p>
+
+  <div id="rxCutBox" class="cutbox">
+   <h3 id="rxCutTitle" style="margin:5px 0">Cargando corte de Radar X…</h3>
+   <p id="rxCutNote" class="muted"></p>
+   <div id="rxCutMetrics" class="cutgrid"></div>
+  </div>
+
+  <div id="rxCards" class="cards"><div class="muted">Cargando publicaciones de Radar X…</div></div>
+
+  <div style="margin-top:35px">
+   <div class="ey">HISTÓRICO · RADAR X</div><h3>Evolución por corte</h3>
+   <div id="rxHistBox"><p class="muted">Cargando histórico de Radar X…</p></div>
+  </div>
  </section>
 
  <section id="view-analitica" class="view hide">
@@ -547,6 +589,154 @@ function renderCharts(){
 }
 modal.addEventListener("click",e=>{if(e.target.id==="modal")closeModal()});
 boot().catch(err=>{document.body.innerHTML=`<main><h2>Error cargando datos</h2><p>${esc(err.message)}</p><p>Prueba desde GitHub Pages, no abriendo el archivo local directamente.</p></main>`});
+
+/* ======================================================================
+   RADAR X V4.1 — módulo independiente.
+   Reglas de esta sección:
+   - NUNCA comparte variables ni contadores con RADAR/TOPICS/HIST.
+   - Lee EXCLUSIVAMENTE data/x_radar.json y data/x_historico.json.
+   - Cada fetch tiene su propio try/catch: si uno falla, el otro y el
+     resto del dashboard (Radar Diario) siguen funcionando con normalidad.
+   ====================================================================== */
+let RX_ITEMS=[], RX_CUT=null, RX_HIST_CUTS=[];
+
+const RX_LABEL={politica:"Política",corrupcion:"Corrupción",dinero:"Dinero",seguridad:"Seguridad",salud:"Salud",ambiente:"Ambiente",bogota:"Bogotá",kennedy:"Kennedy",movilidad:"Movilidad",justicia:"Justicia",instituciones:"Instituciones",narcotrafico:"Narcotráfico",educacion:"Educación"};
+
+function rxBadgeAction(a){
+ if(!a) return "";
+ return `<span class="rx-action rx-${esc(a)}">${esc(a)}</span>`;
+}
+function rxBadgeOpportunity(o){
+ if(!o) return "";
+ return `<span class="rx-op rx-op-${esc(o)}">Oportunidad ${esc(o)}</span>`;
+}
+function rxBadgeVerification(v){
+ if(!v) return "";
+ return `<span class="tag v-${esc(v)}">Verificación ${esc(v)}</span>`;
+}
+function rxTerritoryTags(t){
+ if(!t) return "";
+ const rows=[["Colombia",t.colombia],["Bogotá",t.bogota],["Kennedy",t.kennedy]];
+ return `<div class="rx-territory">${rows.map(r=>`<span class="tag">${r[0]}: ${esc(r[1]||"NO_DEMOSTRADO")}</span>`).join("")}</div>`;
+}
+
+function renderRadarXCutBox(){
+ if(!RX_CUT){
+  rxCutTitle.textContent="Sin corte de Radar X registrado";
+  rxCutNote.textContent="";
+  rxCutMetrics.innerHTML="";
+  return;
+ }
+ rxCutTitle.textContent=`${RX_CUT.date||"Sin fecha"}${RX_CUT.time?" · "+RX_CUT.time:""}`;
+ rxCutNote.textContent=`Publicaciones analizadas en este corte: ${RX_CUT.processed??RX_ITEMS.length}.`;
+ rxCutMetrics.innerHTML=[
+  ["Recibidos",RX_CUT.inbox_received??"-"],
+  ["Procesados",RX_CUT.processed??"-"],
+  ["Relevantes",RX_CUT.relevant??"-"],
+  ["Descartados",RX_CUT.discarded??"-"],
+  ["Explicar",RX_CUT.explicar??0],
+  ["Aclarar",RX_CUT.aclarar??0],
+  ["Seguimiento",RX_CUT.seguimiento??0],
+  ["No responder",RX_CUT.no_responder??0],
+  ["Publicables",RX_CUT.publicables??0],
+  ["Guiones LISTO",RX_CUT.scripts_listo??0]
+ ].map(x=>`<div class="cutmetric"><b>${x[1]}</b><span>${x[0]}</span></div>`).join("");
+}
+
+function renderRadarXCards(){
+ const box=document.getElementById("rxCards");
+ if(!RX_ITEMS.length){
+  box.innerHTML=`<div class="notice">No hay publicaciones relevantes en el corte actual.</div>`;
+  return;
+ }
+ box.innerHTML=RX_ITEMS.slice().sort((a,b)=>(a.rank??999)-(b.rank??999)).map(x=>{
+  const dim=(x.content_opportunity==="BAJA"||x.content_opportunity==="NINGUNA")?"rx-dim":"";
+  const cats=(x.categories||[]).map(c=>`<span class="tag">${RX_LABEL[c]||esc(c)}</span>`).join("");
+  return `
+  <article class="card rx-card ${dim}">
+   <div class="topline"><span>#${x.rank??"-"} · ${x.score??"-"}/100</span><span>${esc(x.username?("@"+x.username):"")}</span></div>
+   <h3>${esc(x.author||"")}</h3>
+   <p class="muted" style="font-size:12px">${esc((x.published_at||"").replace("T"," ").slice(0,16))}</p>
+   <p class="summary">${esc(x.post_text||"")}</p>
+   ${x.post_url?`<p><a class="link" href="${x.post_url}" target="_blank" rel="noopener">Ver publicación en X ↗</a></p>`:""}
+   <div class="tags">${cats}${rxBadgeVerification(x.verification)}${rxBadgeOpportunity(x.content_opportunity)}${rxBadgeAction(x.recommended_action)}</div>
+   ${rxTerritoryTags(x.territory)}
+   <div class="rx-fields">
+    <div class="rx-field"><b>${esc(x.verification||"-")}</b><span>Verificación</span></div>
+    <div class="rx-field"><b>${esc(x.content_opportunity||"-")}</b><span>Oportunidad editorial</span></div>
+    <div class="rx-field"><b>${esc(x.recommended_action||"-")}</b><span>Decisión editorial</span></div>
+    <div class="rx-field"><b>${x.publicable?"SÍ":"NO"}</b><span>Publicable</span></div>
+   </div>
+   ${x.topic?`<p class="summary"><b>Tema:</b> ${esc(x.topic)}</p>`:""}
+   ${x.context?`<p class="summary"><b>Contexto:</b> ${esc(x.context)}</p>`:""}
+   ${(x.content_opportunity==="BAJA"||x.content_opportunity==="NINGUNA")&&x.opportunity_reason?`<div class="notice">Por qué no se recomienda contenido: ${esc(x.opportunity_reason)}</div>`:""}
+   ${x.script_status==="LISTO"&&x.script?`<div class="actionrow"><button class="btn btn-ready" onclick="rxOpenScript('${esc(x.x_post_id)}')">Ver guion</button></div>`:""}
+  </article>`;
+ }).join("");
+}
+
+function rxOpenScript(postId){
+ const x=RX_ITEMS.find(a=>a.x_post_id===postId);
+ if(!x||!x.script)return;
+ modalContent.innerHTML=`<div class="ey">GUION · RADAR X</div><h2>${esc(x.author)} · @${esc(x.username)}</h2>
+  <div class="oknotice">✓ Guion LISTO para revisión final del equipo.</div>
+  <pre>${esc(scriptText(x.script))}</pre>`;
+ modal.classList.remove("hide");
+}
+
+function renderRadarXHistorico(){
+ const box=document.getElementById("rxHistBox");
+ if(!RX_HIST_CUTS.length){
+  box.innerHTML=`<p class="muted">Histórico no disponible todavía.</p>`;
+  return;
+ }
+ box.innerHTML=`<table class="rx-hist-table">
+  <thead><tr><th>Fecha</th><th>Procesados</th><th>Relevantes</th><th>Descartados</th><th>Explicar</th><th>Aclarar</th><th>Seguimiento</th><th>No responder</th><th>Publicables</th></tr></thead>
+  <tbody>${RX_HIST_CUTS.map(c=>`<tr>
+    <td>${esc(c.date||"-")}${c.time?" "+esc(c.time):""}</td>
+    <td>${c.processed??"-"}</td><td>${c.relevant??"-"}</td><td>${c.discarded??"-"}</td>
+    <td>${c.explicar??0}</td><td>${c.aclarar??0}</td><td>${c.seguimiento??0}</td><td>${c.no_responder??0}</td>
+    <td>${c.publicables??0}</td>
+  </tr>`).join("")}</tbody>
+ </table>`;
+}
+
+async function loadRadarXRadar(){
+ try{
+  const res=await fetch("data/x_radar.json");
+  if(!res.ok) throw new Error("x_radar.json no disponible");
+  const data=await res.json();
+  RX_ITEMS=data.items||[];
+  RX_CUT=data.cut||null;
+ }catch(e){
+  RX_ITEMS=[]; RX_CUT=null;
+  document.getElementById("rxCards").innerHTML=`<div class="notice">No se pudo cargar Radar X en este momento.</div>`;
+ }
+ renderRadarXCutBox();
+ renderRadarXCards();
+}
+
+async function loadRadarXHistorico(){
+ try{
+  const res=await fetch("data/x_historico.json");
+  if(!res.ok) throw new Error("x_historico.json no disponible");
+  const data=await res.json();
+  RX_HIST_CUTS=data.cuts||[];
+ }catch(e){
+  RX_HIST_CUTS=[];
+  document.getElementById("rxHistBox").innerHTML=`<p class="muted">Histórico no disponible todavía.</p>`;
+  return;
+ }
+ renderRadarXHistorico();
+}
+
+async function bootRadarX(){
+ // Cada carga es independiente: si una falla, la otra y el resto del
+ // dashboard (Radar Diario) siguen funcionando sin interrupción.
+ await loadRadarXRadar();
+ await loadRadarXHistorico();
+}
+bootRadarX();
 </script>
 </body>
 </html>
