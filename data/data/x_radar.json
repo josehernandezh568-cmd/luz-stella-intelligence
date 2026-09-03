@@ -1,0 +1,351 @@
+{
+  "last_updated": "2026-09-03",
+  "timezone": "America/Bogota",
+  "cut": {
+    "date": "2026-09-03",
+    "time": null,
+    "timezone": "America/Bogota"
+  },
+  "items": [
+    {
+      "x_post_id": "2095317399121563853",
+      "rank": 1,
+      "score": 65,
+      "author": "Abelardo De La Espriella",
+      "username": "ABDELAESPRIELLA",
+      "published_at": "2026-09-03T01:06:11.000Z",
+      "post_url": "https://x.com/ABDELAESPRIELLA/status/2095317399121563853",
+      "post_text": "He recibido la preocupación expresada por la Sala de Casación Penal de la Corte Suprema de Justicia frente a la seguridad de sus magistrados. He dado instrucciones a la Policía Nacional y a la UNP para reforzar de inmediato todas las medidas necesarias para garantizar su...",
+      "topic": "Refuerzo de seguridad a magistrados de la Corte Suprema de Justicia",
+      "categories": [
+        "seguridad",
+        "instituciones",
+        "justicia"
+      ],
+      "claims": [
+        {
+          "claim": "El presidente dio instrucciones a la Policia Nacional y a la UNP para reforzar la seguridad de los magistrados de la Sala de Casacion Penal",
+          "type": "fact",
+          "verification": "CONFIRMADO",
+          "evidence": [
+            "https://www.elcolombiano.com/colombia/alerta-seguridad-magistrados-condena-kiko-gomez-disparo-procuraduria-KC40608640",
+            "https://www.semana.com/politica/articulo/abelardo-de-la-espriella-dijo-que-quien-se-mete-con-la-corte-se-mete-con-el-presidente-ordeno-proteger-a-los-magistrados/202659/",
+            "https://www.infobae.com/colombia/2026/09/03/corte-suprema-pidio-reforzar-la-seguridad-por-el-caso-kiko-gomez-y-de-la-espriella-aprovecho-para-lanzar-fuerte-advertencia/"
+          ],
+          "notes": "Confirmado por al menos 6 medios independientes con la misma cita textual y contexto (disparo contra oficina de la Procuraduria, caso del exgobernador condenado 'Kiko' Gomez)."
+        }
+      ],
+      "verification": "alta",
+      "territory": {
+        "colombia": "DIRECTO",
+        "bogota": "DIRECTO",
+        "kennedy": "NO_DEMOSTRADO"
+      },
+      "context": "Un disparo contra una oficina de la Procuraduria (piso 26, Bogota) genero preocupacion en la Sala de Casacion Penal por posible relacion con la condena al exgobernador de La Guajira Juan Francisco 'Kiko' Gomez. El presidente respondio publicamente reforzando la proteccion.",
+      "recommended_action": "EXPLICAR",
+      "publicable": false,
+      "script_status": "SEGUIMIENTO",
+      "script": null,
+      "sources": [
+        {
+          "name": "El Colombiano",
+          "url": "https://www.elcolombiano.com/colombia/alerta-seguridad-magistrados-condena-kiko-gomez-disparo-procuraduria-KC40608640",
+          "type": "secondary",
+          "date": "2026-09-03"
+        },
+        {
+          "name": "Semana",
+          "url": "https://www.semana.com/politica/articulo/abelardo-de-la-espriella-dijo-que-quien-se-mete-con-la-corte-se-mete-con-el-presidente-ordeno-proteger-a-los-magistrados/202659/",
+          "type": "secondary",
+          "date": "2026-09-03"
+        },
+        {
+          "name": "Infobae",
+          "url": "https://www.infobae.com/colombia/2026/09/03/corte-suprema-pidio-reforzar-la-seguridad-por-el-caso-kiko-gomez-y-de-la-espriella-aprovecho-para-lanzar-fuerte-advertencia/",
+          "type": "secondary",
+          "date": "2026-09-03"
+        },
+        {
+          "name": "Pulzo",
+          "url": "https://www.pulzo.com/nacion/abelardo-de-la-espriella-refuerza-seguridad-a-la-corte-suprema-tras-ataque-en-bogota-PP5291567A",
+          "type": "secondary",
+          "date": "2026-09-03"
+        }
+      ],
+      "carried_over": false,
+      "content_opportunity": "BAJA",
+      "opportunity_reason": "Sin relacion territorial real con Kennedy ni Bogota (el disparo ocurrio en Bogota pero es incidental al asunto de fondo, que es seguridad institucional nacional); ninguna competencia de una Edilesa sobre la rama judicial; publicarlo amplificaria la agenda comunicacional propia del presidente respaldando a la Corte, sin aporte territorial de Luz Stella."
+    },
+    {
+      "x_post_id": "2095300237489271012",
+      "rank": 2,
+      "score": 55,
+      "author": "Abelardo De La Espriella",
+      "username": "ABDELAESPRIELLA",
+      "published_at": "2026-09-02T23:58:00.000Z",
+      "post_url": "https://x.com/ABDELAESPRIELLA/status/2095300237489271012",
+      "post_text": "Colombianos: Hoy estoy designando a la doctora Ilva Myriam Hoyos como Ministra de Educación Nacional. Su talante, fortaleza, honradez y firme defensa de los valores la preceden...",
+      "topic": "Designación de nueva Ministra de Educación",
+      "categories": [
+        "politica",
+        "instituciones",
+        "educacion"
+      ],
+      "claims": [
+        {
+          "claim": "Ilva Myriam Hoyos fue designada Ministra de Educacion Nacional en reemplazo de Viviane Morales",
+          "type": "fact",
+          "verification": "CONFIRMADO",
+          "evidence": [
+            "https://www.elheraldo.co/colombia/2026/09/03/quien-es-ilva-myriam-hoyos-la-nueva-ministra-de-educacion/",
+            "https://www.eltiempo.com/vida/educacion/quien-es-ilva-myriam-hoyos-la-nueva-ministra-de-educacion-de-de-la-espriella-3583142",
+            "https://www.elespectador.com/educacion/quien-es-ilva-myriam-hoyos-la-nueva-ministra-de-educacion-y-reemplazo-de-viviane-morales/"
+          ],
+          "notes": "Confirmado por al menos 8 medios independientes; Viviane Morales renuncio por motivos personales, no por conflicto politico."
+        }
+      ],
+      "verification": "alta",
+      "territory": {
+        "colombia": "DIRECTO",
+        "bogota": "NO_DEMOSTRADO",
+        "kennedy": "NO_DEMOSTRADO"
+      },
+      "context": "Cambio ministerial: Viviane Morales renuncia por una situacion familiar; Ilva Myriam Hoyos, exprocuradora delegada para la familia, asume el Ministerio de Educacion Nacional.",
+      "recommended_action": "EXPLICAR",
+      "publicable": false,
+      "script_status": "NO_APLICA",
+      "script": null,
+      "sources": [
+        {
+          "name": "El Heraldo",
+          "url": "https://www.elheraldo.co/colombia/2026/09/03/quien-es-ilva-myriam-hoyos-la-nueva-ministra-de-educacion/",
+          "type": "secondary",
+          "date": "2026-09-03"
+        },
+        {
+          "name": "El Tiempo",
+          "url": "https://www.eltiempo.com/vida/educacion/quien-es-ilva-myriam-hoyos-la-nueva-ministra-de-educacion-de-de-la-espriella-3583142",
+          "type": "secondary",
+          "date": "2026-09-03"
+        },
+        {
+          "name": "El Espectador",
+          "url": "https://www.elespectador.com/educacion/quien-es-ilva-myriam-hoyos-la-nueva-ministra-de-educacion-y-reemplazo-de-viviane-morales/",
+          "type": "secondary",
+          "date": "2026-09-03"
+        },
+        {
+          "name": "Semana",
+          "url": "https://www.semana.com/politica/articulo/ilva-myriam-hoyos-la-voz-fuerte-que-defendio-a-los-ninos-en-la-procuraduria-y-quien-se-convirtio-en-la-ministra-de-educacion-de-abelardo-de-la-espriella/202658/",
+          "type": "secondary",
+          "date": "2026-09-03"
+        }
+      ],
+      "carried_over": false,
+      "content_opportunity": "BAJA",
+      "opportunity_reason": "Educacion no esta entre los ejes estrategicos declarados de Luz Stella (ambiente, seguridad, movilidad, corrupcion/transparencia); sin relacion con Kennedy o Bogota; es contenido de vitrina de un nombramiento del Ejecutivo nacional, sin angulo propio para su audiencia."
+    },
+    {
+      "x_post_id": "2095484041331921232",
+      "rank": 3,
+      "score": 49,
+      "author": "Abelardo De La Espriella",
+      "username": "ABDELAESPRIELLA",
+      "published_at": "2026-09-03T12:08:22.000Z",
+      "post_url": "https://x.com/ABDELAESPRIELLA/status/2095484041331921232",
+      "post_text": "Las cárceles no pueden ser centros de operación de las estructuras criminales. La autoridad del Estado también se ejerce detrás de los muros. A través del Ministerio de Justicia y la USPEC, entregamos nuevos equipos para el pabellón de alta seguridad de la cárcel de Palogordo,...",
+      "topic": "Refuerzo de seguridad en la cárcel de Palogordo (Girón, Santander)",
+      "categories": [
+        "seguridad",
+        "instituciones"
+      ],
+      "claims": [
+        {
+          "claim": "El Ministerio de Justicia y la USPEC entregaron equipos de vigilancia (camaras corporales, detectores de metales, drones, chalecos balisticos) al pabellon de alta seguridad de la carcel de Palogordo",
+          "type": "fact",
+          "verification": "CONFIRMADO",
+          "evidence": [
+            "https://www.elpais.com.co/colombia/gobierno-anuncia-entrega-de-equipos-de-vigilancia-para-pabellon-de-alta-seguridad-de-la-carcel-de-palogordo-en-santander-0348.html",
+            "https://www.infobae.com/colombia/2026/09/03/abelardo-de-la-espriella-anuncio-nuevos-equipos-de-seguridad-para-carcel-a-la-que-trasladaron-peligrosos-criminales-vamos-a-cerrarles-todos-los-espacios/"
+          ],
+          "notes": "Confirmado por El Pais y Infobae con el mismo listado de equipos."
+        }
+      ],
+      "verification": "alta",
+      "territory": {
+        "colombia": "DIRECTO",
+        "bogota": "NO_DEMOSTRADO",
+        "kennedy": "NO_DEMOSTRADO"
+      },
+      "context": "La carcel de Palogordo (Giron, Santander) recibe internos de alta peligrosidad; el refuerzo busca evitar que operen estructuras criminales desde dentro del centro penitenciario.",
+      "recommended_action": "EXPLICAR",
+      "publicable": false,
+      "script_status": "NO_APLICA",
+      "script": null,
+      "sources": [
+        {
+          "name": "El País",
+          "url": "https://www.elpais.com.co/colombia/gobierno-anuncia-entrega-de-equipos-de-vigilancia-para-pabellon-de-alta-seguridad-de-la-carcel-de-palogordo-en-santander-0348.html",
+          "type": "secondary",
+          "date": "2026-09-03"
+        },
+        {
+          "name": "Infobae",
+          "url": "https://www.infobae.com/colombia/2026/09/03/abelardo-de-la-espriella-anuncio-nuevos-equipos-de-seguridad-para-carcel-a-la-que-trasladaron-peligrosos-criminales-vamos-a-cerrarles-todos-los-espacios/",
+          "type": "secondary",
+          "date": "2026-09-03"
+        }
+      ],
+      "carried_over": false,
+      "content_opportunity": "BAJA",
+      "opportunity_reason": "La seguridad es un eje de Luz Stella, pero este es un asunto de seguridad penitenciaria en Giron, Santander, sin conexion territorial demostrada con Kennedy o Bogota; forzar esa conexion violaria la regla de no forzar territorio. Es vitrina de gestion del Gobierno Nacional."
+    },
+    {
+      "x_post_id": "2095350787140432099",
+      "rank": 4,
+      "score": 48,
+      "author": "Abelardo De La Espriella",
+      "username": "ABDELAESPRIELLA",
+      "published_at": "2026-09-03T03:18:52.000Z",
+      "post_url": "https://x.com/ABDELAESPRIELLA/status/2095350787140432099",
+      "post_text": "¡Otro golpe contundente al narcotráfico! Nuestra Policía Nacional en coordinación con la DEA y Guardacostas de Santa Marta, incautó en alta mar 736 kilogramos de cocaína que eran transportados en una lancha rápida tipo go-fast, procedente de la zona costera de la Alta Guajira y...",
+      "topic": "Incautación de 736 kg de cocaína en el Caribe",
+      "categories": [
+        "seguridad",
+        "narcotrafico"
+      ],
+      "claims": [
+        {
+          "claim": "Se incautaron 736 kilogramos de cocaina en una lancha go-fast que salio de la Alta Guajira con destino a Republica Dominicana; dos personas fueron capturadas",
+          "type": "fact",
+          "verification": "CONFIRMADO",
+          "evidence": [
+            "https://www.infobae.com/colombia/2026/09/03/armada-de-colombia-incauto-cargamento-de-cocaina-avaluado-en-34-millones-de-dolares-dos-dominicanos-fueron-capturados/",
+            "https://gsnoticias.com/incautan-736-kilos-de-cocaina-y-capturan-a-dos-dominicanos/"
+          ],
+          "notes": "Cifra y hechos centrales confirmados por multiples medios independientes."
+        },
+        {
+          "claim": "La operacion fue liderada por la Policia Nacional en coordinacion con la DEA y Guardacostas de Santa Marta",
+          "type": "fact",
+          "verification": "PARCIAL",
+          "evidence": [
+            "https://www.infobae.com/colombia/2026/09/03/armada-de-colombia-incauto-cargamento-de-cocaina-avaluado-en-34-millones-de-dolares-dos-dominicanos-fueron-capturados/"
+          ],
+          "notes": "Infobae atribuye la operacion a la Armada Nacional (de la cual Guardacostas de Santa Marta es una unidad), no exclusivamente a la Policia Nacional. Es un matiz institucional, no una contradiccion del hecho central."
+        }
+      ],
+      "verification": "alta",
+      "territory": {
+        "colombia": "DIRECTO",
+        "bogota": "NO_DEMOSTRADO",
+        "kennedy": "NO_DEMOSTRADO"
+      },
+      "context": "Operacion antinarcoticos en el Caribe colombiano con apoyo internacional (DEA, JIATF-South).",
+      "recommended_action": "EXPLICAR",
+      "publicable": false,
+      "script_status": "NO_APLICA",
+      "script": null,
+      "sources": [
+        {
+          "name": "Infobae",
+          "url": "https://www.infobae.com/colombia/2026/09/03/armada-de-colombia-incauto-cargamento-de-cocaina-avaluado-en-34-millones-de-dolares-dos-dominicanos-fueron-capturados/",
+          "type": "secondary",
+          "date": "2026-09-03"
+        },
+        {
+          "name": "GS Noticias",
+          "url": "https://gsnoticias.com/incautan-736-kilos-de-cocaina-y-capturan-a-dos-dominicanos/",
+          "type": "secondary",
+          "date": "2026-09-03"
+        },
+        {
+          "name": "NTN24 (via EntornoInteligente)",
+          "url": "https://www.entornointeligente.com/en-una-operacion-conjunta-con-la-dea-la-policia-nacional-de-colombia-lidera-la-incautacion-de-736-kilogramos-de-cocaina-ntn24-com/",
+          "type": "secondary",
+          "date": "2026-09-03"
+        }
+      ],
+      "carried_over": false,
+      "content_opportunity": "BAJA",
+      "opportunity_reason": "Operativo antinarcoticos maritimo en la Guajira/Caribe, sin relacion con Kennedy o Bogota; sin competencia de una Edilesa; es un logro operativo del Gobierno Nacional sin angulo territorial."
+    },
+    {
+      "x_post_id": "2095547931990372443",
+      "rank": 5,
+      "score": 37,
+      "author": "Abelardo De La Espriella",
+      "username": "ABDELAESPRIELLA",
+      "published_at": "2026-09-03T16:22:15.000Z",
+      "post_url": "https://x.com/ABDELAESPRIELLA/status/2095547931990372443",
+      "post_text": "Como presidente de la República, garantizaré que las decisiones de cada juez y magistrado sean respetadas y que la autonomía de esta rama sea celosamente protegida sin interferencias del Ejecutivo. ¡Firme por la Patria!",
+      "topic": "Compromiso presidencial de respeto a la autonomía judicial",
+      "categories": [
+        "politica",
+        "instituciones"
+      ],
+      "claims": [
+        {
+          "claim": "El presidente garantizara el respeto a las decisiones judiciales y la autonomia de la rama judicial",
+          "type": "prediction",
+          "verification": "PREDICCION_NO_VERIFICABLE",
+          "evidence": [],
+          "notes": "Es un compromiso/promesa de conducta futura, no un hecho verificable en este momento."
+        }
+      ],
+      "verification": "no_aplica",
+      "territory": {
+        "colombia": "DIRECTO",
+        "bogota": "NO_DEMOSTRADO",
+        "kennedy": "NO_DEMOSTRADO"
+      },
+      "context": "Declaracion de principio sobre separacion de poderes, sin un hecho concreto asociado todavia que permita verificar su cumplimiento.",
+      "recommended_action": "SEGUIMIENTO",
+      "publicable": false,
+      "script_status": "SEGUIMIENTO",
+      "script": null,
+      "sources": [],
+      "carried_over": false,
+      "content_opportunity": "NINGUNA",
+      "opportunity_reason": "Es una promesa sin hecho concreto asociado (claim ya clasificado como PREDICCION_NO_VERIFICABLE); sin relacion territorial, sin competencia de una Edilesa, sin eje estrategico aplicable todavia."
+    },
+    {
+      "x_post_id": "2095549445089681431",
+      "rank": 6,
+      "score": 25,
+      "author": "Gustavo Petro",
+      "username": "petrogustavo",
+      "published_at": "2026-09-03T16:28:15.000Z",
+      "post_url": "https://x.com/petrogustavo/status/2095549445089681431",
+      "post_text": "¿Han visto cien años de soledad en Netflix y el capitulo de la matanza de los trabajadores de las bananeras? Este es el presidente Abadía Méndez en 1928. Transformamos el país hacia adelante o retrocedimos? El mismo desprecio a la vida, la misma indignidad con los muertos.",
+      "topic": "Comparación histórica entre el gobierno actual y la masacre de las bananeras (1928)",
+      "categories": [
+        "politica"
+      ],
+      "claims": [
+        {
+          "claim": "El gobierno actual muestra 'el mismo desprecio a la vida, la misma indignidad con los muertos' que el gobierno de Abadia Mendez en 1928",
+          "type": "opinion",
+          "verification": "OPINION_NO_VERIFICABLE",
+          "evidence": [],
+          "notes": "Es una comparacion retorica/historica sin un hecho puntual y verificable asociado al gobierno actual."
+        }
+      ],
+      "verification": "no_aplica",
+      "territory": {
+        "colombia": "DIRECTO",
+        "bogota": "NO_DEMOSTRADO",
+        "kennedy": "NO_DEMOSTRADO"
+      },
+      "context": "Publicacion de tono politico/opinativo que usa una referencia historica (masacre de las bananeras de 1928) para criticar de forma general al gobierno actual, sin senalar un hecho especifico y verificable.",
+      "recommended_action": "NO_RESPONDER",
+      "publicable": false,
+      "script_status": "NO_APLICA",
+      "script": null,
+      "sources": [],
+      "carried_over": false,
+      "content_opportunity": "NINGUNA",
+      "opportunity_reason": "Opinion retorica sin hecho verificable (claim ya clasificado como OPINION_NO_VERIFICABLE); sin relacion territorial; responder amplificaria una disputa discursiva entre figuras nacionales sin utilidad pedagogica territorial."
+    }
+  ]
+}
