@@ -1,12 +1,12 @@
 {
-  "last_updated": "2026-09-01T00:30:00-05:00",
+  "last_updated": "2026-09-02T00:00:00-05:00",
   "timezone": "America/Bogota",
   "items": [
     {
       "id": "2026-09-01-001",
       "topic_id": "seguridad-tren-aragua-kennedy-kevin-angel",
       "rank": 1,
-      "score": 88,
+      "score": 92,
       "date": "2026-09-01",
       "title": "Capturas del Tren de Aragua por el asesinato del profesor Kevin Santiago Angel, Kennedy",
       "place": "Kennedy, Bogota",
@@ -15,25 +15,31 @@
         "kennedy",
         "bogota"
       ],
-      "verification": "media",
-      "status": "CONFIRMADO",
-      "historical_status": "NUEVO",
-      "summary": "La Fiscalia vinculo a 8 presuntos integrantes del Tren de Aragua al asesinato de Kevin Santiago Angel, profesor y lider comunitario de Kennedy asesinado en mayo de 2026 por su trabajo social con jovenes. Siete capturas en Bogota y Pamplona; una persona ya recluida en La Dorada.",
+      "verification": "alta",
+      "status": "EN DESARROLLO",
+      "historical_status": "SEGUIMIENTO",
+      "summary": "La Fiscalia vinculo a 8 presuntos integrantes del Tren de Aragua al asesinato de Kevin Santiago Angel, profesor y lider comunitario que trabajaba con jovenes de Kennedy. Fueron presentados ante juez; se les imputaran concierto para delinquir y homicidio agravado.",
       "source_name": "Infobae",
       "source_url": "https://www.infobae.com/colombia/2026/09/01/el-tren-de-aragua-habria-sido-el-responsable-del-brutal-asesinato-del-profesor-kevin-santiago-angel-en-bogota-capturaron-a-ocho-sospechosos/",
       "passes": [
-        "fuente unica (Infobae) con cita directa de funcionario de la Fiscalia",
-        "no se encontro segunda fuente independiente ni comunicado oficial verificable por separado"
+        "fuente primaria: declaracion oficial de la Fiscalia (director UEI) + publicacion de @FiscaliaCol",
+        "7 fuentes secundarias independientes (El Espectador, El Tiempo, Semana, CityTV, QHubo, Colombia.com, Boyaca Le Informa)",
+        "verification sube de MEDIA a ALTA"
       ],
-      "publicable": false,
-      "script_status": "REVISAR_VERIFICACION",
+      "publicable": true,
+      "script_status": "LISTO",
       "script": {
-        "hook": "En Kennedy, un profesor que trabajaba para alejar a los jovenes del crimen fue asesinado. Hoy hay ocho capturas por ese caso.",
-        "context": "Kevin Santiago Angel era profesor y lider comunitario en Kennedy. Segun la Fiscalia, su trabajo social incomodaba a una estructura del Tren de Aragua, y por eso fue asesinado en mayo de este ano.",
-        "key_fact": "La Fiscalia, con apoyo del CTI, la Policia y el Gaula Militar, capturo a ocho presuntos responsables: siete en Bogota y Pamplona, y una octava persona que ya estaba presa en Caldas.",
-        "citizen_connection": "Este caso nos recuerda que el trabajo comunitario en Kennedy tiene un costo real, y que merece proteccion y reconocimiento.",
-        "close": "Como Edilesa de Kennedy, quiero que este caso no se olvide, y que el trabajo de personas como Kevin siga inspirando a nuestra comunidad.",
-        "cta": "BORRADOR INTERNO - NO PUBLICAR TODAVIA hasta encontrar segunda fuente o comunicado oficial."
+        "hook": "En Kennedy, un profesor que trabajaba para alejar a los jóvenes del crimen fue asesinado. Hoy la Fiscalía capturó a ocho presuntos responsables de ese crimen.",
+        "context": "Kevin Santiago Ángel, profesor y líder comunitario, desarrollaba proyectos con jóvenes de Kennedy para prevenir su vinculación con el narcomenudeo. Fue asesinado entre el 20 y 21 de mayo de 2026.",
+        "key_fact": "La Fiscalía, con apoyo del CTI, la Policía y el Gaula Militar, capturó a ocho presuntos integrantes del Tren de Aragua. Ya fueron presentados ante un juez y se les imputarán concierto para delinquir y homicidio agravado.",
+        "explanation": "Esto es un avance judicial, no una condena todavía. Los capturados son presuntos responsables; la imputación es el paso siguiente antes de un eventual juicio.",
+        "citizen_connection": "Este caso vuelve a poner sobre la mesa la importancia de proteger y reconocer a quienes desarrollan trabajo social y comunitario con jóvenes en nuestros barrios.",
+        "role_competencia": "Como Edilesa de Kennedy, puedo hacer seguimiento público a este caso, visibilizar su impacto en nuestra comunidad y exigir respuestas institucionales dentro de las competencias correspondientes. La investigación penal y las decisiones judiciales corresponden a la Fiscalía y a las autoridades judiciales.",
+        "close": "El caso avanza ahora a la etapa de judicialización de los ocho capturados.",
+        "cta": "¿Conocían el trabajo de Kevin? Cuéntenme qué representó para su comunidad.",
+        "script_style": "INSTITUCIONAL_V3_4",
+        "estimated_seconds_full": 48,
+        "last_script_verification": "2026-09-02T00:00:00-05:00"
       }
     },
     {
@@ -191,9 +197,36 @@
       }
     },
     {
+      "id": "2026-08-31-006",
+      "topic_id": "kennedy-siniestro-vial-americas-boyaca",
+      "rank": 6,
+      "score": 50,
+      "date": "2026-08-31",
+      "title": "Siniestro vial fatal en Av. Américas con Av. Boyacá, Kennedy",
+      "place": "Kennedy",
+      "categories": [
+        "movilidad",
+        "seguridad",
+        "kennedy",
+        "bogota"
+      ],
+      "verification": "baja",
+      "status": "NO VERIFICADO",
+      "historical_status": "NUEVO",
+      "summary": "Un peatón habría fallecido en un siniestro vial el 31 de agosto. Una sola fuente encontrada hasta ahora, sin URL recuperada ni confirmación de Movilidad/Policía.",
+      "source_name": null,
+      "source_url": null,
+      "passes": [
+        "ninguna verificación independiente completada todavía"
+      ],
+      "publicable": false,
+      "script_status": "BLOQUEADO_POR_VERIFICACION",
+      "script": null
+    },
+    {
       "id": "2026-08-31-005",
       "topic_id": "kennedy-espacio-publico",
-      "rank": 6,
+      "rank": 7,
       "score": 45,
       "date": "2026-08-29",
       "title": "Operativos de recuperación de espacio público en Kennedy",
@@ -223,33 +256,6 @@
         "close": "Vamos a seguir recorriendo Kennedy para que estos espacios sigan siendo de la comunidad.",
         "cta": "¿Hay algún espacio público en su sector que necesite atención? Cuéntenme."
       }
-    },
-    {
-      "id": "2026-08-31-006",
-      "topic_id": "kennedy-siniestro-vial-americas-boyaca",
-      "rank": 7,
-      "score": 50,
-      "date": "2026-08-31",
-      "title": "Siniestro vial fatal en Av. Américas con Av. Boyacá, Kennedy",
-      "place": "Kennedy",
-      "categories": [
-        "movilidad",
-        "seguridad",
-        "kennedy",
-        "bogota"
-      ],
-      "verification": "baja",
-      "status": "NO VERIFICADO",
-      "historical_status": "NUEVO",
-      "summary": "Un peatón habría fallecido en un siniestro vial el 31 de agosto. Una sola fuente encontrada hasta ahora, sin URL recuperada ni confirmación de Movilidad/Policía.",
-      "source_name": null,
-      "source_url": null,
-      "passes": [
-        "ninguna verificación independiente completada todavía"
-      ],
-      "publicable": false,
-      "script_status": "BLOQUEADO_POR_VERIFICACION",
-      "script": null
     },
     {
       "id": "2026-08-31-007",
