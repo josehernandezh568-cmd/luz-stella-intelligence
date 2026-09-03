@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-09-01T00:30:00-05:00",
+  "last_updated": "2026-09-02T00:00:00-05:00",
   "topics": [
     {
       "topic_id": "seguridad-tren-aragua-kennedy-kevin-angel",
@@ -13,31 +13,94 @@
         "Bogotá"
       ],
       "primera_aparicion": "2026-09-01",
-      "ultima_actualizacion": "2026-09-01",
-      "numero_apariciones": 1,
-      "estado_actual": "NUEVO",
-      "importancia_actual": 88,
+      "ultima_actualizacion": "2026-09-02",
+      "numero_apariciones": 2,
+      "estado_actual": "SEGUIMIENTO",
+      "importancia_actual": 92,
       "historial_importancia": [
         {
           "fecha": "2026-09-01",
           "score": 88
+        },
+        {
+          "fecha": "2026-09-02",
+          "score": 92
         }
       ],
-      "resumen_evolucion": "Kevin Santiago Angel, profesor y lider comunitario de Kennedy que trabajaba para alejar jovenes del crimen y el narcomenudeo, fue asesinado entre el 20 y 21 de mayo de 2026. El 1 de septiembre de 2026 la Fiscalia General de la Nacion, con apoyo del CTI, la Policia Nacional y el Gaula Militar, capturo a ocho presuntos integrantes del Tren de Aragua vinculados al crimen: siete en Bogota y Pamplona (Norte de Santander), y una octava persona ya recluida en la carcel de La Dorada, Caldas. Re-verificacion (segunda pasada): no se encontro una segunda fuente independiente ni comunicado oficial de Fiscalia/Policia sobre este caso especifico. Clasificacion corregida a MEDIA: una fuente solida con cita oficial directa, pero sin corroboracion independiente suficiente.",
-      "publicable": false,
-      "guion_estado": "REVISAR_VERIFICACION",
-      "ultima_verificacion": "2026-09-01T00:00:00-05:00",
-      "numero_fuentes_verificadas": 1,
+      "resumen_evolucion": "Kevin Santiago Angel, profesor y lider comunitario de Kennedy que trabajaba para alejar jovenes del crimen y el narcomenudeo, fue asesinado entre el 20 y 21 de mayo de 2026. El 1 de septiembre de 2026 la Fiscalia General de la Nacion, con apoyo del CTI, la Policia Nacional y el Gaula Militar, capturo a ocho presuntos integrantes del Tren de Aragua vinculados al crimen: siete en Bogota y Pamplona (Norte de Santander), y una octava persona ya recluida en la carcel de La Dorada, Caldas. Re-verificacion (segunda pasada): no se encontro una segunda fuente independiente ni comunicado oficial de Fiscalia/Policia sobre este caso especifico. Clasificacion corregida a MEDIA: una fuente solida con cita oficial directa, pero sin corroboracion independiente suficiente. ACTUALIZACION 2 de septiembre: se encontraron 7 fuentes independientes adicionales (El Espectador, El Tiempo, Semana, CityTV, QHubo, Colombia.com, Boyaca Le Informa), todas citando la declaracion oficial de la Fiscalia (Andres Escobar Lopez, director UEI) y una publicacion oficial de @FiscaliaCol. Los 8 capturados fueron presentados ante juez de control de garantias; se les imputaran concierto para delinquir y homicidio agravado (2 presuntos coordinadores de zona + 5 personas mas). Correccion de dato: Kevin Santiago Angel Garzon, 31 anos, era profesor en un colegio de Bosa; su labor comunitaria (motivo del crimen) la hacia con jovenes de Kennedy.",
+      "publicable": true,
+      "guion_estado": "LISTO",
+      "ultima_verificacion": "2026-09-02T00:00:00-05:00",
+      "numero_fuentes_verificadas": 8,
       "fuentes": [
         {
           "medio": "Infobae",
           "url": "https://www.infobae.com/colombia/2026/09/01/el-tren-de-aragua-habria-sido-el-responsable-del-brutal-asesinato-del-profesor-kevin-santiago-angel-en-bogota-capturaron-a-ocho-sospechosos/",
           "tipo": "secundaria",
           "fecha": "2026-09-01"
+        },
+        {
+          "medio": "El Espectador",
+          "url": "https://www.elespectador.com/bogota/capturan-a-integrantes-del-tren-de-aragua-por-crimen-del-profesor-kevin-santiago-angel/",
+          "tipo": "secundaria",
+          "fecha": "2026-09-01"
+        },
+        {
+          "medio": "El Tiempo",
+          "url": "https://www.eltiempo.com/bogota/cayeron-presuntos-integrantes-del-tren-de-aragua-implicados-en-el-asesinato-del-profesor-kevin-santiago-angel-en-bogota-los-delitos-que-les-imputaran-3582718",
+          "tipo": "secundaria",
+          "fecha": "2026-09-01"
+        },
+        {
+          "medio": "Semana",
+          "url": "https://www.semana.com/nacion/articulo/lo-asesinaron-por-alejar-jovenes-de-la-criminalidad-la-fiscalia-confirmo-la-captura-de-integrantes-del-tren-de-aragua-por-crimen-de-un-profesor/202621/",
+          "tipo": "secundaria",
+          "fecha": "2026-09-01"
+        },
+        {
+          "medio": "CityTV Noticias",
+          "url": "https://citytv.eltiempo.com/programas/citynoticias-de-las-8/capturan-ocho-integrantes-del-tren-de-aragua-por-asesinato-de-profesor-kevin-santiago-angel_94802",
+          "tipo": "secundaria",
+          "fecha": "2026-09-01"
+        },
+        {
+          "medio": "QHubo Bogotá",
+          "url": "https://www.qhubobogota.com/asi-paso/captura-aragua-asesina-profe-kennedy/",
+          "tipo": "secundaria",
+          "fecha": "2026-09-01"
+        },
+        {
+          "medio": "Colombia.com",
+          "url": "https://www.colombia.com/actualidad/nacionales/kevin-santiago-angel-habria-sido-asesinado-por-el-tren-de-aragua-598638",
+          "tipo": "secundaria",
+          "fecha": "2026-09-01"
+        },
+        {
+          "medio": "Boyacá Le Informa",
+          "url": "https://www.boyacaleinforma.com/?p=46108",
+          "tipo": "secundaria",
+          "fecha": "2026-09-01"
         }
       ],
       "correcciones": [],
-      "verificaciones": []
+      "verificaciones": [
+        {
+          "fecha": "2026-09-02T00:00:00-05:00",
+          "resultado": "ACTUALIZADO",
+          "verification": "alta",
+          "numero_fuentes": 8,
+          "fuentes_nuevas": [
+            "El Espectador",
+            "El Tiempo",
+            "Semana",
+            "CityTV Noticias",
+            "QHubo Bogotá",
+            "Colombia.com",
+            "Boyacá Le Informa"
+          ],
+          "nota": "Corroboracion independiente encontrada. Verification sube de MEDIA a ALTA. publicable=true, guion_estado=LISTO."
+        }
+      ]
     },
     {
       "topic_id": "seguridad-el-amparo-kennedy",
@@ -124,7 +187,7 @@
       "resumen_evolucion": "Iniciativa del concejal Julián Uscátegui y el representante José Jaime Uscátegui, con comité promotor inscrito desde enero de 2026. La Registraduría (Resolución 1052 del 19 de agosto de 2026) certificó 37.056 firmas válidas de 52.965 revisadas, frente a un umbral de 31.096. Obliga al Concejo a tramitar un cabildo abierto en un plazo máximo de un mes; no aprueba la militarización por sí sola ni obliga al alcalde Galán a solicitarla. Los promotores citan cifras de estructuras criminales en Bogotá que varían entre fuentes (~200 según Semana, ~250 según Colombia.com) sin una fuente oficial única identificada. Re-verificado el 1 de septiembre de 2026: sin cambios, el Concejo aun no ha definido fecha de sesion.",
       "publicable": true,
       "guion_estado": "LISTO",
-      "ultima_verificacion": "2026-09-01T00:30:00-05:00",
+      "ultima_verificacion": "2026-09-02T00:00:00-05:00",
       "numero_fuentes_verificadas": 8,
       "fuentes": [
         {
@@ -194,6 +257,14 @@
           "numero_fuentes": 8,
           "fuentes_nuevas": [],
           "nota": "Se actualizó el guion al estándar institucional V3.4 (reemplazo del script principal en radar.json). Los hechos y el nivel de verificación no cambiaron."
+        },
+        {
+          "fecha": "2026-09-02T00:00:00-05:00",
+          "resultado": "SIN_CAMBIOS",
+          "verification": "alta",
+          "numero_fuentes": 8,
+          "fuentes_nuevas": [],
+          "nota": "Re-verificado el 2 de septiembre: sigue sin fecha de sesion del cabildo."
         }
       ]
     },
