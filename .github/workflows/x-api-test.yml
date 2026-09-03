@@ -1,1 +1,90 @@
+name: X API - Prueba de conexion (manual)
 
+on:
+  workflow_dispatch: {}
+
+jobs:
+  test-connection:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Resolver usuario petrogustavo
+        env:
+          X_BEARER_TOKEN: ${{ secrets.X_BEARER_TOKEN }}
+        run: |
+          set -euo pipefail
+
+          HTTP_STATUS=$(curl -s -o user_response.json -w "%{http_code}" \
+            -H "Authorization: Bearer ${X_BEARER_TOKEN}" \
+            "https://api.x.com/2/users/by/username/petrogustavo")
+
+          echo "Codigo HTTP (resolver usuario): $HTTP_STATUS"
+
+          if [ "$HTTP_STATUS" -ge 400 ]; then
+            case "$HTTP_STATUS" in
+              401)
+                echo "PROBLEMA DE AUTENTICACION: el Bearer Token fue rechazado (401)." ;;
+              402|403)
+                echo "PROBLEMA DE CREDITOS/PERMISOS/ACCESO: la API rechazo la solicitud ($HTTP_STATUS)." ;;
+              429)
+                echo "LIMITE DE TASA ALCANZADO (429). Intenta mas tarde." ;;
+              *)
+                echo "ERROR HTTP $HTTP_STATUS al resolver usuario." ;;
+            esac
+            ERROR_TITLE=$(jq -r '.title // "sin detalle"' user_response.json 2>/dev/null || echo "sin detalle")
+            ERROR_DETAIL=$(jq -r '.detail // "sin detalle"' user_response.json 2>/dev/null || echo "sin detalle")
+            echo "Mensaje de error (seguro, sin credenciales): titulo=$ERROR_TITLE detalle=$ERROR_DETAIL"
+            exit 1
+          fi
+
+          USERNAME=$(jq -r '.data.username' user_response.json)
+          USER_ID=$(jq -r '.data.id' user_response.json)
+
+          echo "Username: $USERNAME"
+          echo "User ID: $USER_ID"
+
+          echo "USER_ID=$USER_ID" >> "$GITHUB_ENV"
+          echo "RESOLVED_USERNAME=$USERNAME" >> "$GITHUB_ENV"
+
+      - name: Obtener publicaciones recientes (originales, sin replies ni retweets)
+        env:
+          X_BEARER_TOKEN: ${{ secrets.X_BEARER_TOKEN }}
+        run: |
+          set -euo pipefail
+
+          HTTP_STATUS=$(curl -s -o tweets_response.json -w "%{http_code}" \
+            -H "Authorization: Bearer ${X_BEARER_TOKEN}" \
+            "https://api.x.com/2/users/${USER_ID}/tweets?max_results=5&exclude=replies,retweets&tweet.fields=created_at")
+
+          echo "Codigo HTTP (publicaciones): $HTTP_STATUS"
+
+          if [ "$HTTP_STATUS" -ge 400 ]; then
+            case "$HTTP_STATUS" in
+              401)
+                echo "PROBLEMA DE AUTENTICACION: el Bearer Token fue rechazado (401)." ;;
+              402|403)
+                echo "PROBLEMA DE CREDITOS/PERMISOS/ACCESO: la API rechazo la solicitud ($HTTP_STATUS)." ;;
+              429)
+                echo "LIMITE DE TASA ALCANZADO (429). Intenta mas tarde." ;;
+              *)
+                echo "ERROR HTTP $HTTP_STATUS al obtener publicaciones." ;;
+            esac
+            ERROR_TITLE=$(jq -r '.title // "sin detalle"' tweets_response.json 2>/dev/null || echo "sin detalle")
+            ERROR_DETAIL=$(jq -r '.detail // "sin detalle"' tweets_response.json 2>/dev/null || echo "sin detalle")
+            echo "Mensaje de error (seguro, sin credenciales): titulo=$ERROR_TITLE detalle=$ERROR_DETAIL"
+            exit 1
+          fi
+
+          POST_COUNT=$(jq '(.data // []) | length' tweets_response.json)
+          echo "Cantidad de publicaciones recuperadas: $POST_COUNT"
+
+          {
+            echo "### Prueba de conexion X API - resultado"
+            echo ""
+            echo "- Username resuelto: $RESOLVED_USERNAME"
+            echo "- User ID: $USER_ID"
+            echo "- Publicaciones recuperadas: $POST_COUNT"
+            echo ""
+            echo "| ID | Fecha | Texto |"
+            echo "|---|---|---|"
+            jq -r '(.data // [])[] | "| \(.id) | \(.created_at) | \(.text | gsub("\\|"; "\\|") | gsub("\n"; " ")) |"' tweets_response.json
+          } >> "$GITHUB_STEP_SUMMARY"
