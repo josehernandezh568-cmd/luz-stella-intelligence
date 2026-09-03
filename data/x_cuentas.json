@@ -1,0 +1,24 @@
+{
+  "version": "1.0",
+  "last_updated": "2026-09-03T00:00:00-05:00",
+  "cuentas": [
+    {
+      "nombre": "Gustavo Petro",
+      "usuario": "petrogustavo",
+      "x_user_id": null,
+      "categoria": "figura politica nacional",
+      "prioridad": "alta",
+      "activo": true,
+      "notas": "Cuenta publica seleccionada para monitoreo en Radar X."
+    },
+    {
+      "nombre": "Abelardo De La Espriella",
+      "usuario": "ABDELAESPRIELLA",
+      "x_user_id": null,
+      "categoria": "figura politica nacional",
+      "prioridad": "alta",
+      "activo": true,
+      "notas": "Cuenta publica seleccionada para monitoreo en Radar X."
+    }
+  ]
+}
