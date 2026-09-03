@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-09-02T00:00:00-05:00",
+  "last_updated": "2026-09-03T00:00:00-05:00",
   "topics": [
     {
       "topic_id": "seguridad-tren-aragua-kennedy-kevin-angel",
@@ -13,8 +13,8 @@
         "Bogotá"
       ],
       "primera_aparicion": "2026-09-01",
-      "ultima_actualizacion": "2026-09-02",
-      "numero_apariciones": 2,
+      "ultima_actualizacion": "2026-09-03",
+      "numero_apariciones": 3,
       "estado_actual": "SEGUIMIENTO",
       "importancia_actual": 92,
       "historial_importancia": [
@@ -25,12 +25,16 @@
         {
           "fecha": "2026-09-02",
           "score": 92
+        },
+        {
+          "fecha": "2026-09-03",
+          "score": 92
         }
       ],
       "resumen_evolucion": "Kevin Santiago Angel, profesor y lider comunitario de Kennedy que trabajaba para alejar jovenes del crimen y el narcomenudeo, fue asesinado entre el 20 y 21 de mayo de 2026. El 1 de septiembre de 2026 la Fiscalia General de la Nacion, con apoyo del CTI, la Policia Nacional y el Gaula Militar, capturo a ocho presuntos integrantes del Tren de Aragua vinculados al crimen: siete en Bogota y Pamplona (Norte de Santander), y una octava persona ya recluida en la carcel de La Dorada, Caldas. Re-verificacion (segunda pasada): no se encontro una segunda fuente independiente ni comunicado oficial de Fiscalia/Policia sobre este caso especifico. Clasificacion corregida a MEDIA: una fuente solida con cita oficial directa, pero sin corroboracion independiente suficiente. ACTUALIZACION 2 de septiembre: se encontraron 7 fuentes independientes adicionales (El Espectador, El Tiempo, Semana, CityTV, QHubo, Colombia.com, Boyaca Le Informa), todas citando la declaracion oficial de la Fiscalia (Andres Escobar Lopez, director UEI) y una publicacion oficial de @FiscaliaCol. Los 8 capturados fueron presentados ante juez de control de garantias; se les imputaran concierto para delinquir y homicidio agravado (2 presuntos coordinadores de zona + 5 personas mas). Correccion de dato: Kevin Santiago Angel Garzon, 31 anos, era profesor en un colegio de Bosa; su labor comunitaria (motivo del crimen) la hacia con jovenes de Kennedy.",
       "publicable": true,
       "guion_estado": "LISTO",
-      "ultima_verificacion": "2026-09-02T00:00:00-05:00",
+      "ultima_verificacion": "2026-09-03T00:00:00-05:00",
       "numero_fuentes_verificadas": 8,
       "fuentes": [
         {
@@ -99,6 +103,14 @@
             "Boyacá Le Informa"
           ],
           "nota": "Corroboracion independiente encontrada. Verification sube de MEDIA a ALTA. publicable=true, guion_estado=LISTO."
+        },
+        {
+          "fecha": "2026-09-03T00:00:00-05:00",
+          "resultado": "SIN_CAMBIOS",
+          "verification": "alta",
+          "numero_fuentes": 8,
+          "fuentes_nuevas": [],
+          "nota": "Re-verificado el 3 de septiembre: las 7 fuentes independientes encontradas siguen vigentes y accesibles. Sin novedades adicionales sobre el caso."
         }
       ]
     },
@@ -187,7 +199,7 @@
       "resumen_evolucion": "Iniciativa del concejal Julián Uscátegui y el representante José Jaime Uscátegui, con comité promotor inscrito desde enero de 2026. La Registraduría (Resolución 1052 del 19 de agosto de 2026) certificó 37.056 firmas válidas de 52.965 revisadas, frente a un umbral de 31.096. Obliga al Concejo a tramitar un cabildo abierto en un plazo máximo de un mes; no aprueba la militarización por sí sola ni obliga al alcalde Galán a solicitarla. Los promotores citan cifras de estructuras criminales en Bogotá que varían entre fuentes (~200 según Semana, ~250 según Colombia.com) sin una fuente oficial única identificada. Re-verificado el 1 de septiembre de 2026: sin cambios, el Concejo aun no ha definido fecha de sesion.",
       "publicable": true,
       "guion_estado": "LISTO",
-      "ultima_verificacion": "2026-09-02T00:00:00-05:00",
+      "ultima_verificacion": "2026-09-03T00:00:00-05:00",
       "numero_fuentes_verificadas": 8,
       "fuentes": [
         {
@@ -265,6 +277,14 @@
           "numero_fuentes": 8,
           "fuentes_nuevas": [],
           "nota": "Re-verificado el 2 de septiembre: sigue sin fecha de sesion del cabildo."
+        },
+        {
+          "fecha": "2026-09-03T00:00:00-05:00",
+          "resultado": "SIN_CAMBIOS",
+          "verification": "alta",
+          "numero_fuentes": 8,
+          "fuentes_nuevas": [],
+          "nota": "Re-verificado el 3 de septiembre: sigue sin fecha, lugar ni agenda del cabildo."
         }
       ]
     },
@@ -574,6 +594,67 @@
           "url": null,
           "tipo": "primaria",
           "fecha": "2026-08-31"
+        }
+      ],
+      "correcciones": [],
+      "verificaciones": []
+    },
+    {
+      "topic_id": "seguridad-hincha-santafe-kennedy",
+      "titulo_actual": "Asesinato de un hincha de Independiente Santa Fe en Kennedy",
+      "categoria": [
+        "seguridad"
+      ],
+      "territorio": [
+        "Kennedy",
+        "Bogotá"
+      ],
+      "primera_aparicion": "2026-09-03",
+      "ultima_actualizacion": "2026-09-03",
+      "numero_apariciones": 1,
+      "estado_actual": "NUEVO",
+      "importancia_actual": 70,
+      "historial_importancia": [
+        {
+          "fecha": "2026-09-03",
+          "score": 70
+        }
+      ],
+      "resumen_evolucion": "Luis Alberto Gomez Avellaneda, de 32 anos, murio el domingo 30 de agosto de 2026 tras ser atacado con arma blanca por varias personas en el sector de Bellavista/El Amparo, Kennedy (Cra. 80 con Calle 51B Sur). La familia cree que la agresion pudo deberse a que vestia una camiseta de Independiente Santa Fe; las autoridades investigan pero no han confirmado esa hipotesis ni el movil del crimen. Sin capturas reportadas.",
+      "publicable": true,
+      "guion_estado": "REVISAR",
+      "ultima_verificacion": "2026-09-03T00:00:00-05:00",
+      "numero_fuentes_verificadas": 5,
+      "fuentes": [
+        {
+          "medio": "El Espectador",
+          "url": "https://www.elespectador.com/bogota/investigan-asesinato-de-hincha-de-santa-fe-en-kennedy-esto-se-sabe-del-ataque/",
+          "tipo": "secundaria",
+          "fecha": "2026-09-03"
+        },
+        {
+          "medio": "Infobae",
+          "url": "https://www.infobae.com/colombia/2026/09/02/asesinado-hincha-de-santa-fe-en-el-sur-de-bogota-autoridades-investigan-si-fue-un-crimen-relacionado-con-el-futbol/",
+          "tipo": "secundaria",
+          "fecha": "2026-09-02"
+        },
+        {
+          "medio": "Semana",
+          "url": "https://www.semana.com/nacion/bogota/articulo/lo-mataron-por-llevar-la-camiseta-de-santa-fe-hincha-fue-atacado-con-arma-blanca-en-kennedy-bogota/202614/",
+          "tipo": "secundaria",
+          "fecha": "2026-09-02"
+        },
+        {
+          "medio": "Pulzo",
+          "url": "https://www.pulzo.com/deportes/violencia-en-el-futbol-de-bogota-asesinato-de-hincha-de-santa-fe-en-kennedy-genera-alarma-PP5291947A",
+          "tipo": "secundaria",
+          "fecha": "2026-09-03"
+        },
+        {
+          "medio": "El Deportivo",
+          "url": "https://eldeportivo.com.co/futbol-colombiano/santa-fe/asesinaron-hincha-independiente-santa-fe-kennedy/",
+          "tipo": "secundaria",
+          "fecha": "2026-09-02"
         }
       ],
       "correcciones": [],
