@@ -44,7 +44,7 @@
       "context": "Un disparo contra una oficina de la Procuraduria (piso 26, Bogota) genero preocupacion en la Sala de Casacion Penal por posible relacion con la condena al exgobernador de La Guajira Juan Francisco 'Kiko' Gomez. El presidente respondio publicamente reforzando la proteccion.",
       "recommended_action": "EXPLICAR",
       "publicable": false,
-      "script_status": "SEGUIMIENTO",
+      "script_status": "NO_APLICA",
       "script": null,
       "sources": [
         {
@@ -302,7 +302,7 @@
       "context": "Declaracion de principio sobre separacion de poderes, sin un hecho concreto asociado todavia que permita verificar su cumplimiento.",
       "recommended_action": "SEGUIMIENTO",
       "publicable": false,
-      "script_status": "SEGUIMIENTO",
+      "script_status": "NO_APLICA",
       "script": null,
       "sources": [],
       "carried_over": false,
