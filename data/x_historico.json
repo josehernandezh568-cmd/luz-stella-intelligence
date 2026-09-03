@@ -1,6 +1,154 @@
 {
   "version": "1.0",
-  "last_updated": null,
+  "last_updated": "2026-09-03",
   "timezone": "America/Bogota",
-  "posts": []
+  "cuts": [
+    {
+      "date": "2026-09-03",
+      "time": null,
+      "timezone": "America/Bogota",
+      "inbox_received": 10,
+      "processed": 10,
+      "relevant": 6,
+      "discarded": 4,
+      "explicar": 4,
+      "aclarar": 0,
+      "seguimiento": 1,
+      "no_responder": 1,
+      "publicables": 0,
+      "scripts_listo": 0
+    }
+  ],
+  "posts": [
+    {
+      "x_post_id": "2095565419562279338",
+      "author": "Gustavo Petro",
+      "username": "petrogustavo",
+      "published_at": "2026-09-03T17:31:44.000Z",
+      "post_url": "https://x.com/petrogustavo/status/2095565419562279338",
+      "processed_at": "2026-09-03",
+      "final_status": "DESCARTADO",
+      "recommended_action": "NO_APLICA",
+      "verification": "no_aplica",
+      "score": null,
+      "discard_reason": "Promocion personal de una conferencia propia ('El Capital en el siglo XXI'), sin relacion con decisiones publicas, instituciones, Bogota o Kennedy."
+    },
+    {
+      "x_post_id": "2095561991117021368",
+      "author": "Gustavo Petro",
+      "username": "petrogustavo",
+      "published_at": "2026-09-03T17:18:06.000Z",
+      "post_url": "https://x.com/petrogustavo/status/2095561991117021368",
+      "processed_at": "2026-09-03",
+      "final_status": "DESCARTADO",
+      "recommended_action": "NO_APLICA",
+      "verification": "no_aplica",
+      "score": null,
+      "discard_reason": "Opinion de politica exterior sobre Venezuela, sin relacion directa con decisiones publicas colombianas, Bogota o Kennedy."
+    },
+    {
+      "x_post_id": "2095550017612230813",
+      "author": "Gustavo Petro",
+      "username": "petrogustavo",
+      "published_at": "2026-09-03T16:30:32.000Z",
+      "post_url": "https://x.com/petrogustavo/status/2095550017612230813",
+      "processed_at": "2026-09-03",
+      "final_status": "DESCARTADO",
+      "recommended_action": "NO_APLICA",
+      "verification": "no_aplica",
+      "score": null,
+      "discard_reason": "Declaracion moral/religiosa de tono general, sin afirmacion factual ni relacion institucional identificable."
+    },
+    {
+      "x_post_id": "2095547578175586598",
+      "author": "Gustavo Petro",
+      "username": "petrogustavo",
+      "published_at": "2026-09-03T16:20:50.000Z",
+      "post_url": "https://x.com/petrogustavo/status/2095547578175586598",
+      "processed_at": "2026-09-03",
+      "final_status": "DESCARTADO",
+      "recommended_action": "NO_APLICA",
+      "verification": "no_aplica",
+      "score": null,
+      "discard_reason": "Comentario personal informal, sin contenido sustantivo verificable ni relacion institucional."
+    },
+    {
+      "x_post_id": "2095317399121563853",
+      "author": "Abelardo De La Espriella",
+      "username": "ABDELAESPRIELLA",
+      "published_at": "2026-09-03T01:06:11.000Z",
+      "post_url": "https://x.com/ABDELAESPRIELLA/status/2095317399121563853",
+      "processed_at": "2026-09-03",
+      "final_status": "ANALIZADO",
+      "recommended_action": "EXPLICAR",
+      "verification": "alta",
+      "score": 65,
+      "discard_reason": null
+    },
+    {
+      "x_post_id": "2095300237489271012",
+      "author": "Abelardo De La Espriella",
+      "username": "ABDELAESPRIELLA",
+      "published_at": "2026-09-02T23:58:00.000Z",
+      "post_url": "https://x.com/ABDELAESPRIELLA/status/2095300237489271012",
+      "processed_at": "2026-09-03",
+      "final_status": "ANALIZADO",
+      "recommended_action": "EXPLICAR",
+      "verification": "alta",
+      "score": 55,
+      "discard_reason": null
+    },
+    {
+      "x_post_id": "2095484041331921232",
+      "author": "Abelardo De La Espriella",
+      "username": "ABDELAESPRIELLA",
+      "published_at": "2026-09-03T12:08:22.000Z",
+      "post_url": "https://x.com/ABDELAESPRIELLA/status/2095484041331921232",
+      "processed_at": "2026-09-03",
+      "final_status": "ANALIZADO",
+      "recommended_action": "EXPLICAR",
+      "verification": "alta",
+      "score": 49,
+      "discard_reason": null
+    },
+    {
+      "x_post_id": "2095350787140432099",
+      "author": "Abelardo De La Espriella",
+      "username": "ABDELAESPRIELLA",
+      "published_at": "2026-09-03T03:18:52.000Z",
+      "post_url": "https://x.com/ABDELAESPRIELLA/status/2095350787140432099",
+      "processed_at": "2026-09-03",
+      "final_status": "ANALIZADO",
+      "recommended_action": "EXPLICAR",
+      "verification": "alta",
+      "score": 48,
+      "discard_reason": null
+    },
+    {
+      "x_post_id": "2095547931990372443",
+      "author": "Abelardo De La Espriella",
+      "username": "ABDELAESPRIELLA",
+      "published_at": "2026-09-03T16:22:15.000Z",
+      "post_url": "https://x.com/ABDELAESPRIELLA/status/2095547931990372443",
+      "processed_at": "2026-09-03",
+      "final_status": "ANALIZADO",
+      "recommended_action": "SEGUIMIENTO",
+      "verification": "no_aplica",
+      "score": 37,
+      "discard_reason": null
+    },
+    {
+      "x_post_id": "2095549445089681431",
+      "author": "Gustavo Petro",
+      "username": "petrogustavo",
+      "published_at": "2026-09-03T16:28:15.000Z",
+      "post_url": "https://x.com/petrogustavo/status/2095549445089681431",
+      "processed_at": "2026-09-03",
+      "final_status": "ANALIZADO",
+      "recommended_action": "NO_RESPONDER",
+      "verification": "no_aplica",
+      "score": 25,
+      "discard_reason": null
+    }
+  ]
 }
