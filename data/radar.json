@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-09-02T00:00:00-05:00",
+  "last_updated": "2026-09-03T00:00:00-05:00",
   "timezone": "America/Bogota",
   "items": [
     {
@@ -39,7 +39,7 @@
         "cta": "¿Conocían el trabajo de Kevin? Cuéntenme qué representó para su comunidad.",
         "script_style": "INSTITUCIONAL_V3_4",
         "estimated_seconds_full": 48,
-        "last_script_verification": "2026-09-02T00:00:00-05:00"
+        "last_script_verification": "2026-09-03T00:00:00-05:00"
       }
     },
     {
@@ -163,9 +163,37 @@
       }
     },
     {
+      "id": "2026-09-03-001",
+      "topic_id": "seguridad-hincha-santafe-kennedy",
+      "rank": 5,
+      "score": 70,
+      "date": "2026-08-30",
+      "title": "Asesinato de un hincha de Independiente Santa Fe en Kennedy",
+      "place": "Kennedy (Bellavista/El Amparo)",
+      "categories": [
+        "seguridad",
+        "kennedy",
+        "bogota"
+      ],
+      "verification": "alta",
+      "status": "EN DESARROLLO",
+      "historical_status": "NUEVO",
+      "summary": "Luis Alberto Gomez Avellaneda, 32 anos, murio apunalado el 30 de agosto en Kennedy. La familia cree que vestir una camiseta de Santa Fe motivo el ataque; las autoridades no han confirmado esa hipotesis ni identificado a los responsables.",
+      "source_name": "El Espectador",
+      "source_url": "https://www.elespectador.com/bogota/investigan-asesinato-de-hincha-de-santa-fe-en-kennedy-esto-se-sabe-del-ataque/",
+      "passes": [
+        "5 fuentes independientes con hechos centrales consistentes",
+        "sin fuente oficial directa (Policia investiga, sin comunicado formal)",
+        "movil sigue como hipotesis familiar, no confirmado"
+      ],
+      "publicable": true,
+      "script_status": "REVISAR",
+      "script": null
+    },
+    {
       "id": "2026-08-31-004",
       "topic_id": "corrupcion-libro-de-la-verdad",
-      "rank": 5,
+      "rank": 6,
       "score": 65,
       "date": "2026-08-18",
       "title": "\"Libro de la Verdad\": hallazgos sobre la administración anterior",
@@ -199,7 +227,7 @@
     {
       "id": "2026-08-31-006",
       "topic_id": "kennedy-siniestro-vial-americas-boyaca",
-      "rank": 6,
+      "rank": 7,
       "score": 50,
       "date": "2026-08-31",
       "title": "Siniestro vial fatal en Av. Américas con Av. Boyacá, Kennedy",
@@ -226,7 +254,7 @@
     {
       "id": "2026-08-31-005",
       "topic_id": "kennedy-espacio-publico",
-      "rank": 7,
+      "rank": 8,
       "score": 45,
       "date": "2026-08-29",
       "title": "Operativos de recuperación de espacio público en Kennedy",
@@ -260,7 +288,7 @@
     {
       "id": "2026-08-31-007",
       "topic_id": "ambiente-incendios-el-nino",
-      "rank": 8,
+      "rank": 9,
       "score": 40,
       "date": "2026-08-29",
       "title": "Incendios forestales y probabilidad de El Niño fuerte",
@@ -285,7 +313,7 @@
     {
       "id": "2026-08-31-008",
       "topic_id": "corrupcion-denuncia-briceno-contratistas",
-      "rank": 9,
+      "rank": 10,
       "score": 35,
       "date": "2026-08-25",
       "title": "Denuncia de Daniel Briceño sobre contratistas inhabilitados",
@@ -312,7 +340,7 @@
     {
       "id": "2026-08-31-009",
       "topic_id": "kennedy-servicios-cortes-agua-luz",
-      "rank": 10,
+      "rank": 11,
       "score": 20,
       "date": "2026-08-31",
       "title": "Cortes programados de agua y energía en Kennedy",
