@@ -1,1 +1,273 @@
+name: X Collector - Radar X V4.1 (manual)
 
+on:
+  workflow_dispatch: {}
+
+jobs:
+  collect:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout del repositorio
+        uses: actions/checkout@v4
+
+      - name: Preparar archivos base (cuentas, historico, inbox)
+        run: |
+          set -euo pipefail
+
+          mkdir -p work
+
+          if [ ! -f "data/x_cuentas.json" ]; then
+            echo "ERROR: no existe data/x_cuentas.json. Abortando."
+            exit 1
+          fi
+          cp data/x_cuentas.json work/x_cuentas.json
+
+          # x_historico.json puede o no existir; si no existe, se trata como vacio
+          if [ -f "data/x_historico.json" ]; then
+            cp data/x_historico.json work/x_historico.json
+          else
+            echo '{"cuts":[],"posts":[]}' > work/x_historico.json
+          fi
+
+          # x_inbox.json puede no existir todavia
+          if [ -f "data/x_inbox.json" ]; then
+            cp data/x_inbox.json work/x_inbox_existente.json
+          else
+            echo '{"last_updated": null, "timezone": "America/Bogota", "posts": []}' > work/x_inbox_existente.json
+          fi
+
+          # IDs ya conocidos por el historico: solo x_post_id reales y no nulos.
+          # post_id_pendiente (registros antiguos sin ID real de X) se ignora a proposito.
+          jq '[(.posts // [])[] | select(has("x_post_id")) | select(.x_post_id != null) | .x_post_id]' \
+            work/x_historico.json > work/known_ids_historico.json
+
+          # IDs ya presentes en el inbox existente (posts pendientes de analisis)
+          jq '[(.posts // [])[] | select(.x_post_id != null) | .x_post_id]' \
+            work/x_inbox_existente.json > work/known_ids_inbox.json
+
+          jq -s '[.[0][], .[1][]] | unique' \
+            work/known_ids_historico.json work/known_ids_inbox.json > work/known_ids.json
+
+          echo "IDs conocidos combinados (historico + inbox existente):"
+          jq 'length' work/known_ids.json
+
+          # Acumuladores de esta ejecucion
+          echo "[]" > work/new_posts.json
+          echo "[]" > work/resolved_updates.json
+          echo "## Radar X - Colector - resumen de ejecucion" > work/summary.md
+          echo "" >> work/summary.md
+
+          # Corte de ventana: estrictamente 24 horas respecto al momento de ejecucion (UTC).
+          # El colector automatico NO amplia a 48 horas; eso queda para la capa de inteligencia.
+          CUTOFF_EPOCH=$(date -u -d "-24 hours" +%s)
+          echo "CUTOFF_EPOCH=$CUTOFF_EPOCH" >> "$GITHUB_ENV"
+          echo "Corte de ventana (24h, epoch UTC): $CUTOFF_EPOCH ($(date -u -d "@$CUTOFF_EPOCH" +"%Y-%m-%dT%H:%M:%SZ"))"
+
+      - name: Consultar cuentas activas y recolectar publicaciones nuevas
+        env:
+          X_BEARER_TOKEN: ${{ secrets.X_BEARER_TOKEN }}
+        run: |
+          set -uo pipefail
+
+          ACTIVE_COUNT=$(jq '[.cuentas[] | select(.activo == true)] | length' work/x_cuentas.json)
+          echo "Cuentas activas encontradas: $ACTIVE_COUNT" >> work/summary.md
+          echo "" >> work/summary.md
+          echo "| Cuenta | Resolucion usuario | Publicaciones API | Nuevas | Duplicadas | Fuera de ventana 24h | Error |" >> work/summary.md
+          echo "|---|---|---|---|---|---|---|" >> work/summary.md
+
+          NUM_ACCOUNTS=$(jq '.cuentas | length' work/x_cuentas.json)
+
+          classify_error () {
+            local status="$1"
+            case "$status" in
+              401) echo "AUTENTICACION (401)" ;;
+              402|403) echo "CREDITOS/PERMISOS (${status})" ;;
+              404) echo "USUARIO NO ENCONTRADO (404)" ;;
+              429) echo "LIMITE DE TASA (429)" ;;
+              5*) echo "ERROR TEMPORAL DE X (${status})" ;;
+              *) echo "ERROR HTTP (${status})" ;;
+            esac
+          }
+
+          for i in $(seq 0 $((NUM_ACCOUNTS - 1))); do
+            ACCOUNT=$(jq -c ".cuentas[$i]" work/x_cuentas.json)
+            ACTIVO=$(echo "$ACCOUNT" | jq -r '.activo')
+            if [ "$ACTIVO" != "true" ]; then
+              continue
+            fi
+
+            USERNAME=$(echo "$ACCOUNT" | jq -r '.usuario')
+            NOMBRE=$(echo "$ACCOUNT" | jq -r '.nombre')
+            X_USER_ID=$(echo "$ACCOUNT" | jq -r '.x_user_id')
+
+            RESOLVE_NOTE="ya existia"
+            ACCOUNT_ERROR=""
+            POSTS_RECOVERED=0
+            POSTS_NEW=0
+            POSTS_DUP=0
+
+            if [ "$X_USER_ID" = "null" ] || [ -z "$X_USER_ID" ]; then
+              HTTP_STATUS=$(curl -s -o work/resolve_${i}.json -w "%{http_code}" \
+                -H "Authorization: Bearer ${X_BEARER_TOKEN}" \
+                "https://api.x.com/2/users/by/username/${USERNAME}")
+
+              if [ "$HTTP_STATUS" -ge 400 ]; then
+                ACCOUNT_ERROR=$(classify_error "$HTTP_STATUS")
+                echo "| ${NOMBRE} (@${USERNAME}) | FALLO: ${ACCOUNT_ERROR} | 0 | 0 | 0 | 0 | si |" >> work/summary.md
+                continue
+              fi
+
+              X_USER_ID=$(jq -r '.data.id' work/resolve_${i}.json)
+              RESOLVE_NOTE="resuelto ahora: ${X_USER_ID}"
+
+              jq -n --arg username "$USERNAME" --arg id "$X_USER_ID" \
+                '{username: $username, x_user_id: $id}' >> work/resolved_updates_lines.jsonl
+            fi
+
+            HTTP_STATUS=$(curl -s -o work/tweets_${i}.json -w "%{http_code}" \
+              -H "Authorization: Bearer ${X_BEARER_TOKEN}" \
+              "https://api.x.com/2/users/${X_USER_ID}/tweets?max_results=5&exclude=replies,retweets&tweet.fields=created_at")
+
+            if [ "$HTTP_STATUS" -ge 400 ]; then
+              ACCOUNT_ERROR=$(classify_error "$HTTP_STATUS")
+              echo "| ${NOMBRE} (@${USERNAME}) | ${RESOLVE_NOTE} | 0 | 0 | 0 | 0 | si: ${ACCOUNT_ERROR} |" >> work/summary.md
+              continue
+            fi
+
+            POSTS_RECOVERED=$(jq '(.data // []) | length' work/tweets_${i}.json)
+
+            jq -c '(.data // [])[]' work/tweets_${i}.json | while read -r POST; do
+              POST_ID=$(echo "$POST" | jq -r '.id')
+              ALREADY_KNOWN=$(jq --arg pid "$POST_ID" '[.[] | select(. == $pid)] | length' work/known_ids.json)
+
+              if [ "$ALREADY_KNOWN" -gt 0 ]; then
+                echo "dup" >> work/dup_count_${i}.txt
+                continue
+              fi
+
+              CREATED_AT=$(echo "$POST" | jq -r '.created_at')
+
+              # Ventana estricta de 24 horas: si el post es mas antiguo que el corte,
+              # no entra al inbox ni cuenta como duplicado; se registra aparte.
+              POST_EPOCH=$(date -u -d "$CREATED_AT" +%s 2>/dev/null || echo "")
+              if [ -z "$POST_EPOCH" ] || [ "$POST_EPOCH" -lt "$CUTOFF_EPOCH" ]; then
+                echo "fuera" >> work/window_count_${i}.txt
+                continue
+              fi
+
+              TEXT=$(echo "$POST" | jq -r '.text')
+
+              jq -n \
+                --arg id "$POST_ID" \
+                --arg author "$NOMBRE" \
+                --arg username "$USERNAME" \
+                --arg published_at "$CREATED_AT" \
+                --arg url "https://x.com/${USERNAME}/status/${POST_ID}" \
+                --arg text "$TEXT" \
+                '{x_post_id: $id, author: $author, username: $username, published_at: $published_at, post_url: $url, post_text: $text, collection_status: "PENDIENTE_ANALISIS"}' \
+                >> work/new_posts_lines_${i}.jsonl
+
+              echo "new" >> work/new_count_${i}.txt
+            done
+
+            POSTS_NEW=0
+            POSTS_DUP=0
+            POSTS_WINDOW=0
+            [ -f "work/new_count_${i}.txt" ] && POSTS_NEW=$(wc -l < "work/new_count_${i}.txt")
+            [ -f "work/dup_count_${i}.txt" ] && POSTS_DUP=$(wc -l < "work/dup_count_${i}.txt")
+            [ -f "work/window_count_${i}.txt" ] && POSTS_WINDOW=$(wc -l < "work/window_count_${i}.txt")
+
+            echo "| ${NOMBRE} (@${USERNAME}) | ${RESOLVE_NOTE} | ${POSTS_RECOVERED} | ${POSTS_NEW} | ${POSTS_DUP} | ${POSTS_WINDOW} | no |" >> work/summary.md
+          done
+
+          echo "" >> work/summary.md
+
+      - name: Construir x_inbox.json y x_cuentas.sugerido.json finales
+        run: |
+          set -euo pipefail
+
+          # Unir todos los posts nuevos detectados (si algun archivo no existe, jq -s lo ignora con [])
+          shopt -s nullglob
+          NEW_FILES=(work/new_posts_lines_*.jsonl)
+          if [ ${#NEW_FILES[@]} -eq 0 ]; then
+            echo "[]" > work/all_new_posts.json
+          else
+            jq -s '.' work/new_posts_lines_*.jsonl > work/all_new_posts.json
+          fi
+
+          TOTAL_NEW=$(jq 'length' work/all_new_posts.json)
+          echo "Total de publicaciones nuevas detectadas: $TOTAL_NEW"
+
+          NOW=$(date -u +"%Y-%m-%dT%H:%M:%S%z")
+
+          # x_inbox.json final = posts existentes (preservados) + posts nuevos (agregados)
+          jq -n \
+            --argjson existentes "$(jq '.posts // []' work/x_inbox_existente.json)" \
+            --argjson nuevos "$(cat work/all_new_posts.json)" \
+            --arg now "$NOW" \
+            '{last_updated: $now, timezone: "America/Bogota", posts: ($existentes + $nuevos)}' \
+            > work/x_inbox_final.json
+
+          jq empty work/x_inbox_final.json
+          cp work/x_inbox_final.json data/x_inbox.json
+
+          # x_cuentas.sugerido.json solo si hubo al menos una resolucion nueva
+          if [ -f work/resolved_updates_lines.jsonl ]; then
+            RESOLVED_COUNT=$(wc -l < work/resolved_updates_lines.jsonl)
+          else
+            RESOLVED_COUNT=0
+          fi
+          echo "RESOLVED_COUNT=$RESOLVED_COUNT" >> "$GITHUB_ENV"
+
+          if [ "$RESOLVED_COUNT" -gt 0 ]; then
+            RESOLVED_JSON=$(jq -s '.' work/resolved_updates_lines.jsonl)
+            jq --argjson updates "$RESOLVED_JSON" '
+              .cuentas |= map(
+                . as $c
+                | ($updates | map(select(.username == $c.usuario)) | first) as $u
+                | if $u != null
+                  then ($c | .x_user_id = $u.x_user_id)
+                  else $c
+                  end
+              )
+            ' work/x_cuentas.json > work/x_cuentas.sugerido.json
+
+            jq empty work/x_cuentas.sugerido.json
+            echo "x_cuentas.sugerido.json generado con $RESOLVED_COUNT resolucion(es) nueva(s)."
+          else
+            echo "No hubo resoluciones nuevas de x_user_id; no se genera x_cuentas.sugerido.json."
+          fi
+
+      - name: Completar resumen de ejecucion
+        if: always()
+        run: |
+          TOTAL_WINDOW=0
+          for f in work/window_count_*.txt; do
+            [ -f "$f" ] || continue
+            TOTAL_WINDOW=$((TOTAL_WINDOW + $(wc -l < "$f")))
+          done
+
+          {
+            echo "### Detalle"
+            cat work/summary.md 2>/dev/null || echo "(sin detalle disponible)"
+            echo ""
+            echo "- Total publicaciones nuevas agregadas al inbox: $(jq 'length' work/all_new_posts.json 2>/dev/null || echo 0)"
+            echo "- Total publicaciones fuera de ventana 24h (no agregadas): ${TOTAL_WINDOW}"
+            echo "- IDs de usuario resueltos en esta ejecucion: ${RESOLVED_COUNT:-0}"
+          } >> "$GITHUB_STEP_SUMMARY"
+
+      - name: Subir x_inbox.json como artifact
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: x_inbox
+          path: data/x_inbox.json
+          if-no-files-found: warn
+
+      - name: Subir x_cuentas.sugerido.json como artifact (solo si hubo resoluciones nuevas)
+        if: env.RESOLVED_COUNT != '0'
+        uses: actions/upload-artifact@v4
+        with:
+          name: x_cuentas_sugerido
+          path: work/x_cuentas.sugerido.json
+          if-no-files-found: warn
