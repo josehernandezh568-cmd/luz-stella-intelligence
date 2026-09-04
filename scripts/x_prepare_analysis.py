@@ -1,3 +1,4 @@
+"""
 Radar X V4.2 - Preparacion del lote para analisis manual con Claude.
 
 Filosofia V4.2: CLAUDE PROPONE -> PYTHON VALIDA -> PYTHON RECONSTRUYE.
