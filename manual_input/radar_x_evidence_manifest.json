@@ -1,1 +1,6 @@
-
+{
+  "version": "4.2",
+  "mode": "manual_claude",
+  "input_sha256": "f2580a9de90e222f188cdfc451aeb780d3653267b389e21d4e482ac5b8f6ef43",
+  "evidence_urls": []
+}
