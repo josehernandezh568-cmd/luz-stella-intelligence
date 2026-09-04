@@ -1,1 +1,404 @@
-
+{
+  "version": "4.2",
+  "mode": "manual_claude",
+  "input_sha256": "f2580a9de90e222f188cdfc451aeb780d3653267b389e21d4e482ac5b8f6ef43",
+  "analysis": [
+    {
+      "x_post_id": "2095583251398119468",
+      "final_status": "ANALIZADO",
+      "discard_reason": null,
+      "radar_item": {
+        "x_post_id": "2095583251398119468",
+        "author": "Abelardo De La Espriella",
+        "username": "ABDELAESPRIELLA",
+        "published_at": "2026-09-03T18:42:35.000Z",
+        "post_url": "https://x.com/ABDELAESPRIELLA/status/2095583251398119468",
+        "post_text": "Los colombianos pueden estar tranquilos: la expedición de pasaportes está garantizada.\n\n¡Firme por la Patria!\n\n(A.D.L.E.) 🇨🇴🐅 https://t.co/6lGyzUPMS6",
+        "score": 60,
+        "topic": "Suspensión judicial del convenio para producir pasaportes",
+        "categories": [
+          "instituciones",
+          "politica"
+        ],
+        "claims": [
+          {
+            "claim": "El Tribunal Administrativo de Cundinamarca suspendio temporalmente el convenio entre la Cancilleria y la Imprenta Nacional (con la Casa de la Moneda de Portugal) para producir pasaportes, y el Gobierno garantiza que el servicio de expedicion continua sin interrupcion gracias a una reserva de 600.000 pasaportes",
+            "type": "fact",
+            "verification": "CONFIRMADO",
+            "evidence": [
+              {
+                "url": "https://www.infobae.com/colombia/2026/09/04/el-gobierno-aclaro-que-pasara-con-la-expedicion-de-pasaportes-tras-la-suspension-de-convenios-con-la-imprenta-nacional/"
+              },
+              {
+                "url": "https://www.infobae.com/america/agencias/2026/09/04/colombia-pide-calma-tras-la-suspension-judicial-del-convenio-para-producir-pasaportes/"
+              },
+              {
+                "url": "https://www.elespectador.com/politica/hay-una-reserva-de-pasaportes-para-cuatro-meses-gobierno-de-la-espriella-anuncia-medidas/"
+              }
+            ],
+            "notes": "Confirmado por al menos 6 medios independientes; la decision judicial se dio en una accion popular y no ordena suspender la expedicion, solo frena pagos del convenio."
+          }
+        ],
+        "verification": "alta",
+        "territory": {
+          "colombia": "DIRECTO",
+          "bogota": "NO_DEMOSTRADO",
+          "kennedy": "NO_DEMOSTRADO"
+        },
+        "context": "El fallo del Tribunal Administrativo de Cundinamarca frena temporalmente el Convenio Interadministrativo 001/2025 y CI-005/2026, firmados en la administracion anterior. El canciller reporto inventario de 600.000 pasaportes (410.000 actuales + 190.000 por llegar), con cobertura estimada de 4 meses.",
+        "recommended_action": "EXPLICAR",
+        "content_opportunity": "MEDIA",
+        "opportunity_reason": "Es informacion de servicio publico de utilidad directa para cualquier ciudadano -incluidos los de Kennedy- que necesite tramitar su pasaporte, y ademas ilustra un caso concreto de control judicial sobre una decision de gobierno (separacion de poderes), con valor pedagogico institucional real, no generico.",
+        "publicable": true,
+        "script_status": "LISTO",
+        "script": {
+          "hook": "Un fallo judicial puso en pausa parte del trámite para producir pasaportes, pero el servicio sigue funcionando.",
+          "context": "El Tribunal Administrativo de Cundinamarca suspendió temporalmente el convenio entre la Cancillería y la Imprenta Nacional, firmado con la Casa de la Moneda de Portugal en la administración anterior.",
+          "key_fact": "El Gobierno reportó una reserva de 600.000 pasaportes, con cobertura estimada de 4 meses.",
+          "explanation": "El fallo no ordena suspender la expedición de pasaportes; frena los pagos del convenio mientras se resuelve el fondo del caso en una acción popular.",
+          "citizen_connection": "Cualquier persona que necesite tramitar su pasaporte, incluidos vecinos de Kennedy, puede seguir haciéndolo con normalidad por ahora.",
+          "role_competencia": "Es un trámite de competencia nacional (Cancillería); como Edilesa puedo ayudar a que la comunidad esté bien informada.",
+          "close": "Vamos a seguir de cerca la respuesta contingente que prepara el Gobierno.",
+          "cta": "¿Han tenido dificultades recientes para tramitar su pasaporte? Cuéntenme."
+        },
+        "sources": [
+          {
+            "name": "Infobae",
+            "url": "https://www.infobae.com/colombia/2026/09/04/el-gobierno-aclaro-que-pasara-con-la-expedicion-de-pasaportes-tras-la-suspension-de-convenios-con-la-imprenta-nacional/",
+            "type": "secondary",
+            "date": "2026-09-04"
+          }
+        ]
+      }
+    },
+    {
+      "x_post_id": "2095596713151197693",
+      "final_status": "ANALIZADO",
+      "discard_reason": null,
+      "radar_item": {
+        "x_post_id": "2095596713151197693",
+        "author": "Abelardo De La Espriella",
+        "username": "ABDELAESPRIELLA",
+        "published_at": "2026-09-03T19:36:05.000Z",
+        "post_url": "https://x.com/ABDELAESPRIELLA/status/2095596713151197693",
+        "post_text": "¡Golpe estratégico al Tren de Aragua en Colombia!\n\nHoy, en Manizales, nuestra Policía Nacional, a través de la DIPOL y el GAULA-ÉLITE, capturó en la Operación TITÁN a dos importantes cabecillas de esta organización terrorista transnacional. \n\nCayó Richard José Espinal Quintero, https://t.co/pMv0oOlSdD",
+        "score": 61,
+        "topic": "Captura de dos cabecillas del Tren de Aragua en Manizales (Operación Titán)",
+        "categories": [
+          "seguridad",
+          "narcotrafico"
+        ],
+        "claims": [
+          {
+            "claim": "La Policia Nacional (Dipol y Gaula-Elite) capturo en Manizales a Richard Jose Espinal Quintero ('El Coti') y Henderzon Adrian Villarroel Luque ('El Paton'), presuntos cabecillas del Tren de Aragua buscados por Estados Unidos",
+            "type": "fact",
+            "verification": "CONFIRMADO",
+            "evidence": [
+              {
+                "url": "https://www.infobae.com/america/agencias/2026/09/03/detienen-en-colombia-a-dos-cabecillas-del-tren-de-aragua-buscados-por-estados-unidos/"
+              },
+              {
+                "url": "https://www.semana.com/politica/articulo/presidente-de-la-espriella-publico-video-de-la-captura-de-cabecillas-del-tren-de-aragua-asi-fue-sorprendido-uno-de-los-criminales/202639/"
+              },
+              {
+                "url": "https://www.colombia.com/actualidad/nacionales/capturan-en-manizales-a-dos-cabecillas-del-tren-de-aragua-requeridos-por-interpol-598994"
+              }
+            ],
+            "notes": "Confirmado por multiples medios independientes, con cita textual del presidente."
+          },
+          {
+            "claim": "El asesinato del profesor y lider comunitario Kevin Santiago Angel en Kennedy (mayo 2026) fue atribuido por la Fiscalia a integrantes del Tren de Aragua, la misma organizacion criminal de la que Espinal Quintero y Villarroel Luque son senalados cabecillas",
+            "type": "fact",
+            "verification": "CONFIRMADO",
+            "evidence": [
+              {
+                "url": "https://www.infobae.com/colombia/2026/09/01/el-tren-de-aragua-habria-sido-el-responsable-del-brutal-asesinato-del-profesor-kevin-santiago-angel-en-bogota-capturaron-a-ocho-sospechosos/"
+              },
+              {
+                "url": "https://www.elespectador.com/bogota/capturan-a-integrantes-del-tren-de-aragua-por-crimen-del-profesor-kevin-santiago-angel/"
+              },
+              {
+                "url": "https://www.eltiempo.com/bogota/cayeron-presuntos-integrantes-del-tren-de-aragua-implicados-en-el-asesinato-del-profesor-kevin-santiago-angel-en-bogota-los-delitos-que-les-imputaran-3582718"
+              },
+              {
+                "url": "https://www.semana.com/nacion/articulo/lo-asesinaron-por-alejar-jovenes-de-la-criminalidad-la-fiscalia-confirmo-la-captura-de-integrantes-del-tren-de-aragua-por-crimen-de-un-profesor/202621/"
+              }
+            ],
+            "notes": "Evidencia reutilizada de la verificacion ya realizada dentro de este sistema (caso Kevin Angel, corroborado por 8 fuentes independientes el 1-2 de septiembre de 2026)."
+          }
+        ],
+        "verification": "alta",
+        "territory": {
+          "colombia": "DIRECTO",
+          "bogota": "NO_DEMOSTRADO",
+          "kennedy": "NO_DEMOSTRADO"
+        },
+        "context": "Operativo en Manizales (Caldas), no en Kennedy ni Bogota. Es la misma estructura criminal (Tren de Aragua) vinculada al asesinato del profesor Kevin Santiago Angel en Kennedy en mayo de 2026.",
+        "recommended_action": "EXPLICAR",
+        "content_opportunity": "MEDIA",
+        "opportunity_reason": "Es la misma estructura criminal (Tren de Aragua) vinculada al asesinato de Kevin Angel en Kennedy; sin afirmar que esta captura especifica ocurrio alli, hay valor pedagogico real en mostrar continuidad del trabajo institucional contra esa organizacion para la audiencia que ya sigue ese caso.",
+        "publicable": true,
+        "script_status": "LISTO",
+        "script": {
+          "hook": "La Policía Nacional capturó a dos presuntos cabecillas del Tren de Aragua en Manizales.",
+          "context": "En la Operación Titán, la Dipol y el Gaula-Élite capturaron a dos personas señaladas como cabecillas de la organización, ambas requeridas por Estados Unidos.",
+          "key_fact": "Fueron identificados como Richard José Espinal Quintero ('El Coti') y Henderzon Adrián Villarroel Luque ('El Patón'); el primero sería el cuarto cabecilla de la estructura en Colombia.",
+          "explanation": "Son presuntos responsables; la investigación y judicialización siguen su curso ante la Fiscalía.",
+          "citizen_connection": "Es la misma organización vinculada al asesinato de Kevin Santiago Ángel en Kennedy — un golpe a esa estructura importa para nuestra comunidad, aunque esta captura específica ocurrió en Caldas.",
+          "role_competencia": "La investigación y judicialización corresponden a la Fiscalía y la Policía; como Edilesa puedo dar seguimiento público al fenómeno.",
+          "close": "Los capturados quedan a disposición de las autoridades competentes.",
+          "cta": "¿Han sentido el impacto del Tren de Aragua en su barrio?"
+        },
+        "sources": [
+          {
+            "name": "Infobae/EFE",
+            "url": "https://www.infobae.com/america/agencias/2026/09/03/detienen-en-colombia-a-dos-cabecillas-del-tren-de-aragua-buscados-por-estados-unidos/",
+            "type": "secondary",
+            "date": "2026-09-03"
+          }
+        ]
+      }
+    },
+    {
+      "x_post_id": "2095634265358877158",
+      "final_status": "ANALIZADO",
+      "discard_reason": null,
+      "radar_item": {
+        "x_post_id": "2095634265358877158",
+        "author": "Abelardo De La Espriella",
+        "username": "ABDELAESPRIELLA",
+        "published_at": "2026-09-03T22:05:18.000Z",
+        "post_url": "https://x.com/ABDELAESPRIELLA/status/2095634265358877158",
+        "post_text": "Encuentro con nuestros embajadores María Consuelo Araújo y Mauricio Gaona, con quienes trabajamos para proyectar ante el mundo una Colombia fuerte, confiable y llena de oportunidades.\n\nNuestra diplomacia tiene una misión clara: abrir puertas, construir alianzas, atraer inversión https://t.co/ZR8V7XZ27H",
+        "score": 44,
+        "topic": "Reunión presidencial con embajadores ante EE.UU. y la ONU",
+        "categories": [
+          "politica",
+          "instituciones"
+        ],
+        "claims": [
+          {
+            "claim": "El presidente se reunio con la embajadora en Estados Unidos, Maria Consuelo Araujo, y el embajador ante la ONU, Mauricio Gaona, para fijar lineamientos de politica exterior",
+            "type": "fact",
+            "verification": "CONFIRMADO",
+            "evidence": [
+              {
+                "url": "https://www.eltiempo.com/politica/abelardo-de-la-espriella/presidente-abelardo-de-la-espriella-se-reunio-con-los-embajadores-mauricio-gaona-y-maria-consuelo-araujo-abrir-puertas-y-atraer-inversion-3583483"
+              },
+              {
+                "url": "https://www.infobae.com/colombia/2026/09/04/de-la-espriella-dio-instrucciones-a-los-embajadores-ante-estados-unidos-y-la-onu-y-les-encargo-esta-especial-mision-hacerse-respetar/"
+              }
+            ],
+            "notes": "Confirmado por El Tiempo e Infobae."
+          }
+        ],
+        "verification": "alta",
+        "territory": {
+          "colombia": "DIRECTO",
+          "bogota": "NO_DEMOSTRADO",
+          "kennedy": "NO_DEMOSTRADO"
+        },
+        "context": "Reunion de politica exterior en el Palacio de San Carlos, sin relacion con asuntos distritales o locales.",
+        "recommended_action": "EXPLICAR",
+        "content_opportunity": "BAJA",
+        "opportunity_reason": "Nombramientos diplomaticos y politica exterior no estan entre los ejes estrategicos de Luz Stella (ambiente, seguridad, movilidad, corrupcion/transparencia); sin relacion con Kennedy o Bogota; es vitrina de gestion del Ejecutivo nacional.",
+        "publicable": false,
+        "script_status": "NO_APLICA",
+        "script": null,
+        "sources": [
+          {
+            "name": "El Tiempo",
+            "url": "https://www.eltiempo.com/politica/abelardo-de-la-espriella/presidente-abelardo-de-la-espriella-se-reunio-con-los-embajadores-mauricio-gaona-y-maria-consuelo-araujo-abrir-puertas-y-atraer-inversion-3583483",
+            "type": "secondary",
+            "date": "2026-09-04"
+          }
+        ]
+      }
+    },
+    {
+      "x_post_id": "2095668382423290221",
+      "final_status": "ANALIZADO",
+      "discard_reason": null,
+      "radar_item": {
+        "x_post_id": "2095668382423290221",
+        "author": "Abelardo De La Espriella",
+        "username": "ABDELAESPRIELLA",
+        "published_at": "2026-09-04T00:20:52.000Z",
+        "post_url": "https://x.com/ABDELAESPRIELLA/status/2095668382423290221",
+        "post_text": "En Colombia se acabó la contemplación con el crimen y volvió a regir, sin titubeos, el imperio de la ley.\n\nA los criminales y narcoterroristas les notifico con absoluta firmeza: las cárceles dejaron de ser hoteles y centros de operación del delito. Quien sea condenado tendrá que https://t.co/cHBCZ00koX",
+        "score": 30,
+        "topic": "Discurso general sobre política de seguridad y sistema penitenciario",
+        "categories": [
+          "seguridad",
+          "politica"
+        ],
+        "claims": [
+          {
+            "claim": "Las carceles dejaron de ser 'hoteles y centros de operacion del delito'",
+            "type": "opinion",
+            "verification": "OPINION_NO_VERIFICABLE",
+            "evidence": [],
+            "notes": "Declaracion retorica de politica general, sin un hecho, cifra o evento especifico y nuevo asociado."
+          }
+        ],
+        "verification": "no_aplica",
+        "territory": {
+          "colombia": "DIRECTO",
+          "bogota": "NO_DEMOSTRADO",
+          "kennedy": "NO_DEMOSTRADO"
+        },
+        "context": "Mensaje de tono politico general sobre la politica de seguridad del gobierno, sin nuevo hecho verificable.",
+        "recommended_action": "NO_RESPONDER",
+        "content_opportunity": "NINGUNA",
+        "opportunity_reason": "Es retorica politica sin dato nuevo verificable; responder no aportaria informacion adicional y arriesgaria sonar como eco de la comunicacion oficial del gobierno.",
+        "publicable": false,
+        "script_status": "NO_APLICA",
+        "script": null,
+        "sources": []
+      }
+    },
+    {
+      "x_post_id": "2095726229701726370",
+      "final_status": "ANALIZADO",
+      "discard_reason": null,
+      "radar_item": {
+        "x_post_id": "2095726229701726370",
+        "author": "Abelardo De La Espriella",
+        "username": "ABDELAESPRIELLA",
+        "published_at": "2026-09-04T04:10:44.000Z",
+        "post_url": "https://x.com/ABDELAESPRIELLA/status/2095726229701726370",
+        "post_text": "Que viva Colombia, que viva Cristo Rey. Todos los delincuentes y narcoterroristas que desafíen al Estado van a caer bajo la fuerza de las armas y las leyes de la República.\n\nMañana, grandes noticias tendremos.\n\n¡Firme por la Patria! \n\n(A.D.L.E) 🇨🇴 🐅",
+        "score": 34,
+        "topic": "Anuncio genérico de próximas noticias de seguridad",
+        "categories": [
+          "seguridad",
+          "politica"
+        ],
+        "claims": [
+          {
+            "claim": "Manana habra 'grandes noticias' relacionadas con la lucha contra el crimen",
+            "type": "prediction",
+            "verification": "PREDICCION_NO_VERIFICABLE",
+            "evidence": [],
+            "notes": "Anuncio/teaser sin hecho concreto todavia asociado."
+          }
+        ],
+        "verification": "no_aplica",
+        "territory": {
+          "colombia": "DIRECTO",
+          "bogota": "NO_DEMOSTRADO",
+          "kennedy": "NO_DEMOSTRADO"
+        },
+        "context": "Mensaje retorico previo a un anuncio no especificado.",
+        "recommended_action": "SEGUIMIENTO",
+        "content_opportunity": "BAJA",
+        "opportunity_reason": "Mensaje retorico/promocional sin hecho concreto todavia que explicar; sin relacion territorial; se espera si el anuncio produce un hecho verificable relevante.",
+        "publicable": false,
+        "script_status": "NO_APLICA",
+        "script": null,
+        "sources": []
+      }
+    },
+    {
+      "x_post_id": "2095843748483657999",
+      "final_status": "ANALIZADO",
+      "discard_reason": null,
+      "radar_item": {
+        "x_post_id": "2095843748483657999",
+        "author": "Gustavo Petro",
+        "username": "petrogustavo",
+        "published_at": "2026-09-04T11:57:43.000Z",
+        "post_url": "https://x.com/petrogustavo/status/2095843748483657999",
+        "post_text": "Aquí las mentiras  abelardistas hablan del voto fusil que no existió y cuando los fusiles ilegales son los del narcotráfico.\n\nPero lo que si hubo fue centenares de miles de votos robots, bots y votos de algoritmo. https://t.co/XXuReEyTeW",
+        "score": 35,
+        "topic": "Acusación de fraude electoral (votos bot/algoritmo) sin evidencia presentada",
+        "categories": [
+          "politica"
+        ],
+        "claims": [
+          {
+            "claim": "Hubo centenares de miles de 'votos robots, bots y votos de algoritmo' en la eleccion presidencial",
+            "type": "fact",
+            "verification": "NO_DEMOSTRADO",
+            "evidence": [],
+            "notes": "Afirmacion factual/acusatoria sin evidencia externa (Registraduria, CNE, observadores) que la respalde ni que la refute; el propio post no aporta fuente ni metodologia."
+          }
+        ],
+        "verification": "baja",
+        "territory": {
+          "colombia": "DIRECTO",
+          "bogota": "NO_DEMOSTRADO",
+          "kennedy": "NO_DEMOSTRADO"
+        },
+        "context": "Publicacion de tono acusatorio sobre presunto fraude electoral, sin evidencia especifica citada.",
+        "recommended_action": "NO_RESPONDER",
+        "content_opportunity": "NINGUNA",
+        "opportunity_reason": "Es una afirmacion factual sobre presunto fraude electoral clasificada NO_DEMOSTRADO por falta de evidencia externa; amplificarla sin evidencia seria irresponsable y arriesgaria involucrar a Luz Stella en una disputa partidista de alto voltaje sin aporte informativo real.",
+        "publicable": false,
+        "script_status": "NO_APLICA",
+        "script": null,
+        "sources": []
+      }
+    },
+    {
+      "x_post_id": "2095846892470968626",
+      "final_status": "ANALIZADO",
+      "discard_reason": null,
+      "radar_item": {
+        "x_post_id": "2095846892470968626",
+        "author": "Gustavo Petro",
+        "username": "petrogustavo",
+        "published_at": "2026-09-04T12:10:12.000Z",
+        "post_url": "https://x.com/petrogustavo/status/2095846892470968626",
+        "post_text": "El Pacto Histórico debe ser un movimiento amplio, con votaciones abiertas para elegir sus coordinaciones locales, regionales y nacionales.\n\nEl Pacto histórico debe convocar los movimientos sociales y regionales y políticas y personas para integrar la Alianza por la Vida que",
+        "score": 26,
+        "topic": "Propuesta de Petro sobre democracia interna del Pacto Histórico",
+        "categories": [
+          "politica"
+        ],
+        "claims": [
+          {
+            "claim": "Petro propone que el Pacto Historico tenga votaciones abiertas para elegir coordinaciones",
+            "type": "opinion",
+            "verification": "OPINION_NO_VERIFICABLE",
+            "evidence": [],
+            "notes": "Es una propuesta de organizacion interna del movimiento, no un hecho o decision ya tomada."
+          }
+        ],
+        "verification": "no_aplica",
+        "territory": {
+          "colombia": "DIRECTO",
+          "bogota": "NO_DEMOSTRADO",
+          "kennedy": "NO_DEMOSTRADO"
+        },
+        "context": "Propuesta de un dirigente del Pacto Historico sobre la organizacion interna del movimiento al que pertenece Luz Stella.",
+        "recommended_action": "SEGUIMIENTO",
+        "content_opportunity": "NINGUNA",
+        "opportunity_reason": "Es una propuesta interna de organizacion del Pacto Historico; pronunciarse publicamente arriesgaria fabricar o insinuar una postura oficial del movimiento que Luz Stella no ha expresado.",
+        "publicable": false,
+        "script_status": "NO_APLICA",
+        "script": null,
+        "sources": []
+      }
+    },
+    {
+      "x_post_id": "2095847785471922316",
+      "final_status": "DESCARTADO",
+      "discard_reason": "Opinion de politica exterior sobre Venezuela, sin relacion directa con decisiones publicas colombianas, Bogota o Kennedy.",
+      "radar_item": null
+    },
+    {
+      "x_post_id": "2095849539060015337",
+      "final_status": "DESCARTADO",
+      "discard_reason": "Declaracion de tono general/slogan politico, sin afirmacion factual ni relacion institucional identificable.",
+      "radar_item": null
+    },
+    {
+      "x_post_id": "2095851536844734557",
+      "final_status": "DESCARTADO",
+      "discard_reason": "Opinion de politica internacional (Chile/Argentina) con lenguaje despectivo hacia otro mandatario, sin relacion con decisiones publicas colombianas, Bogota o Kennedy.",
+      "radar_item": null
+    }
+  ],
+  "unprocessed": []
+}
