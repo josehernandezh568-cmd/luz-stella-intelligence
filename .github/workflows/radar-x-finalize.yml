@@ -1,0 +1,69 @@
+name: RADAR X V4.2 - FINALIZE
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: radar-x-v4.2-finalize
+  cancel-in-progress: false
+
+jobs:
+  finalize:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Limpiar salida anterior
+        run: |
+          rm -rf work/finalize
+          mkdir -p work/finalize
+
+      - name: Verificar archivos de entrada
+        run: |
+          test -s manual_input/radar_x_input_bundle.json
+          test -s manual_input/radar_x_claude_response.json
+          test -s manual_input/radar_x_evidence_manifest.json
+          test -s scripts/x_finalize_analysis.py
+          test -s data/x_inbox.json
+          test -s data/x_historico.json
+          test -s data/x_radar.json
+
+      - name: Ejecutar FINALIZE
+        run: |
+          python3 scripts/x_finalize_analysis.py \
+            --bundle manual_input/radar_x_input_bundle.json \
+            --response manual_input/radar_x_claude_response.json \
+            --evidence-manifest manual_input/radar_x_evidence_manifest.json \
+            --inbox data/x_inbox.json \
+            --historico data/x_historico.json \
+            --radar data/x_radar.json \
+            --outdir work/finalize
+
+      - name: Verificar salida FINALIZE
+        run: |
+          test -s work/finalize/x_radar.json
+          test -s work/finalize/x_historico.json
+          test -s work/finalize/x_inbox.json
+          test -s work/finalize/analysis_report.json
+
+      - name: Subir artifact FINALIZE
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: radar-x-v4.2-finalize
+          path: work/finalize/
+          if-no-files-found: error
+          retention-days: 7
