@@ -1,238 +1,49 @@
 {
-  "last_updated": "2026-09-03",
+  "last_updated": "2026-09-04",
   "timezone": "America/Bogota",
   "cut": {
-    "date": "2026-09-03",
+    "date": "2026-09-04",
     "time": null,
     "timezone": "America/Bogota"
   },
   "items": [
     {
-      "x_post_id": "2095317399121563853",
+      "x_post_id": "2095596713151197693",
       "rank": 1,
-      "score": 65,
+      "score": 61,
       "author": "Abelardo De La Espriella",
       "username": "ABDELAESPRIELLA",
-      "published_at": "2026-09-03T01:06:11.000Z",
-      "post_url": "https://x.com/ABDELAESPRIELLA/status/2095317399121563853",
-      "post_text": "He recibido la preocupación expresada por la Sala de Casación Penal de la Corte Suprema de Justicia frente a la seguridad de sus magistrados. He dado instrucciones a la Policía Nacional y a la UNP para reforzar de inmediato todas las medidas necesarias para garantizar su...",
-      "topic": "Refuerzo de seguridad a magistrados de la Corte Suprema de Justicia",
-      "categories": [
-        "seguridad",
-        "instituciones",
-        "justicia"
-      ],
-      "claims": [
-        {
-          "claim": "El presidente dio instrucciones a la Policia Nacional y a la UNP para reforzar la seguridad de los magistrados de la Sala de Casacion Penal",
-          "type": "fact",
-          "verification": "CONFIRMADO",
-          "evidence": [
-            "https://www.elcolombiano.com/colombia/alerta-seguridad-magistrados-condena-kiko-gomez-disparo-procuraduria-KC40608640",
-            "https://www.semana.com/politica/articulo/abelardo-de-la-espriella-dijo-que-quien-se-mete-con-la-corte-se-mete-con-el-presidente-ordeno-proteger-a-los-magistrados/202659/",
-            "https://www.infobae.com/colombia/2026/09/03/corte-suprema-pidio-reforzar-la-seguridad-por-el-caso-kiko-gomez-y-de-la-espriella-aprovecho-para-lanzar-fuerte-advertencia/"
-          ],
-          "notes": "Confirmado por al menos 6 medios independientes con la misma cita textual y contexto (disparo contra oficina de la Procuraduria, caso del exgobernador condenado 'Kiko' Gomez)."
-        }
-      ],
-      "verification": "alta",
-      "territory": {
-        "colombia": "DIRECTO",
-        "bogota": "DIRECTO",
-        "kennedy": "NO_DEMOSTRADO"
-      },
-      "context": "Un disparo contra una oficina de la Procuraduria (piso 26, Bogota) genero preocupacion en la Sala de Casacion Penal por posible relacion con la condena al exgobernador de La Guajira Juan Francisco 'Kiko' Gomez. El presidente respondio publicamente reforzando la proteccion.",
-      "recommended_action": "EXPLICAR",
-      "publicable": false,
-      "script_status": "NO_APLICA",
-      "script": null,
-      "sources": [
-        {
-          "name": "El Colombiano",
-          "url": "https://www.elcolombiano.com/colombia/alerta-seguridad-magistrados-condena-kiko-gomez-disparo-procuraduria-KC40608640",
-          "type": "secondary",
-          "date": "2026-09-03"
-        },
-        {
-          "name": "Semana",
-          "url": "https://www.semana.com/politica/articulo/abelardo-de-la-espriella-dijo-que-quien-se-mete-con-la-corte-se-mete-con-el-presidente-ordeno-proteger-a-los-magistrados/202659/",
-          "type": "secondary",
-          "date": "2026-09-03"
-        },
-        {
-          "name": "Infobae",
-          "url": "https://www.infobae.com/colombia/2026/09/03/corte-suprema-pidio-reforzar-la-seguridad-por-el-caso-kiko-gomez-y-de-la-espriella-aprovecho-para-lanzar-fuerte-advertencia/",
-          "type": "secondary",
-          "date": "2026-09-03"
-        },
-        {
-          "name": "Pulzo",
-          "url": "https://www.pulzo.com/nacion/abelardo-de-la-espriella-refuerza-seguridad-a-la-corte-suprema-tras-ataque-en-bogota-PP5291567A",
-          "type": "secondary",
-          "date": "2026-09-03"
-        }
-      ],
-      "carried_over": false,
-      "content_opportunity": "BAJA",
-      "opportunity_reason": "Sin relacion territorial real con Kennedy ni Bogota (el disparo ocurrio en Bogota pero es incidental al asunto de fondo, que es seguridad institucional nacional); ninguna competencia de una Edilesa sobre la rama judicial; publicarlo amplificaria la agenda comunicacional propia del presidente respaldando a la Corte, sin aporte territorial de Luz Stella."
-    },
-    {
-      "x_post_id": "2095300237489271012",
-      "rank": 2,
-      "score": 55,
-      "author": "Abelardo De La Espriella",
-      "username": "ABDELAESPRIELLA",
-      "published_at": "2026-09-02T23:58:00.000Z",
-      "post_url": "https://x.com/ABDELAESPRIELLA/status/2095300237489271012",
-      "post_text": "Colombianos: Hoy estoy designando a la doctora Ilva Myriam Hoyos como Ministra de Educación Nacional. Su talante, fortaleza, honradez y firme defensa de los valores la preceden...",
-      "topic": "Designación de nueva Ministra de Educación",
-      "categories": [
-        "politica",
-        "instituciones",
-        "educacion"
-      ],
-      "claims": [
-        {
-          "claim": "Ilva Myriam Hoyos fue designada Ministra de Educacion Nacional en reemplazo de Viviane Morales",
-          "type": "fact",
-          "verification": "CONFIRMADO",
-          "evidence": [
-            "https://www.elheraldo.co/colombia/2026/09/03/quien-es-ilva-myriam-hoyos-la-nueva-ministra-de-educacion/",
-            "https://www.eltiempo.com/vida/educacion/quien-es-ilva-myriam-hoyos-la-nueva-ministra-de-educacion-de-de-la-espriella-3583142",
-            "https://www.elespectador.com/educacion/quien-es-ilva-myriam-hoyos-la-nueva-ministra-de-educacion-y-reemplazo-de-viviane-morales/"
-          ],
-          "notes": "Confirmado por al menos 8 medios independientes; Viviane Morales renuncio por motivos personales, no por conflicto politico."
-        }
-      ],
-      "verification": "alta",
-      "territory": {
-        "colombia": "DIRECTO",
-        "bogota": "NO_DEMOSTRADO",
-        "kennedy": "NO_DEMOSTRADO"
-      },
-      "context": "Cambio ministerial: Viviane Morales renuncia por una situacion familiar; Ilva Myriam Hoyos, exprocuradora delegada para la familia, asume el Ministerio de Educacion Nacional.",
-      "recommended_action": "EXPLICAR",
-      "publicable": false,
-      "script_status": "NO_APLICA",
-      "script": null,
-      "sources": [
-        {
-          "name": "El Heraldo",
-          "url": "https://www.elheraldo.co/colombia/2026/09/03/quien-es-ilva-myriam-hoyos-la-nueva-ministra-de-educacion/",
-          "type": "secondary",
-          "date": "2026-09-03"
-        },
-        {
-          "name": "El Tiempo",
-          "url": "https://www.eltiempo.com/vida/educacion/quien-es-ilva-myriam-hoyos-la-nueva-ministra-de-educacion-de-de-la-espriella-3583142",
-          "type": "secondary",
-          "date": "2026-09-03"
-        },
-        {
-          "name": "El Espectador",
-          "url": "https://www.elespectador.com/educacion/quien-es-ilva-myriam-hoyos-la-nueva-ministra-de-educacion-y-reemplazo-de-viviane-morales/",
-          "type": "secondary",
-          "date": "2026-09-03"
-        },
-        {
-          "name": "Semana",
-          "url": "https://www.semana.com/politica/articulo/ilva-myriam-hoyos-la-voz-fuerte-que-defendio-a-los-ninos-en-la-procuraduria-y-quien-se-convirtio-en-la-ministra-de-educacion-de-abelardo-de-la-espriella/202658/",
-          "type": "secondary",
-          "date": "2026-09-03"
-        }
-      ],
-      "carried_over": false,
-      "content_opportunity": "BAJA",
-      "opportunity_reason": "Educacion no esta entre los ejes estrategicos declarados de Luz Stella (ambiente, seguridad, movilidad, corrupcion/transparencia); sin relacion con Kennedy o Bogota; es contenido de vitrina de un nombramiento del Ejecutivo nacional, sin angulo propio para su audiencia."
-    },
-    {
-      "x_post_id": "2095484041331921232",
-      "rank": 3,
-      "score": 49,
-      "author": "Abelardo De La Espriella",
-      "username": "ABDELAESPRIELLA",
-      "published_at": "2026-09-03T12:08:22.000Z",
-      "post_url": "https://x.com/ABDELAESPRIELLA/status/2095484041331921232",
-      "post_text": "Las cárceles no pueden ser centros de operación de las estructuras criminales. La autoridad del Estado también se ejerce detrás de los muros. A través del Ministerio de Justicia y la USPEC, entregamos nuevos equipos para el pabellón de alta seguridad de la cárcel de Palogordo,...",
-      "topic": "Refuerzo de seguridad en la cárcel de Palogordo (Girón, Santander)",
-      "categories": [
-        "seguridad",
-        "instituciones"
-      ],
-      "claims": [
-        {
-          "claim": "El Ministerio de Justicia y la USPEC entregaron equipos de vigilancia (camaras corporales, detectores de metales, drones, chalecos balisticos) al pabellon de alta seguridad de la carcel de Palogordo",
-          "type": "fact",
-          "verification": "CONFIRMADO",
-          "evidence": [
-            "https://www.elpais.com.co/colombia/gobierno-anuncia-entrega-de-equipos-de-vigilancia-para-pabellon-de-alta-seguridad-de-la-carcel-de-palogordo-en-santander-0348.html",
-            "https://www.infobae.com/colombia/2026/09/03/abelardo-de-la-espriella-anuncio-nuevos-equipos-de-seguridad-para-carcel-a-la-que-trasladaron-peligrosos-criminales-vamos-a-cerrarles-todos-los-espacios/"
-          ],
-          "notes": "Confirmado por El Pais y Infobae con el mismo listado de equipos."
-        }
-      ],
-      "verification": "alta",
-      "territory": {
-        "colombia": "DIRECTO",
-        "bogota": "NO_DEMOSTRADO",
-        "kennedy": "NO_DEMOSTRADO"
-      },
-      "context": "La carcel de Palogordo (Giron, Santander) recibe internos de alta peligrosidad; el refuerzo busca evitar que operen estructuras criminales desde dentro del centro penitenciario.",
-      "recommended_action": "EXPLICAR",
-      "publicable": false,
-      "script_status": "NO_APLICA",
-      "script": null,
-      "sources": [
-        {
-          "name": "El País",
-          "url": "https://www.elpais.com.co/colombia/gobierno-anuncia-entrega-de-equipos-de-vigilancia-para-pabellon-de-alta-seguridad-de-la-carcel-de-palogordo-en-santander-0348.html",
-          "type": "secondary",
-          "date": "2026-09-03"
-        },
-        {
-          "name": "Infobae",
-          "url": "https://www.infobae.com/colombia/2026/09/03/abelardo-de-la-espriella-anuncio-nuevos-equipos-de-seguridad-para-carcel-a-la-que-trasladaron-peligrosos-criminales-vamos-a-cerrarles-todos-los-espacios/",
-          "type": "secondary",
-          "date": "2026-09-03"
-        }
-      ],
-      "carried_over": false,
-      "content_opportunity": "BAJA",
-      "opportunity_reason": "La seguridad es un eje de Luz Stella, pero este es un asunto de seguridad penitenciaria en Giron, Santander, sin conexion territorial demostrada con Kennedy o Bogota; forzar esa conexion violaria la regla de no forzar territorio. Es vitrina de gestion del Gobierno Nacional."
-    },
-    {
-      "x_post_id": "2095350787140432099",
-      "rank": 4,
-      "score": 48,
-      "author": "Abelardo De La Espriella",
-      "username": "ABDELAESPRIELLA",
-      "published_at": "2026-09-03T03:18:52.000Z",
-      "post_url": "https://x.com/ABDELAESPRIELLA/status/2095350787140432099",
-      "post_text": "¡Otro golpe contundente al narcotráfico! Nuestra Policía Nacional en coordinación con la DEA y Guardacostas de Santa Marta, incautó en alta mar 736 kilogramos de cocaína que eran transportados en una lancha rápida tipo go-fast, procedente de la zona costera de la Alta Guajira y...",
-      "topic": "Incautación de 736 kg de cocaína en el Caribe",
+      "published_at": "2026-09-03T19:36:05.000Z",
+      "post_url": "https://x.com/ABDELAESPRIELLA/status/2095596713151197693",
+      "post_text": "¡Golpe estratégico al Tren de Aragua en Colombia! Hoy, en Manizales, nuestra Policía Nacional, a través de la DIPOL y el GAULA-ÉLITE, capturó en la Operación TITÁN a dos importantes cabecillas de esta organización terrorista transnacional. Cayó Richard José Espinal Quintero,...",
+      "topic": "Captura de dos cabecillas del Tren de Aragua en Manizales (Operación Titán)",
       "categories": [
         "seguridad",
         "narcotrafico"
       ],
       "claims": [
         {
-          "claim": "Se incautaron 736 kilogramos de cocaina en una lancha go-fast que salio de la Alta Guajira con destino a Republica Dominicana; dos personas fueron capturadas",
+          "claim": "La Policia Nacional (Dipol y Gaula-Elite) capturo en Manizales a Richard Jose Espinal Quintero ('El Coti') y Henderzon Adrian Villarroel Luque ('El Paton'), presuntos cabecillas del Tren de Aragua buscados por Estados Unidos",
           "type": "fact",
           "verification": "CONFIRMADO",
           "evidence": [
-            "https://www.infobae.com/colombia/2026/09/03/armada-de-colombia-incauto-cargamento-de-cocaina-avaluado-en-34-millones-de-dolares-dos-dominicanos-fueron-capturados/",
-            "https://gsnoticias.com/incautan-736-kilos-de-cocaina-y-capturan-a-dos-dominicanos/"
+            "https://www.infobae.com/america/agencias/2026/09/03/detienen-en-colombia-a-dos-cabecillas-del-tren-de-aragua-buscados-por-estados-unidos/",
+            "https://www.semana.com/politica/articulo/presidente-de-la-espriella-publico-video-de-la-captura-de-cabecillas-del-tren-de-aragua-asi-fue-sorprendido-uno-de-los-criminales/202639/",
+            "https://www.colombia.com/actualidad/nacionales/capturan-en-manizales-a-dos-cabecillas-del-tren-de-aragua-requeridos-por-interpol-598994"
           ],
-          "notes": "Cifra y hechos centrales confirmados por multiples medios independientes."
+          "notes": "Confirmado por al menos 8 medios independientes (Infobae/EFE, Semana, Pulzo, El Nacional, LaPatilla, entre otros), con la cita textual del presidente y detalles consistentes."
         },
         {
-          "claim": "La operacion fue liderada por la Policia Nacional en coordinacion con la DEA y Guardacostas de Santa Marta",
+          "claim": "El asesinato del profesor y lider comunitario Kevin Santiago Angel en Kennedy (mayo 2026) fue atribuido por la Fiscalia a integrantes del Tren de Aragua, la misma organizacion criminal de la que Espinal Quintero y Villarroel Luque son senalados cabecillas",
           "type": "fact",
-          "verification": "PARCIAL",
+          "verification": "CONFIRMADO",
           "evidence": [
-            "https://www.infobae.com/colombia/2026/09/03/armada-de-colombia-incauto-cargamento-de-cocaina-avaluado-en-34-millones-de-dolares-dos-dominicanos-fueron-capturados/"
+            "https://www.infobae.com/colombia/2026/09/01/el-tren-de-aragua-habria-sido-el-responsable-del-brutal-asesinato-del-profesor-kevin-santiago-angel-en-bogota-capturaron-a-ocho-sospechosos/",
+            "https://www.elespectador.com/bogota/capturan-a-integrantes-del-tren-de-aragua-por-crimen-del-profesor-kevin-santiago-angel/",
+            "https://www.eltiempo.com/bogota/cayeron-presuntos-integrantes-del-tren-de-aragua-implicados-en-el-asesinato-del-profesor-kevin-santiago-angel-en-bogota-los-delitos-que-les-imputaran-3582718",
+            "https://www.semana.com/nacion/articulo/lo-asesinaron-por-alejar-jovenes-de-la-criminalidad-la-fiscalia-confirmo-la-captura-de-integrantes-del-tren-de-aragua-por-crimen-de-un-profesor/202621/"
           ],
-          "notes": "Infobae atribuye la operacion a la Armada Nacional (de la cual Guardacostas de Santa Marta es una unidad), no exclusivamente a la Policia Nacional. Es un matiz institucional, no una contradiccion del hecho central."
+          "notes": "Evidencia reutilizada de la verificacion ya realizada dentro de este mismo sistema (topic_id seguridad-tren-aragua-kennedy-kevin-angel del Radar Diario V4.0, corroborado por 8 fuentes independientes el 1-2 de septiembre de 2026). Se cita aqui explicitamente para sustentar la conexion editorial usada en opportunity_reason y en el guion, en vez de dejarla en memoria implicita."
         }
       ],
       "verification": "alta",
@@ -241,94 +52,232 @@
         "bogota": "NO_DEMOSTRADO",
         "kennedy": "NO_DEMOSTRADO"
       },
-      "context": "Operacion antinarcoticos en el Caribe colombiano con apoyo internacional (DEA, JIATF-South).",
+      "context": "Operativo en Manizales (Caldas), no en Kennedy ni Bogota. Es la misma estructura criminal (Tren de Aragua) vinculada al asesinato del profesor Kevin Santiago Angel en Kennedy en mayo de 2026, caso ya cubierto anteriormente por este sistema. La vinculacion del Tren de Aragua con el asesinato de Kevin Santiago Angel en Kennedy esta confirmada por multiples fuentes independientes (ver claims), lo que sustenta -con evidencia trazable, no solo memoria implicita- la oportunidad editorial de este item.",
       "recommended_action": "EXPLICAR",
-      "publicable": false,
-      "script_status": "NO_APLICA",
-      "script": null,
+      "content_opportunity": "MEDIA",
+      "opportunity_reason": "Es la misma estructura criminal (Tren de Aragua) vinculada al asesinato de Kevin Angel en Kennedy; sin afirmar que esta captura especifica ocurrio alli, hay valor pedagogico real en mostrar continuidad del trabajo institucional contra esa organizacion para la audiencia que ya sigue ese caso.",
+      "publicable": true,
+      "script_status": "LISTO",
+      "script": {
+        "hook": "La Policía Nacional capturó a dos presuntos cabecillas del Tren de Aragua en Manizales.",
+        "context": "En la Operación Titán, la Dipol y el Gaula-Élite capturaron a dos personas señaladas como cabecillas de la organización, ambas requeridas por Estados Unidos.",
+        "key_fact": "Fueron identificados como Richard José Espinal Quintero ('El Coti') y Henderzon Adrián Villarroel Luque ('El Patón'); el primero sería el cuarto cabecilla de la estructura en Colombia.",
+        "explanation": "Son presuntos responsables; la investigación y judicialización siguen su curso ante la Fiscalía.",
+        "citizen_connection": "Es la misma organización vinculada al asesinato de Kevin Santiago Ángel en Kennedy — un golpe a esa estructura importa para nuestra comunidad, aunque esta captura específica ocurrió en Caldas.",
+        "role_competencia": "La investigación y judicialización corresponden a la Fiscalía y la Policía; como Edilesa puedo dar seguimiento público al fenómeno.",
+        "close": "Los capturados quedan a disposición de las autoridades competentes.",
+        "cta": "¿Han sentido el impacto del Tren de Aragua en su barrio?",
+        "script_style": "INSTITUCIONAL_V3_4",
+        "estimated_seconds_full": 45
+      },
+      "sources": [
+        {
+          "name": "Infobae/EFE",
+          "url": "https://www.infobae.com/america/agencias/2026/09/03/detienen-en-colombia-a-dos-cabecillas-del-tren-de-aragua-buscados-por-estados-unidos/",
+          "type": "secondary",
+          "date": "2026-09-03"
+        },
+        {
+          "name": "Semana",
+          "url": "https://www.semana.com/politica/articulo/presidente-de-la-espriella-publico-video-de-la-captura-de-cabecillas-del-tren-de-aragua-asi-fue-sorprendido-uno-de-los-criminales/202639/",
+          "type": "secondary",
+          "date": "2026-09-03"
+        },
+        {
+          "name": "Colombia.com",
+          "url": "https://www.colombia.com/actualidad/nacionales/capturan-en-manizales-a-dos-cabecillas-del-tren-de-aragua-requeridos-por-interpol-598994",
+          "type": "secondary",
+          "date": "2026-09-03"
+        },
+        {
+          "name": "Infobae (caso Kevin Ángel, verificación previa del sistema)",
+          "url": "https://www.infobae.com/colombia/2026/09/01/el-tren-de-aragua-habria-sido-el-responsable-del-brutal-asesinato-del-profesor-kevin-santiago-angel-en-bogota-capturaron-a-ocho-sospechosos/",
+          "type": "secondary",
+          "date": "2026-09-01"
+        }
+      ],
+      "carried_over": false
+    },
+    {
+      "x_post_id": "2095583251398119468",
+      "rank": 2,
+      "score": 60,
+      "author": "Abelardo De La Espriella",
+      "username": "ABDELAESPRIELLA",
+      "published_at": "2026-09-03T18:42:35.000Z",
+      "post_url": "https://x.com/ABDELAESPRIELLA/status/2095583251398119468",
+      "post_text": "Los colombianos pueden estar tranquilos: la expedición de pasaportes está garantizada. ¡Firme por la Patria! (A.D.L.E.) 🇨🇴🐅",
+      "topic": "Suspensión judicial del convenio para producir pasaportes",
+      "categories": [
+        "instituciones",
+        "politica"
+      ],
+      "claims": [
+        {
+          "claim": "El Tribunal Administrativo de Cundinamarca suspendio temporalmente el convenio entre la Cancilleria y la Imprenta Nacional (con la Casa de la Moneda de Portugal) para producir pasaportes, y el Gobierno garantiza que el servicio de expedicion continua sin interrupcion gracias a una reserva de 600.000 pasaportes",
+          "type": "fact",
+          "verification": "CONFIRMADO",
+          "evidence": [
+            "https://www.infobae.com/colombia/2026/09/04/el-gobierno-aclaro-que-pasara-con-la-expedicion-de-pasaportes-tras-la-suspension-de-convenios-con-la-imprenta-nacional/",
+            "https://www.infobae.com/america/agencias/2026/09/04/colombia-pide-calma-tras-la-suspension-judicial-del-convenio-para-producir-pasaportes/"
+          ],
+          "notes": "Confirmado por al menos 6 medios independientes (Infobae/EFE, Semana, Pulzo, El Espectador, Eje21, CW+); la decision judicial se dio en una accion popular y no ordena suspender la expedicion, solo frena pagos del convenio."
+        }
+      ],
+      "verification": "alta",
+      "territory": {
+        "colombia": "DIRECTO",
+        "bogota": "NO_DEMOSTRADO",
+        "kennedy": "NO_DEMOSTRADO"
+      },
+      "context": "El fallo del Tribunal Administrativo de Cundinamarca frena temporalmente el Convenio Interadministrativo 001/2025 y CI-005/2026, firmados en la administracion anterior. El canciller reporto inventario de 600.000 pasaportes (410.000 actuales + 190.000 por llegar), con cobertura estimada de 4 meses.",
+      "recommended_action": "EXPLICAR",
+      "content_opportunity": "MEDIA",
+      "opportunity_reason": "Es informacion de servicio publico de utilidad directa para cualquier ciudadano -incluidos los de Kennedy- que necesite tramitar su pasaporte, y ademas ilustra un caso concreto de control judicial sobre una decision de gobierno (separacion de poderes), con valor pedagogico institucional real, no generico.",
+      "publicable": true,
+      "script_status": "LISTO",
+      "script": {
+        "hook": "Un fallo judicial puso en pausa parte del trámite para producir pasaportes, pero el servicio sigue funcionando.",
+        "context": "El Tribunal Administrativo de Cundinamarca suspendió temporalmente el convenio entre la Cancillería y la Imprenta Nacional, firmado con la Casa de la Moneda de Portugal en la administración anterior.",
+        "key_fact": "El Gobierno reportó una reserva de 600.000 pasaportes, con cobertura estimada de 4 meses.",
+        "explanation": "El fallo no ordena suspender la expedición de pasaportes; frena los pagos del convenio mientras se resuelve el fondo del caso en una acción popular.",
+        "citizen_connection": "Cualquier persona que necesite tramitar su pasaporte, incluidos vecinos de Kennedy, puede seguir haciéndolo con normalidad por ahora.",
+        "role_competencia": "Es un trámite de competencia nacional (Cancillería); como Edilesa puedo ayudar a que la comunidad esté bien informada.",
+        "close": "Vamos a seguir de cerca la respuesta contingente que prepara el Gobierno.",
+        "cta": "¿Han tenido dificultades recientes para tramitar su pasaporte? Cuéntenme.",
+        "script_style": "INSTITUCIONAL_V3_4",
+        "estimated_seconds_full": 44
+      },
       "sources": [
         {
           "name": "Infobae",
-          "url": "https://www.infobae.com/colombia/2026/09/03/armada-de-colombia-incauto-cargamento-de-cocaina-avaluado-en-34-millones-de-dolares-dos-dominicanos-fueron-capturados/",
+          "url": "https://www.infobae.com/colombia/2026/09/04/el-gobierno-aclaro-que-pasara-con-la-expedicion-de-pasaportes-tras-la-suspension-de-convenios-con-la-imprenta-nacional/",
           "type": "secondary",
-          "date": "2026-09-03"
+          "date": "2026-09-04"
         },
         {
-          "name": "GS Noticias",
-          "url": "https://gsnoticias.com/incautan-736-kilos-de-cocaina-y-capturan-a-dos-dominicanos/",
+          "name": "Infobae/EFE",
+          "url": "https://www.infobae.com/america/agencias/2026/09/04/colombia-pide-calma-tras-la-suspension-judicial-del-convenio-para-producir-pasaportes/",
           "type": "secondary",
-          "date": "2026-09-03"
+          "date": "2026-09-04"
         },
         {
-          "name": "NTN24 (via EntornoInteligente)",
-          "url": "https://www.entornointeligente.com/en-una-operacion-conjunta-con-la-dea-la-policia-nacional-de-colombia-lidera-la-incautacion-de-736-kilogramos-de-cocaina-ntn24-com/",
+          "name": "El Espectador",
+          "url": "https://www.elespectador.com/politica/hay-una-reserva-de-pasaportes-para-cuatro-meses-gobierno-de-la-espriella-anuncia-medidas/",
           "type": "secondary",
           "date": "2026-09-03"
         }
       ],
-      "carried_over": false,
-      "content_opportunity": "BAJA",
-      "opportunity_reason": "Operativo antinarcoticos maritimo en la Guajira/Caribe, sin relacion con Kennedy o Bogota; sin competencia de una Edilesa; es un logro operativo del Gobierno Nacional sin angulo territorial."
+      "carried_over": false
     },
     {
-      "x_post_id": "2095547931990372443",
-      "rank": 5,
-      "score": 37,
+      "x_post_id": "2095634265358877158",
+      "rank": 3,
+      "score": 44,
       "author": "Abelardo De La Espriella",
       "username": "ABDELAESPRIELLA",
-      "published_at": "2026-09-03T16:22:15.000Z",
-      "post_url": "https://x.com/ABDELAESPRIELLA/status/2095547931990372443",
-      "post_text": "Como presidente de la República, garantizaré que las decisiones de cada juez y magistrado sean respetadas y que la autonomía de esta rama sea celosamente protegida sin interferencias del Ejecutivo. ¡Firme por la Patria!",
-      "topic": "Compromiso presidencial de respeto a la autonomía judicial",
+      "published_at": "2026-09-03T22:05:18.000Z",
+      "post_url": "https://x.com/ABDELAESPRIELLA/status/2095634265358877158",
+      "post_text": "Encuentro con nuestros embajadores María Consuelo Araújo y Mauricio Gaona, con quienes trabajamos para proyectar ante el mundo una Colombia fuerte, confiable y llena de oportunidades...",
+      "topic": "Reunión presidencial con embajadores ante EE.UU. y la ONU",
       "categories": [
         "politica",
         "instituciones"
       ],
       "claims": [
         {
-          "claim": "El presidente garantizara el respeto a las decisiones judiciales y la autonomia de la rama judicial",
-          "type": "prediction",
-          "verification": "PREDICCION_NO_VERIFICABLE",
-          "evidence": [],
-          "notes": "Es un compromiso/promesa de conducta futura, no un hecho verificable en este momento."
+          "claim": "El presidente se reunio con la embajadora en Estados Unidos, Maria Consuelo Araujo, y el embajador ante la ONU, Mauricio Gaona, para fijar lineamientos de politica exterior",
+          "type": "fact",
+          "verification": "CONFIRMADO",
+          "evidence": [
+            "https://www.eltiempo.com/politica/abelardo-de-la-espriella/presidente-abelardo-de-la-espriella-se-reunio-con-los-embajadores-mauricio-gaona-y-maria-consuelo-araujo-abrir-puertas-y-atraer-inversion-3583483",
+            "https://www.infobae.com/colombia/2026/09/04/de-la-espriella-dio-instrucciones-a-los-embajadores-ante-estados-unidos-y-la-onu-y-les-encargo-esta-especial-mision-hacerse-respetar/"
+          ],
+          "notes": "Confirmado por El Heraldo, Semana, El Tiempo e Infobae."
         }
       ],
-      "verification": "no_aplica",
+      "verification": "alta",
       "territory": {
         "colombia": "DIRECTO",
         "bogota": "NO_DEMOSTRADO",
         "kennedy": "NO_DEMOSTRADO"
       },
-      "context": "Declaracion de principio sobre separacion de poderes, sin un hecho concreto asociado todavia que permita verificar su cumplimiento.",
-      "recommended_action": "SEGUIMIENTO",
+      "context": "Reunion de politica exterior en el Palacio de San Carlos, sin relacion con asuntos distritales o locales.",
+      "recommended_action": "EXPLICAR",
+      "content_opportunity": "BAJA",
+      "opportunity_reason": "Nombramientos diplomaticos y politica exterior no estan entre los ejes estrategicos de Luz Stella (ambiente, seguridad, movilidad, corrupcion/transparencia); sin relacion con Kennedy o Bogota; es vitrina de gestion del Ejecutivo nacional.",
       "publicable": false,
       "script_status": "NO_APLICA",
       "script": null,
-      "sources": [],
-      "carried_over": false,
-      "content_opportunity": "NINGUNA",
-      "opportunity_reason": "Es una promesa sin hecho concreto asociado (claim ya clasificado como PREDICCION_NO_VERIFICABLE); sin relacion territorial, sin competencia de una Edilesa, sin eje estrategico aplicable todavia."
+      "sources": [
+        {
+          "name": "El Tiempo",
+          "url": "https://www.eltiempo.com/politica/abelardo-de-la-espriella/presidente-abelardo-de-la-espriella-se-reunio-con-los-embajadores-mauricio-gaona-y-maria-consuelo-araujo-abrir-puertas-y-atraer-inversion-3583483",
+          "type": "secondary",
+          "date": "2026-09-04"
+        }
+      ],
+      "carried_over": false
     },
     {
-      "x_post_id": "2095549445089681431",
-      "rank": 6,
-      "score": 25,
+      "x_post_id": "2095843748483657999",
+      "rank": 4,
+      "score": 35,
       "author": "Gustavo Petro",
       "username": "petrogustavo",
-      "published_at": "2026-09-03T16:28:15.000Z",
-      "post_url": "https://x.com/petrogustavo/status/2095549445089681431",
-      "post_text": "¿Han visto cien años de soledad en Netflix y el capitulo de la matanza de los trabajadores de las bananeras? Este es el presidente Abadía Méndez en 1928. Transformamos el país hacia adelante o retrocedimos? El mismo desprecio a la vida, la misma indignidad con los muertos.",
-      "topic": "Comparación histórica entre el gobierno actual y la masacre de las bananeras (1928)",
+      "published_at": "2026-09-04T11:57:43.000Z",
+      "post_url": "https://x.com/petrogustavo/status/2095843748483657999",
+      "post_text": "Aquí las mentiras abelardistas hablan del voto fusil que no existió y cuando los fusiles ilegales son los del narcotráfico. Pero lo que si hubo fue centenares de miles de votos robots, bots y votos de algoritmo.",
+      "topic": "Acusación de fraude electoral (votos bot/algoritmo) sin evidencia presentada",
       "categories": [
         "politica"
       ],
       "claims": [
         {
-          "claim": "El gobierno actual muestra 'el mismo desprecio a la vida, la misma indignidad con los muertos' que el gobierno de Abadia Mendez en 1928",
-          "type": "opinion",
-          "verification": "OPINION_NO_VERIFICABLE",
+          "claim": "Hubo centenares de miles de 'votos robots, bots y votos de algoritmo' en la eleccion presidencial",
+          "type": "fact",
+          "verification": "NO_DEMOSTRADO",
           "evidence": [],
-          "notes": "Es una comparacion retorica/historica sin un hecho puntual y verificable asociado al gobierno actual."
+          "notes": "Es una afirmacion factual/acusatoria sobre un supuesto hecho electoral. No se encontro evidencia externa (informe de la Registraduria, del CNE, o de observadores electorales independientes) que la respalde; tampoco el propio post aporta una fuente, cifra verificable o metodologia. Se mantiene NO_DEMOSTRADO, no CONTRADICHO, porque no se encontro evidencia que la refute directamente tampoco -- simplemente no hay evidencia externa disponible en ningun sentido."
+        }
+      ],
+      "verification": "baja",
+      "territory": {
+        "colombia": "DIRECTO",
+        "bogota": "NO_DEMOSTRADO",
+        "kennedy": "NO_DEMOSTRADO"
+      },
+      "context": "Publicacion de tono acusatorio sobre presunto fraude electoral, sin evidencia especifica citada.",
+      "recommended_action": "NO_RESPONDER",
+      "content_opportunity": "NINGUNA",
+      "opportunity_reason": "Es una afirmacion factual sobre presunto fraude electoral clasificada NO_DEMOSTRADO por falta de evidencia externa; amplificarla sin evidencia seria irresponsable y arriesgaria involucrar a Luz Stella en una disputa partidista de alto voltaje sin aporte informativo real.",
+      "publicable": false,
+      "script_status": "NO_APLICA",
+      "script": null,
+      "sources": [],
+      "carried_over": false
+    },
+    {
+      "x_post_id": "2095726229701726370",
+      "rank": 5,
+      "score": 34,
+      "author": "Abelardo De La Espriella",
+      "username": "ABDELAESPRIELLA",
+      "published_at": "2026-09-04T04:10:44.000Z",
+      "post_url": "https://x.com/ABDELAESPRIELLA/status/2095726229701726370",
+      "post_text": "Que viva Colombia, que viva Cristo Rey. Todos los delincuentes y narcoterroristas que desafíen al Estado van a caer bajo la fuerza de las armas y las leyes de la República. Mañana, grandes noticias tendremos. ¡Firme por la Patria!",
+      "topic": "Anuncio genérico de próximas noticias de seguridad",
+      "categories": [
+        "seguridad",
+        "politica"
+      ],
+      "claims": [
+        {
+          "claim": "Manana habra 'grandes noticias' relacionadas con la lucha contra el crimen",
+          "type": "prediction",
+          "verification": "PREDICCION_NO_VERIFICABLE",
+          "evidence": [],
+          "notes": "Anuncio/teaser sin hecho concreto todavia asociado."
         }
       ],
       "verification": "no_aplica",
@@ -337,15 +286,92 @@
         "bogota": "NO_DEMOSTRADO",
         "kennedy": "NO_DEMOSTRADO"
       },
-      "context": "Publicacion de tono politico/opinativo que usa una referencia historica (masacre de las bananeras de 1928) para criticar de forma general al gobierno actual, sin senalar un hecho especifico y verificable.",
-      "recommended_action": "NO_RESPONDER",
+      "context": "Mensaje retorico previo a un anuncio no especificado.",
+      "recommended_action": "SEGUIMIENTO",
+      "content_opportunity": "BAJA",
+      "opportunity_reason": "Mensaje retorico/promocional sin hecho concreto todavia que explicar; sin relacion territorial; se espera si el anuncio del dia siguiente produce un hecho verificable relevante.",
       "publicable": false,
       "script_status": "NO_APLICA",
       "script": null,
       "sources": [],
-      "carried_over": false,
+      "carried_over": false
+    },
+    {
+      "x_post_id": "2095668382423290221",
+      "rank": 6,
+      "score": 30,
+      "author": "Abelardo De La Espriella",
+      "username": "ABDELAESPRIELLA",
+      "published_at": "2026-09-04T00:20:52.000Z",
+      "post_url": "https://x.com/ABDELAESPRIELLA/status/2095668382423290221",
+      "post_text": "En Colombia se acabó la contemplación con el crimen y volvió a regir, sin titubeos, el imperio de la ley. A los criminales y narcoterroristas les notifico con absoluta firmeza: las cárceles dejaron de ser hoteles y centros de operación del delito...",
+      "topic": "Discurso general sobre política de seguridad y sistema penitenciario",
+      "categories": [
+        "seguridad",
+        "politica"
+      ],
+      "claims": [
+        {
+          "claim": "Las carceles dejaron de ser 'hoteles y centros de operacion del delito'",
+          "type": "opinion",
+          "verification": "OPINION_NO_VERIFICABLE",
+          "evidence": [],
+          "notes": "Declaracion retorica de politica general, sin un hecho, cifra o evento especifico y nuevo asociado (distinto del anuncio puntual de Palogordo del dia anterior)."
+        }
+      ],
+      "verification": "no_aplica",
+      "territory": {
+        "colombia": "DIRECTO",
+        "bogota": "NO_DEMOSTRADO",
+        "kennedy": "NO_DEMOSTRADO"
+      },
+      "context": "Mensaje de tono politico general sobre la politica de seguridad del gobierno, sin nuevo hecho verificable.",
+      "recommended_action": "NO_RESPONDER",
       "content_opportunity": "NINGUNA",
-      "opportunity_reason": "Opinion retorica sin hecho verificable (claim ya clasificado como OPINION_NO_VERIFICABLE); sin relacion territorial; responder amplificaria una disputa discursiva entre figuras nacionales sin utilidad pedagogica territorial."
+      "opportunity_reason": "Es retorica politica sin dato nuevo verificable; responder no aportaria informacion adicional a la ya cubierta y arriesgaria sonar como eco de la comunicacion oficial del gobierno.",
+      "publicable": false,
+      "script_status": "NO_APLICA",
+      "script": null,
+      "sources": [],
+      "carried_over": false
+    },
+    {
+      "x_post_id": "2095846892470968626",
+      "rank": 7,
+      "score": 26,
+      "author": "Gustavo Petro",
+      "username": "petrogustavo",
+      "published_at": "2026-09-04T12:10:12.000Z",
+      "post_url": "https://x.com/petrogustavo/status/2095846892470968626",
+      "post_text": "El Pacto Histórico debe ser un movimiento amplio, con votaciones abiertas para elegir sus coordinaciones locales, regionales y nacionales. El Pacto histórico debe convocar los movimientos sociales y regionales y políticas y personas para integrar la Alianza por la Vida que...",
+      "topic": "Propuesta de Petro sobre democracia interna del Pacto Histórico",
+      "categories": [
+        "politica"
+      ],
+      "claims": [
+        {
+          "claim": "Petro propone que el Pacto Historico tenga votaciones abiertas para elegir coordinaciones",
+          "type": "opinion",
+          "verification": "OPINION_NO_VERIFICABLE",
+          "evidence": [],
+          "notes": "Es una propuesta de organizacion interna del movimiento, no un hecho o decision ya tomada."
+        }
+      ],
+      "verification": "no_aplica",
+      "territory": {
+        "colombia": "DIRECTO",
+        "bogota": "NO_DEMOSTRADO",
+        "kennedy": "NO_DEMOSTRADO"
+      },
+      "context": "Propuesta de un dirigente del Pacto Historico sobre la organizacion interna del movimiento al que pertenece Luz Stella.",
+      "recommended_action": "SEGUIMIENTO",
+      "content_opportunity": "NINGUNA",
+      "opportunity_reason": "Es una propuesta interna de organizacion del Pacto Historico; pronunciarse publicamente sobre esto arriesgaria fabricar o insinuar una postura oficial del movimiento que Luz Stella no ha expresado, lo cual esta expresamente prohibido por el protocolo.",
+      "publicable": false,
+      "script_status": "NO_APLICA",
+      "script": null,
+      "sources": [],
+      "carried_over": false
     }
   ]
 }
